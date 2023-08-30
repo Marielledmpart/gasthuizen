@@ -13,8 +13,9 @@
     <!-- all css here -->
     <!--    private css-->
     <link rel="stylesheet" href="../css/midevcss/style-private.css">
+    <link rel="stylesheet" href="../sass/css/custom.css">
     <!-- bootstrap v5.3.1  css -->
-    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
     <!-- bootstrap v3.3.6 css -->
     <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <!-- flat-icon css -->
@@ -99,9 +100,19 @@
 </header>
 <!-- Header Area End Here -->
 <!-- Slider Area Start Here -->
+<!--TODO:create polygons for kapel and do the modals-->
 <div class="slider-area ">
     <div>
         <img src="../images/midev/svg/Kapel-01.svg" class="img-fluid">
+        <button
+                type="button"
+                id="btn-info"
+                style="top:5%;right: 5%"
+                data-bs-toggle="modal" data-bs-target="#page-info"
+                aria-controls="page-info"
+                class=" btn link-light  no-borders hide-on-load ontvangsthal  z-3 position-absolute  link-light ">
+            <i id="nfoIcon" class="bi bi-info-circle bi--lg" style="font-size: 2vw;"></i>
+        </button>
         <div id="kapel-container" class="container ">
             <!--            go to map button start-->
             <div  class="btn-group-vertical position-fixed  link-light btn-group-div" role="group">
@@ -120,103 +131,134 @@
                     <i class="bi bi-caret-left-fill" style="font-size: 3vw"></i>
                 </button>
             </div>
-            <div id="card-rows-info" class="row hide-on-load ontvangsthal"
-                 style="display: block;float: left;position: absolute; left: 14%;top: 1%">
-                <div class="d-flex justify-content-center col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                    <div id="cardFirst" class="card my-0 mx-0  wow zoomIn w-75" data-wow-delay="0.5s"
-                         style="visibility: visible; animation-delay: 3s; animation-name: zoomIn;
-                         background: rgba(0, 0, 0, .5) !important;color: white; !important;">
-                        <div class="card-body m-0 p-0">
-                            <h5 class="card-title ps-3">De Kapel</h5>
-                            <p class="card-text px-3 mb-1">
-                                In 1382 werd de St. Pieterskapel in de wijk Gansoord opgericht door het Sint
-                                Pietersgilde van de viskopers en de vleeshouwers. Iets meer dan een decennium later werd
-                                de kapel uitgebreid met het gasthuis en al
-                            </p>
-                            <p id="collapseExample" class="collapse card-text px-3 mb-1">
-                                snel overvleugelde het Sint Pietersgasthuis de kapel, waardoor de Sint Pieterskapel in
-                                de 15e eeuw min of meer devalueerde tot gasthuiskapel. Het St. Pietersgilde was toen al
-                                min of meer uit beeld verdwenen.
-                                Kort na de fusie van het St. Pietersgasthuis met het Oude gasthuis krijgen de kapel en
-                                het gasthuis van St. Pieter in 1492 het recht om missen te laten lezen in de kapel door
-                                hun eigen priester en om in het gasthuis overleden zieken en vreemdelingen op een eigen
-                                kerkhof te begraven . Ook mag het heilig sacrament en het heilig oliesel door de
-                                priester van het gasthuis toegediend worden aan de gasthuiszieken en het inwonende
-                                personeel en aan niemand anders. De gasthuispriester wordt door de pastoor van de Oude
-                                Kerk benoemd. Het gasthuis, de zieken, vreemdelingen en de dienaren die er woonden
-                                bleven onder het ambt van de Oude Kerk vallen. Daarvoor betaalden de gasthuismeesters
-                                elk jaar een gouden Engelse Henricus nobel.
-                            </p>
-                            <button id="btn-collapse" class="btn  pull-right button-green no-borders" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseExample" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                <i id="icon-collapse" class="bi bi-chevron-down icon-white"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="card-rows" class=" p-0 m-0 row position-absolute wow zoomIn " data-wow-delay="0.5s"
-                 style="top:2% !important; left: 15% !important;visibility: visible; animation-delay: 3s; animation-name: zoomIn;">
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ">
-                    <div class="card fade-in-right p-0 card-pieters ">
-                        <div class="row">
-                            <div class="col">
-                                <div class="col-1 text-center ">
-                                    <a id="icon-previous" class="hide-on-load" role="button"><i
-                                            class="bi bi-chevron-double-left icon-white"></i></a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="col-1 pull-right text-center ">
-                                    <a id="icon-next" role="button"><i
-                                            class="bi bi-chevron-double-right icon-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-0 ">
-
-                            <div class="col-md-2">
-                                <img id="img-card" class="kapel priester img-fluid rounded-start"
-                                     src="../images/midev/kapel/priester.png" alt="Priester">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body text-light">
-                                    <h5 id="card-title" class="card-title ">Een priester met hart voor de zieken</h5>
-                                    <p id="text-card" class="card-text lh-base font-monospace "
-                                       style="font-size: 12px !important;">Op 1 januari 1550 wordt meester Willem
-                                        Kinnesz, de pastoor van de nieuwe Kerk, door de gasthuismeesters aangenomen om
-                                        voor de zieken te preken in het gasthuis. Dat Willem werkelijk hart had voor de
-                                        zieken en inzag dat zij meer nodig hadden dan geestelijke zorg alleen blijkt uit
-                                        de administratie van de jaren 1551 tot en met 1554. Willem geeft in die jaren
-                                        een steeds toenemend bedrag van zijn loon terug aan de gasthuismeesters als
-                                        geschenk voor de armen en om hen maaltijden voor te zetten. Daarna eindigt in de
-                                        gasthuisadministratie de notatie van loonkosten van deze priester. Wel komen we
-                                        Willem nog een keer tegen in 1556 wanneer hij een testament overdraagt aan de
-                                        gasthuismeesters van een persoon die niet genoemd wil worden . In een ander deel
-                                        van de gasthuisadministratie lezen we dat meester Willem Kinnesz een lijfrente
-                                        van twaalf Karolusgulden per jaar het St. Pietersgasthuis had. De uitkering van
-                                        deze rente stopt als Willem op 17 oktober 1571 sterft.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--                        <div id="chevron-right" class="card-footer">-->
-                        <!--                            <button  class="btn pull-right button-green no-borders" type="button" data-toggle="collapse"-->
-                        <!--                                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
-                        <!--                                <i class="bi bi-chevron-double-right icon-white"></i>-->
-                        <!--                            </button>-->
-                        <!--                        </div>-->
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
+<div id="page-info" class=" showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1" aria-hidden="true">
+    <div class=" modal-dialog  modal-dialog-centered info-card-element  ">
+        <div class="modal-content bg-text-white text-light ">
+            <div class="modal-header border-0">
+                <h1 id="infoModalLabel" class="modal-title fs-5">Inleiding</h1>
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#page-info"
+                        class="btn-close btn-close-white float-end" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <!--                <img id="infoModalImage" src="../images/midev/register-83.png"-->
+                <!--                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"-->
+                <!--                     alt="...">-->
+                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+                <p id="infoModalBody" class="card-text  fontSize-12">
+                    Het eerste gasthuis van de jonge stad Amsterdam, het Oude Gasthuis, stond aan het
+                    uiteinde
+                    van de
+                    Windmolenstraat ter hoogte van de Middeldam . Uit de administratie van de
+                    gasthuismeesters
+                    kunnen we
+                    afleiden dat het al eerder dan 1371 bestond. Het erf waarop het Oude Gasthuis stond was
+                    aanvankelijk
+                    waarschijnlijk vrij breed, maar tussen 1391 en 1398 moest het een deel ervan aan de stad
+                    afstaan
+                    voor de
+                    bouw van een nieuw stadhuis.
+                    Aan de overkant van de Amstel, in de wijk Gansoord, werd in 1382 een kapel gebouwd door
+                    het St.
+                    Pietersgilde
+                    van de viskopers en vleeshouwers. Al voor 1395 werd de St. Pieterskapel uitgebreid met
+                    een
+                    gasthuis.
+                    Aanvankelijk was het St. Pietersgasthuis nog ondergeschikt aan de kapel, maar in de
+                    vijftiende
+                    eeuw
+                    streefde
+                    het gasthuis de kapel ruimschoots voorbij en uiteindelijk was de St. Pieterskapel niet
+                    veel meer
+                    dan
+                    een
+                    gasthuiskapel . Het St. Pietersgasthuis groeide in deze periode uit tot de tweede
+                    charitatieve
+                    instelling in
+                    Amsterdam, na het Oude Gasthuis.
+                    In 1492 moest het Oude Gasthuis echter plaats maken voor uitbreiding van het stadhuis.
+                    Het Sint
+                    Pietersgasthuis en het Oude Gasthuis werden samengevoegd tot één gasthuis en gingen in
+                    de Nes
+                    verder
+                    onder
+                    de naam St. Pietersgasthuis. De invloed van het St. Pietersgilde op het St.
+                    Pietersgasthuis was op dat moment al volledig te verwaarlozen.
+                </p>
+            </div>
+            <div class="modal-footer border-0 flex-column align-items-start">
+                <ul id="infoUl" class="fontSize-8">
+                    <li>
+                        <a class=" fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="voetNote1">1</sup>GH
+                            (342), inv.nr. 62, scan 14 (KLAI03382000014)</a>
+                    </li>
+                    <li>
+                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="voetNote2">2</sup>GH
+                            (342), inv.nr. 83, scan 44 (KLAI03427000044)</a>
+                    </li>
+                </ul>
+            </div>
 
+        </div>
+    </div>
+</div>
+<div id="objectModal" class=" modal info-card-element fade-scale   modal-xl" tabindex="-1" aria-hidden="true">
+    <div class=" modal-dialog   modal-dialog-centered info-card-element  ">
+        <div class="modal-content bg-text-white text-light">
+            <div class="modal-header border-0">
+                <h1 id="modalLabel" class="modal-title fs-5">De organisatie St. Pietersgasthuis</h1>
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#objectModal"
+                        class="btn-close btn-close-white float-end" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="../images/midev/register-83.png"
+                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"
+                     alt="...">
+                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+                <p id="modalBody" class="card-text  fontSize-12">
+                    In de keuken van het St. Pietersgasthuis bereidden de keukenmoeders en -meiden de
+                    maaltijden voor de de arme zieken, de proveniers en de inwonende medewerkers. Voeding
+                    was een belangrijke pijler in de ziekenzorg.
+                    Daarom kreeg goed eten veel aandacht in het gasthuis. De keukenmoer regelde de inkoop
+                    van voedsel, brandstof, olie en zeep en de verkoop van melk, hooi en smeer, producten
+                    afkomstig van eigen vee en land.
+                    In het register van inkomsten en uitgaven over de jaren 1550-1559 zien we verschillende
+                    keukenmoeders en meiden voorbijkomen. De administratie van de gasthuishuismeesters
+                    schetst een beeld van de werkzaamheden in de keuken van het gasthuis, de verdiensten van
+                    de keukenmoeder en de inkoop van voedsel voor de zieken.
+                    In de oudere 15e eeuwse registers lezen we dat de keuken van het Sint Pietersgasthuis op
+                    een erf stond, waarover het gasthuis een Engelse nobel per jaar eeuwige rente betaalde<a
+                        href="#keuken-algemeen-1"><sup>1</sup></a>.
+                    Dat de keuken van het St. Pietersgasthuis goed ingericht was om voor grote groepen te
+                    komen, wordt duidelijk uit een betaling in 1558 van iemand die de keuken huurde om de
+                    maaltijd voor een bruiloft te koken<a href="#keuken-algemeen-2"><sup>2</sup></a>.
+                </p>
+            </div>
+            <div class="modal-footer border-0 flex-column align-items-start">
+                <ul id="modalFooterUl" class="fontSize-8">
+                    <li>
+                        <a class=" fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="keuken-algemeen-1">1</sup>GH
+                            (342), inv.nr. 62, scan 14 (KLAI03382000014)</a>
+                    </li>
+                    <li>
+                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="keuken-algemeen-2">2</sup>GH
+                            (342), inv.nr. 83, scan 44 (KLAI03427000044)</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
 <div id="myTooltip"></div>
 <span id="pol1Title" title="St. Pieters Gasthuys"></span>
 <span id="pol2Title" title="De Kapel"></span>
@@ -379,11 +421,15 @@
 <!-- Footer End Here -->
 <!-- all js here -->
 <!-- jquery latest version -->
-<script src="../js/vendor/jquery-1.12.0.min.js"></script>
+<!--<script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
+<script src="../js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+        integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--private js-->
 <script src="../js/midevjs/jq-costum.js"></script>
 <script src="../js/midevjs/jquery.maphilight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
 <!-- bootstrap js -->
 <script src="../js/bs5js/bootstrap.min.js"></script>
 <!--<script src="js/bootstrap.min.js"></script>-->

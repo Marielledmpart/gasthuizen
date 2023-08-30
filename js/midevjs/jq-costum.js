@@ -8,6 +8,7 @@
 $(document).ready(function () {
     $(function () {
         $('body').show();
+
     }); // end ready
     // showContent();
     if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')){
