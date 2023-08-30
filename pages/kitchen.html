@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Museum - Museum Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- all css here -->
+    <!--    private css-->
+    <link rel="stylesheet" href="../css/midevcss/style-private.css">
+    <link rel="stylesheet" href="../sass/css/custom.css">
+    <!-- bootstrap v5.3.1  css -->
+<!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
+    <!-- bootstrap v3.3.6 css -->
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- flat-icon css -->
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="../css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body  >
+<!-- Header Area Start Here -->
+<header>
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="../index.html"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <nav>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="active"><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Area End Here -->
+<!-- Slider Area Start Here -->
+<div class="slider-area">
+    <div>
+        <img alt="..." id="imgKeuken" src="../images/midev/svg/Keuken-01.svg" class="img-fluid highLightMap">
+        <button
+                type="button"
+                id="btn-info"
+                style="top:5%;right: 5%"
+                data-bs-toggle="modal" data-bs-target="#card-rows-info"
+                aria-controls="card-rows-info"
+                class="btn link-light  no-borders hide-on-load ontvangsthal  z-3 position-absolute  link-light ">
+            <i id="nfoIcon" class="bi bi-info-circle" style="font-size: 2vw"></i>
+        </button>
+        <div id="polDivPieters" class="polygon hide-on-load ontvangsthal">
+            <!--
+              preserveAspectRatio: makes sure the triangle is scalable
+              viewbox: points stretches from the parent
+            -->
+            <svg class="svg1" preserveAspectRatio="none" viewBox="0 0 1519 854">
+                <polygon id="cocking-laidy" class="polygon1 objectModal"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="??????????????"
+                         points="298,494,295,483,292,474,289,467,283,457,278,445,273,436,266,428,262,425,268,413,271,403,268,387,263,378,256,371,248,367,237,366,230,370,224,373,217,378,212,385,209,393,205,402,196,403,182,405,176,407,171,410,167,415,161,423,154,432,151,435,151,438,148,443,144,450,138,461,134,469,135,476,136,483,141,492,145,498,146,503,144,509,139,518,135,530,132,543,131,553,131,567,131,582,129,606,130,629,129,669,128,690,127,702,126,710,128,715,132,717,132,726,134,730,139,731,146,732,149,733,149,738,153,739,160,740,165,741,170,741,176,742,181,742,190,742,196,742,203,742,210,740,213,738,215,729,217,724,214,714,210,707,210,700,210,692,213,684,219,676,223,670,223,664,222,657,219,661,216,666,212,670,209,666,210,660,211,656,202,652,196,649,191,643,187,644,182,645,178,640,177,632,177,625,179,620,186,614,188,608,194,606,200,602,203,602,206,602,210,600,214,595,219,592,224,590,229,589,233,589,236,585,239,580,245,577,250,572,256,570,261,569,264,566,264,560,263,552,263,544,261,538,263,533,265,529,266,524,270,523,275,521,281,518,288,515,294,511,298,506,300,502"
+                ></polygon>
+                <polygon id="two-men" class="polygon1 objectModal"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="??????????????"
+                         points="901,515,901,516,901,518,902,520,903,522,904,523,906,524,909,526,908,527,906,528,906,530,906,532,906,533,907,535,908,537,908,539,907,541,906,543,904,544,900,544,896,543,892,543,891,545,890,547,890,548,891,550,893,551,895,551,897,553,898,554,899,556,899,558,898,561,898,563,898,566,898,568,899,571,899,573,899,575,900,577,900,579,901,581,901,584,901,587,901,590,901,593,901,596,901,599,901,601,901,606,902,608,903,611,903,614,903,617,903,620,903,623,904,626,904,629,904,631,904,634,905,636,906,637,907,639,908,641,906,643,905,643,901,642,898,640,895,639,892,639,890,641,889,643,887,644,886,646,885,648,886,650,887,651,889,651,892,649,894,648,897,649,901,650,904,651,906,651,909,652,909,655,906,656,901,654,897,653,893,653,891,654,892,656,893,658,896,659,899,660,902,662,905,663,909,662,913,663,914,665,916,668,917,670,920,671,923,672,926,673,928,674,929,676,932,675,934,675,937,673,940,672,939,667,939,662,937,658,934,654,934,649,934,643,937,642,942,644,945,647,947,649,951,650,954,648,957,647,961,649,964,648,963,644,960,640,946,629,939,624,938,616,936,609,937,603,938,596,936,588,929,578,926,570,923,563,924,558,927,553,929,550,927,545,926,540,931,536,935,531,936,525,936,519,934,514,930,508,930,502,929,498,925,497,923,492,922,487,919,482,921,477,921,472,919,459,920,448,919,442,916,436,912,429,908,424,904,419,902,413,899,405,903,401,897,396,891,387,881,376,879,370,875,369,871,369,866,365,861,362,856,361,853,363,850,358,847,352,845,347,839,343,842,338,845,331,846,325,843,321,845,316,844,309,839,305,833,299,829,294,822,290,813,287,803,287,795,288,789,291,783,295,779,300,774,303,767,300,758,296,751,293,744,289,738,288,733,290,727,291,722,294,716,297,708,302,702,309,699,313,698,318,696,322,696,329,695,334,697,338,699,342,701,343,706,346,709,348,706,351,702,353,698,357,695,361,693,364,687,366,679,366,672,367,667,368,660,371,654,375,650,378,649,381,649,384,645,386,641,389,640,391,640,393,637,394,634,395,632,397,631,400,630,403,629,406,629,408,625,408,621,410,618,413,614,416,611,420,608,425,605,429,604,433,604,434,604,436,601,437,599,439,598,443,596,446,596,449,595,451,595,453,594,456,596,459,595,460,595,463,595,466,595,469,596,472,598,474,597,477,596,480,593,488,592,495,591,500,590,503,591,507,590,511,590,517,589,523,590,528,590,535,590,541,591,545,593,548,595,549,598,549,603,549,603,553,602,558,601,560,600,563,601,565,603,568,603,571,602,575,602,579,603,583,605,586,608,588,611,590,614,592,618,593,622,594,625,595,628,597,633,597,637,598,640,598,640,600,639,603,640,606,641,609,643,611,646,612,650,614,655,617,658,620,660,623,661,625,664,623,667,620,669,617,673,615,677,615,681,616,684,617,687,619,691,620,694,622,696,617,696,611,700,608,702,603,702,598,702,594,708,593,711,595,712,598,715,601,718,602,722,604,721,608,720,614,720,618,721,622,721,625,720,631,718,640,717,646,716,653,715,659,714,665,714,669,712,677,712,681,712,687,711,693,711,699,711,705,712,711,712,720,712,726,711,735,712,740,713,746,713,750,712,754,712,756,714,757,716,759,716,763,717,766,721,767,730,766,734,764,735,759,733,754,731,749,731,744,731,738,732,731,734,720,738,713,740,707,744,700,745,703,745,705,745,708,745,712,746,714,746,718,745,721,744,725,743,728,741,731,740,735,739,738,739,741,739,744,742,744,746,744,750,744,760,743,772,744,775,744,777,745,779,747,783,749,790,749,796,749,803,749,808,747,811,744,812,740,811,735,805,731,799,728,789,725,781,723,773,720,773,713,772,701,773,671,775,663,776,652,775,638,776,630,778,623,777,617,777,613,781,610,785,609,788,607,795,603,800,600,804,597,804,600,804,602,807,604,808,605,810,607,811,610,811,614,811,618,811,622,810,625,809,628,808,632,807,635,807,639,807,643,808,647,808,653,810,658,811,663,811,669,813,676,814,682,815,687,816,691,817,696,818,702,819,707,819,711,819,718,820,722,821,725,831,753,831,756,831,757,833,760,837,763,840,764,846,767,852,769,857,769,861,767,865,765,869,759,870,754,868,747,866,742,863,737,857,735,852,731,849,725,846,719,844,710,846,700,847,694,849,688,851,681,852,673,854,666,855,654,855,644,855,638,853,631,853,623,852,615,850,609,851,604,855,602,860,599,863,598,868,592,871,584,873,577,871,570,869,565,867,558,870,556,874,554,877,549,877,542,876,532,880,524,882,517,879,512,875,505,868,486,863,482,867,480,870,477,873,472,872,466,868,461,862,459,864,454,866,448,866,441,868,434,871,436,872,440,875,443,877,447,877,451,878,455,879,459,880,461,882,462,884,463,886,467,890,475,892,482,893,489,894,495,895,500,895,504,896,508,898,510"
+                ></polygon>
+                <polygon id="cleaning-laidy" class="polygon1 objectModal"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="??????????????"
+                         points="486,237,489,239,491,242,493,245,494,248,496,252,497,255,497,258,496,260,495,263,494,265,496,266,498,268,501,269,503,272,505,274,505,277,505,281,505,286,507,293,509,294,510,296,510,299,512,301,515,303,517,306,519,309,520,312,522,315,523,319,525,324,535,353,536,357,539,361,542,365,542,368,543,371,546,373,548,376,546,380,543,381,538,383,533,385,533,390,533,394,533,397,533,401,536,418,536,422,535,425,534,427,534,431,535,434,535,438,533,440,529,438,527,440,524,442,520,443,516,443,516,447,517,452,518,455,519,459,519,462,517,465,512,465,508,465,504,466,504,468,506,470,507,473,507,476,507,480,504,482,490,481,481,481,474,481,470,479,469,474,470,472,473,472,478,470,482,468,485,465,486,461,485,452,479,451,474,449,470,445,470,438,471,428,467,431,463,429,463,419,465,399,464,387,462,378,462,365,462,356,463,345,465,334,465,329,459,330,451,330,444,330,438,326,435,321,431,317,425,316,425,311,427,306,429,301,433,298,436,296,438,290,442,287,444,283,452,281,457,278,462,274,465,270,462,264,461,257,461,249,464,243,467,236,470,235,475,234,478,234,481,234"
+                ></polygon>
+                <polygon id="caring-laidy" class="polygon1 objectModal"
+                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="??????????????"
+                         points="1312,503,1317,503,1323,503,1328,505,1334,508,1339,510,1344,515,1349,519,1354,524,1357,527,1362,531,1370,539,1376,545,1385,552,1390,558,1400,566,1405,568,1409,569,1415,573,1421,576,1424,581,1425,586,1421,589,1417,592,1411,594,1405,594,1408,600,1416,607,1422,620,1425,628,1427,638,1430,647,1433,655,1438,660,1443,666,1453,672,1460,674,1469,680,1475,683,1479,688,1486,696,1493,703,1499,712,1506,727,1511,739,1513,746,1514,754,1514,763,1514,772,1515,782,1515,793,1512,801,1508,806,1503,811,1496,817,1488,822,1482,825,1476,829,1479,831,1482,836,1482,841,1480,846,1473,848,1467,848,1456,848,1445,849,1434,850,1431,842,1427,841,1422,842,1415,845,1408,846,1402,848,1394,849,1387,849,1369,849,1344,849,1326,850,1309,849,1291,850,1273,849,1259,849,1246,849,1232,849,1216,849,1205,849,1195,849,1189,849,1189,844,1190,839,1188,835,1194,827,1203,817,1208,810,1212,800,1218,789,1222,782,1228,778,1233,774,1234,764,1237,753,1242,740,1247,730,1252,724,1258,717,1265,712,1264,707,1260,700,1256,696,1252,691,1253,682,1254,672,1255,665,1260,664,1263,661,1260,653,1258,644,1260,635,1263,631,1267,627,1272,624,1276,622,1282,621,1285,620,1289,621,1294,624,1299,626,1304,629,1308,633,1311,629,1315,625,1327,615,1319,612,1313,607,1307,603,1301,601,1303,604,1303,609,1302,612,1297,612,1290,611,1284,609,1281,604,1278,596,1276,589,1271,581,1270,572,1272,565,1275,558,1277,551,1278,545,1281,535,1284,527,1288,519,1292,510,1298,506,1303,504"
+                ></polygon>
+            </svg>
+
+        </div>
+        <div id="kitchen-container" class="container">
+            <!--            button group home,building and back-->
+            <div class="btn-group-vertical position-absolute  link-light btn-group-div" role="group">
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right"
+                        data-bs-original-title="Amsterdamse oude kaart"
+                        onclick="goToPage('map.html')"
+                        id="goToMap" role="button" class="btn   no-borders link-light " href="map.html">
+                    <i class="bi bi-map" style="font-size: 2vw !important;"></i>
+                </button>
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Back"
+                        onclick="history.back()"
+                        id="backToHall" role="button"
+                        class="move-right-left btn btn-back-to-hall no-borders link-light  tooltip-class">
+                    <i class="bi bi-caret-left-fill" style="font-size: 3vw"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="page-info" class="showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1" aria-hidden="true">
+    <div class=" modal-dialog  modal-dialog-centered info-card-element  ">
+        <div class="modal-content bg-text-white text-light ">
+            <div class="modal-header border-0">
+                <h1 id="infoModalLabel" class="modal-title fs-5">De keuken</h1>
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
+                        class="btn-close btn-close-white float-end" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="infoModalImage" src="../images/midev/register-83.png"
+                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"
+                     alt="...">
+                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+                <p id="infoModalBody" class="card-text  fontSize-12">
+                    In de keuken van het St. Pietersgasthuis bereidden de keukenmoeders en -meiden de
+                    maaltijden voor de de arme zieken, de proveniers en de inwonende medewerkers. Voeding
+                    was een belangrijke pijler in de ziekenzorg.Daarom kreeg goed eten veel aandacht in het
+                    gasthuis. De keukenmoer regelde de inkoop
+                    van voedsel, brandstof, olie en zeep en de verkoop van melk, hooi en smeer, producten
+                    afkomstig van eigen vee en land.
+                    In het register van inkomsten en uitgaven over de jaren 1550-1559 zien we verschillende
+                    keukenmoeders en meiden voorbijkomen. De administratie van de gasthuishuismeesters
+                    schetst een beeld van de werkzaamheden in de keuken van het gasthuis, de verdiensten van
+                    de keukenmoeder en de inkoop van voedsel voor de zieken.
+                    In de oudere 15e eeuwse registers lezen we dat de keuken van het Sint Pietersgasthuis op
+                    een erf stond, waarover het gasthuis een Engelse nobel per jaar eeuwige rente betaalde .
+                    Dat de keuken van het St. Pietersgasthuis goed ingericht was om voor grote groepen te
+                    komen, wordt duidelijk uit een betaling in 1558 van iemand die de keuken huurde om de
+                    maaltijd voor een bruiloft te koken.
+                </p>
+            </div>
+            <div class="modal-footer border-0 flex-column align-items-start">
+                <ul id="infoUl" class="fontSize-8">
+                    <li>
+                        <a class=" fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="voetNote1">1</sup>GH
+                            (342), inv.nr. 62, scan 14 (KLAI03382000014)</a>
+                    </li>
+                    <li>
+                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="voetNote2">2</sup>GH
+                            (342), inv.nr. 83, scan 44 (KLAI03427000044)</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="objectModal" class=" modal info-card-element fade-scale   modal-xl" tabindex="-1" aria-hidden="true">
+    <div class=" modal-dialog   modal-dialog-centered info-card-element  ">
+        <div class="modal-content bg-text-white text-light">
+            <div class="modal-header border-0">
+                <h1 id="modalLabel" class="modal-title fs-5">De organisatie St. Pietersgasthuis</h1>
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#objectModal"
+                        class="btn-close btn-close-white float-end" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="../images/midev/register-83.png"
+                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"
+                     alt="...">
+                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+                <p id="modalBody" class="card-text  fontSize-12">
+                    In de keuken van het St. Pietersgasthuis bereidden de keukenmoeders en -meiden de
+                    maaltijden voor de de arme zieken, de proveniers en de inwonende medewerkers. Voeding
+                    was een belangrijke pijler in de ziekenzorg.
+                    Daarom kreeg goed eten veel aandacht in het gasthuis. De keukenmoer regelde de inkoop
+                    van voedsel, brandstof, olie en zeep en de verkoop van melk, hooi en smeer, producten
+                    afkomstig van eigen vee en land.
+                    In het register van inkomsten en uitgaven over de jaren 1550-1559 zien we verschillende
+                    keukenmoeders en meiden voorbijkomen. De administratie van de gasthuishuismeesters
+                    schetst een beeld van de werkzaamheden in de keuken van het gasthuis, de verdiensten van
+                    de keukenmoeder en de inkoop van voedsel voor de zieken.
+                    In de oudere 15e eeuwse registers lezen we dat de keuken van het Sint Pietersgasthuis op
+                    een erf stond, waarover het gasthuis een Engelse nobel per jaar eeuwige rente betaalde<a
+                        href="#keuken-algemeen-1"><sup>1</sup></a>.
+                    Dat de keuken van het St. Pietersgasthuis goed ingericht was om voor grote groepen te
+                    komen, wordt duidelijk uit een betaling in 1558 van iemand die de keuken huurde om de
+                    maaltijd voor een bruiloft te koken<a href="#keuken-algemeen-2"><sup>2</sup></a>.
+                </p>
+            </div>
+            <div class="modal-footer border-0 flex-column align-items-start">
+                <ul id="modalFooterUl" class="fontSize-8">
+                    <li>
+                        <a class=" fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="keuken-algemeen-1">1</sup>GH
+                            (342), inv.nr. 62, scan 14 (KLAI03382000014)</a>
+                    </li>
+                    <li>
+                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="keuken-algemeen-2">2</sup>GH
+                            (342), inv.nr. 83, scan 44 (KLAI03427000044)</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="myTooltip"></div>
+<span id="pol1Title" title="St. Pieters Gasthuys"></span>
+<span id="pol2Title" title="De Kapel"></span>
+<span id="pol3Title" title="Het Pesthuys"></span>
+<span id="map-a-tag" title="Amsterdam Old Map"></span>
+<span id="goInToBuilding" title="Ga naar Ontvangsthal"></span>
+<span id="infoOnt" title="Informatie over Ontvangsthal"></span>
+<span id="dogTitle" title="To code later"></span>
+<span id="munkTitle" title="To code later"></span>
+<span id="up-staires" title="De Regentekamer"></span>
+<span id="patient-room" title="De Ziekenkamer"></span>
+<span id="into-kitchen" title="De Keuken"></span>
+<!-- Slider Area End Here -->
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Hours & Admissions</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum</h4>
+                                <!--                                <p>2087 Sunny Glen Lane<br>Brook Park, OH 44142</p>-->
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum </h4>
+                                <!--                                <p>4342 Longview Avenue<br>Bronx, NY 10461</p>-->
+                            </div>
+                        </div>
+                        <div class="clock">
+                            <img src="../images/clock.png" alt="">
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <!--                                <p>Gallery Admission: $5*<br>Children -12: No Charge<br>* Special Exhibitions: $10+</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Corporate Sponsors</h2>
+                        <div class="sponser sisss">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/partner-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-4.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-5.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-6.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-7.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-8.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h2>Flickr Feed</h2>
+                        <div class="sponser">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/8.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/9.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/10.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/11.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <h2>Upcoming Events</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/12.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Snapshots from the Peter Cohen Gift</h4>
+                                <p>April 8, 2016 – July 3, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/13.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack Levine & Bloom: Against the Grain</h4>
+                                <p>April 12, 2016 – July 23, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/14.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Syd Solomon: Concealed & Revealed</h4>
+                                <p>April 10, 2016 – July 16, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Flickr</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright">
+                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End Here -->
+<!-- all js here -->
+<!-- jquery latest version -->
+<!--<script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
+<script src="../js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
+<!--private js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+        integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../js/midevjs/jq-costum.js"></script>
+<script src="../js/midevjs/jquery.maphilight.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
+<!-- bootstrap js -->
+<script src="../js/bs5js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!-- owl.carousel js -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- meanmenu js -->
+<script src="../js/jquery.meanmenu.js"></script>
+<!-- jquery-ui js -->
+<script src="../js/jquery-ui.min.js"></script>
+<!-- wow js -->
+<script src="../js/wow.min.js"></script>
+<!-- plugins js -->
+<script src="../js/plugins.js"></script>
+<!-- main js -->
+<script src="../js/main.js"></script>
+</body>
+</html>

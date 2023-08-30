@@ -1,0 +1,516 @@
+/* CSS by Nami */
+
+
+@media only screen and (max-width: 479px){
+
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 992px){
+
+}
+#myTooltip {
+    display: inline-block;
+    /*padding: 2px;*/
+    padding-right: 10px;
+    padding-left: 10px;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    /*border: 1px solid white;*/
+    margin: 4px;
+    /*border: 2px solid rgba(255, 255, 230, .9);*/
+    /*background-clip:padding-box;*/
+    position: absolute;
+    display: none;
+
+}
+
+#myTooltip1 {
+    position: absolute;
+    --r: 30px; /* control the radius */
+    --h: 50px; /* control the height of the tail */
+    --p: 30%; /* control the position of the tail */
+
+    padding: var(--r);
+    border-bottom: var(--h) solid #0000;
+    --m: /* adjust the angles of the 1st conic-gradient to control the shape */ conic-gradient(from 30deg at var(--p) 100%, #0000, #000 1deg 30deg, #0000 31deg) 0 100%/100% calc(100% - var(--r)) no-repeat,
+    conic-gradient(at calc(var(--r) / 2) calc(var(--r) / 2), #000 270deg, #0000 0) 0 0/calc(100% - var(--r) / 2) calc(100% - var(--r) / 2) padding-box,
+    radial-gradient(50% 50%, #000 98%, #0000) 0 0/var(--r) var(--r) space padding-box;
+    -webkit-mask: var(--m);
+    mask: var(--m);
+
+
+    margin: 50px auto;
+    max-width: 350px;
+    font-size: 20px;
+    background: linear-gradient(135deg, #FE6D00, #1384C5) border-box;
+    color: #fff;
+    display: inline-block;
+}
+
+#myTooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+/*.area-css {*/
+/*    fill: white;*/
+/*    fill-opacity: 0.1;*/
+
+/*}*/
+
+/*::-webkit-scrollbar {*/
+/*    background: red;*/
+/*}*/
+.img-pieters {
+    background-image: url("/images/midev/Ontvangsthal-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    /*background-size: 100% 100%;*/
+    /*height: 900px;*/
+    /*width: 100%;*/
+}
+
+img-background {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container1 {
+    /*border: 1px solid #DDDDDD;*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.background-pieters {
+    background-image: url('/images/Ontvangsthal-01-2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+}
+
+.background-map {
+    background-image: url('/images/Plattegrond-013.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+}
+
+.poly-css {
+    fill: white;
+    fill-opacity: 0.3;
+    stroke: white;
+    stroke-opacity: 0.5;
+    stroke-width: 2;
+    cursor: pointer;
+    /*-webkit-transition: fill-opacity 3s; !* Safari *!*/
+    /*transition: fill-opacity 3s;*/
+    transition: all 3s ease;
+}
+
+.poly-css:hover {
+    fill-opacity: 0.1;
+    stroke-opacity: 0.9;
+    stroke-width: 6;
+}
+
+.poly-pieters-css:hover {
+    fill-opacity: 0.1;
+    stroke-opacity: 0.9;
+    stroke-width: 6;
+}
+
+.poly-pieters-css {
+    fill: white;
+    fill-opacity: 0.3;
+    stroke: white;
+    stroke-opacity: 0.5;
+    stroke-width: 2;
+    cursor: pointer;
+    /*-webkit-transition: fill-opacity 3s; !* Safari *!*/
+    /*transition: fill-opacity 3s;*/
+    transition: all 3s ease;
+}
+
+.tag-map {
+    z-index: 1000;
+    border: 2px solid rgba(255, 255, 230, .9);
+    border-radius: 10px;
+    left: 15%;
+    right: 20%;
+    background: rgba(0, 0, 0, .5);
+    float: left;
+    position: absolute;
+}
+
+/*.modal-content {*/
+/*    background: rgba(0, 0, 0, .5) !important;*/
+/*    padding: 5px !important;*/
+/*    color: #FFFFFF !important;*/
+/*}*/
+
+/*.modal.fade .modal-dialog {*/
+/*    transition: transform 3s ease-out;*/
+/*}*/
+
+.tag {
+    width: 50%;
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 25%;
+    right: 20%;
+    top: 10px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .5);
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    border: 2px solid rgba(255, 255, 230, .9);
+    border-radius: 5px;
+}
+
+.tag-pieters {
+    width: 40%;
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 50%;
+    right: 10%;
+    top: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .5);
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    /*font-size: 15px;*/
+    border: 2px solid rgba(255, 255, 230, .9);
+    border-radius: 10px;
+}
+.bg-text-white{
+    background: rgba(0, 0, 0, .7) !important;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-pieters {
+    background: rgba(0, 0, 0, .5) !important;
+}
+
+.ss {
+    background: url(/images/Plattegrond-013.jpg) no-repeat;
+    /*background-size: cover;*/
+    background-position: center;
+}
+
+.tag1 {
+    width: auto;
+    height: auto;
+    display: block;
+    float: left;
+    position: absolute;
+    /*left: 15%;*/
+    /*right: 20%;*/
+    /*top: 10px;*/
+    /*z-index: 1000;*/
+    /*background: transparent;*/
+    background: rgba(0, 0, 0, .5);
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1vm;
+    /*border: 2px solid rgba(255, 255, 230, .9);*/
+    /*border-radius: 10px;*/
+}
+
+.button-green {
+    background-color: transparent;
+
+}
+
+/*.map {*/
+/*    background-image: url( './images/Keuken-01.svg' );*/
+/*}*/
+.poly-css {
+    fill: white;
+    fill-opacity: 0.3;
+    stroke: white;
+    stroke-opacity: 0.5;
+    stroke-width: 2;
+    cursor: pointer;
+    /*-webkit-transition: fill-opacity 3s; !* Safari *!*/
+    /*transition: fill-opacity 3s;*/
+    transition: all 3s ease;
+}
+
+.poly-css:hover {
+    fill-opacity: 0.1;
+    stroke-opacity: 0.9;
+    stroke-width: 6;
+}
+.polygon {
+    /*z-index: 0;*/
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*fill: white;*/
+    /*fill-opacity: 0.3;*/
+    /*stroke: white;*/
+    /*stroke-opacity: 0.5;*/
+    /*stroke-width: 2;*/
+    /*cursor: pointer;*/
+    /*transition: all 3s ease;*/
+    animation: fadein 5s ease-in alternate infinite;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+polygon{
+    fill: white;
+    fill-opacity: 0.4;
+    stroke: white;
+    stroke-opacity: 0.6;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: all 5s ease;
+    -webkit-transition: all 5s ease;
+}
+polygon:hover {
+    fill-opacity: 0;
+    stroke-opacity: 0.9;
+    stroke-width: 2;
+    transition: all 5s ease;
+}
+.svg1 {
+    width: 100%;
+    height: auto;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.btn-building {
+    /*position: absolute;*/
+    /*top: 9%;*/
+    /*left: 2%;*/
+    color: white;
+    /*font-size: 16px;*/
+    border-radius: 5px;
+    text-align: center;
+    /*z-index: 1;*/
+}
+.affix {
+    top: 30px;
+    z-index: 9999 !important;
+}
+
+.btn-group-div{
+    /*position: -webkit-sticky; !* Safari *!*/
+    /*position: sticky;*/
+    top: 5%;
+    left: 2%;
+}
+.btn-map {
+    /*top: 5%;*/
+    /*left: 2%;*/
+    /*position: absolute;*/
+    /*color: white;*/
+    /*opacity: 1.0;*/
+}
+
+.btn-up-staires {
+    top: 52%;
+    left: 38%;
+    position: absolute;
+    opacity: 1.0;
+
+}
+
+.btn-into-kitchen {
+    top: 35%;
+    left: 69%;
+    position: absolute;
+    opacity: 1.0;
+
+}
+
+.btn-patient-room {
+    top: 35%;
+    left: 6%;
+    position: absolute;
+    font-size: 60px;
+    color: white;
+    opacity: 1.0;
+
+}
+.fade-scale {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.fade-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+.btn-back-to-hall {
+    /*top: 13%;*/
+    /*left: 2%;*/
+    /*position: absolute;*/
+    /*font-size: 60px;*/
+    color: white;
+    opacity: 1.0;
+
+}
+
+.no-borders {
+    border: none !important;
+    outline: none !important;
+}
+
+.btn-map:hover {
+    color: white;
+    opacity: 0.5;
+}
+
+.go-to-building {
+    float: left;
+    position: absolute;
+    left: 80%;
+    top: 60%;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.go-to-ontvangasthal {
+    float: left;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.back-to-ontvangasthal {
+    float: left;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*.tooltip > .tooltip-inner {*/
+/*    background-color: transparent !important;*/
+/*    !*--bs-tooltip-bg: var(--bs-success);*!*/
+/*}*/
+/*.tooltip >.tooltip-inner {*/
+/*    background-color: red;*/
+/*    color: #fff;*/
+/*    border: 2px solid #efefef;*/
+/*    font-weight: 300;*/
+/*    font-size: 14px;*/
+/*    border-radius: 10px;*/
+/*    padding: 15px 25px;*/
+/*    max-width: 240px;*/
+/*}*/
+
+.tooltip .arrow:before {
+    top: -3px;
+    left: -12px;
+    border-width: 0 12px 12px;
+    z-index: -1;
+    border-color: white;
+}
+
+
+.tooltip {
+    /*--bs-tooltip-bg:  rgba(0, 0, 0, 0.5); !important;*/
+    /*--bs-tooltip-bg:  red !important;*/
+    --bs-tooltip-bg: rgba(0, 0, 0, 0.5) !important;
+    --bs-tooltip-font-size: 1rem !important;
+    /*font-family: 'Unlock', cursive!important;*/
+    font-family: 'Unlock', cursive !important;
+}
+
+/*.tooltip-inner  {*/
+/*    background-color: blue !important;*/
+/*}*/
+
+
+/*.custom-tooltip {*/
+/*    --bs-tooltip-bg: var(--bd-violet-bg);*/
+/*    --bs-tooltip-color: var(--bs-white);*/
+/*}*/
+.icon-white {
+    color: white;
+    font-size: 1vw;
+}
+
+.hide-on-load {
+    display: none !important;
+}
+
+/*css to move up and down*/
+
+.move-up-down {
+    animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.move-right-left {
+    animation: MoveRightLeft 2s linear infinite;
+}
+
+@keyframes MoveRightLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}

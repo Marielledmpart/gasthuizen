@@ -1,0 +1,96 @@
+<!--        <map name="workmap" id="workmap">-->
+            <!--            <area shape="circle" coords="922,318,1">-->
+            <!--            <area shape="circle" coords="927,312,1">-->
+            <!--            <area shape="circle" coords="940,332,1">-->
+            <!--            <area shape="circle" coords="944,341,1">-->
+            <!--            <area shape="circle" coords="949,352,1">-->
+            <!--            <area shape="circle" coords="952,364,1">-->
+            <!--            <area shape="circle" coords="948,372,1">-->
+            <!--            <area shape="circle" coords="929,380,1">-->
+            <!--            <area shape="circle" coords="958,404,1">-->
+            <!--            <area shape="circle" coords="955,367,1"> &lt;!&ndash; this might be joint coords &ndash;&gt;-->
+            <!--            <area shape="circle" coords="963,353,1">-->
+            <!--            <area shape="circle" coords="964,345,1">-->
+            <!--            <area shape="circle" coords="971,350,1">-->
+            <!--            <area shape="circle" coords="1017,383,1">-->
+            <!--            <area shape="circle" coords="1032,401,1">-->
+            <!--            <area shape="circle" coords="959,430,1">-->
+            <!--            <area shape="circle" coords="956,451,1">-->
+            <!--            <area shape="circle" coords="856,372,1">-->
+            <!--            <area shape="circle" coords="857,367,1">-->
+            <!--            <area shape="circle" coords="856,357,1">-->
+            <!--            <area shape="circle" coords="864,340,1">-->
+            <!--            <area shape="circle" coords="868,342,1">-->
+            <!--            <area shape="poly" coords="922,318,927,312,940,332,944,341,949,352,952,364,948,372,929,380,958,404,955,367,963,353,964,345,971,350,1017,383,1032,401,959,430,956,451,856,372,857,367,856,357,864,340,868,342">-->
+<!--                        <area shape="circle" coords="823,413,1"> &lt;!&ndash; 1 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="828,406,1"> &lt;!&ndash; 2 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="830,395,1"> &lt;!&ndash; 3 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="835,400,1"> &lt;!&ndash; 4 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="845,397,1"> &lt;!&ndash; 5 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="844,375,1"> &lt;!&ndash; 6 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="845,369,1"> &lt;!&ndash; 7 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="850,374,1"> &lt;!&ndash; 8 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="854,393,1"> &lt;!&ndash; 9 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="869,388,1"> &lt;!&ndash; 10 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="879,403,1"> &lt;!&ndash; 11 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="880,414,1"> &lt;!&ndash; 12 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="864,423,1"> &lt;!&ndash; 13 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="858,420,1"> &lt;!&ndash; 14 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="855,434,1"> &lt;!&ndash; 15 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="851,429,1"> &lt;!&ndash; 16 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="845,419,1"> &lt;!&ndash; 17 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="836,421,1"> &lt;!&ndash; 18 &ndash;&gt;-->
+<!--                        <area shape="circle" coords="824,426,1"> &lt;!&ndash; 19 &ndash;&gt;-->
+<!--                                    <area shape="poly" coords="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426">-->
+<!--            <area shape="circle" coords="667,643,1"> &lt;!&ndash; 1 &ndash;&gt;-->
+<!--            <area shape="circle" coords="670,620,1"> &lt;!&ndash; 2 &ndash;&gt;-->
+<!--            <area shape="circle" coords="763,589,1"> &lt;!&ndash; 3 &ndash;&gt;-->
+<!--            <area shape="circle" coords="753,563,1"> &lt;!&ndash; 4 &ndash;&gt;-->
+<!--            <area shape="circle" coords="696,498,1"> &lt;!&ndash; 5 &ndash;&gt;-->
+<!--            <area shape="circle" coords="675,508,1"> &lt;!&ndash; 6 &ndash;&gt;-->
+<!--            <area shape="circle" coords="589,535,1"> &lt;!&ndash; 7 &ndash;&gt;-->
+<!--            <area shape="circle" coords="588,552,1"> &lt;!&ndash; 8 &ndash;&gt;-->
+<!--            <area shape="circle" coords="579,556,1"> &lt;!&ndash; 9 &ndash;&gt;-->
+<!--            <area shape="circle" coords="657,641,1"> &lt;!&ndash; 10 &ndash;&gt;-->
+<!--            <area shape="poly" coords="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641">-->
+            <!--            <area id="area1"-->
+            <!--                    onmouseover="myFunc(this)"-->
+            <!--                    onmouseout="myFuncHide(this)" title="St. Pieters Gasthuys"-->
+            <!--                    class="tooltip-class area-css"-->
+            <!--                    shape="poly"-->
+            <!--                    coords="872,315,897,305,883,278,874,263,811,289,801,300,802,310,902,376,899,352,967,331,955,318,910,291,899,307,901,333,885,322"-->
+            <!--                    alt="Pieters Gasthuys" href="pieters.html">-->
+            <!--            <area onmouseover="myFunc(this)" onmouseout="myFuncHide(this)" alt="" class="tooltip-class"-->
+            <!--                  title="De Kapel" href=""-->
+            <!--                  coords="803,354,813,348,831,340,827,332,816,323,805,326,798,305,794,326,783,329,776,340,776,350,790,345"-->
+            <!--                  shape="poly">-->
+            <!--            <area data-toggle="tooltip" alt="" class="tooltip-class" title="Het Pesthuys" onmouseover="myFunc(this)"-->
+            <!--                  onmouseout="myFuncHide(this)" id="area-tooltip"-->
+            <!--                  href="" coords="720,475,709,457,652,404,638,412,558,433,558,458,619,515,627,516,628,498"-->
+            <!--                  shape="poly">-->
+
+
+<!--        </map>-->
+                    <!--                    <svg viewBox="0 0 1519 909" width="100%" height="100%"-->
+                    <!--                         style="position:absolute;top:0px;left:0px;">-->
+                    <!--                        <polygon transform="scale(0.6), translate(17,18)" id="pol1" class="tooltip-class poly-css"-->
+                    <!--                                 onclick="goToPage('../pages/pieters.html')"-->
+                    <!--                                 onmouseover="myFunc(this)"-->
+                    <!--                                 onmouseout="myFuncHide(this)"-->
+                    <!--                                 points="872,315,897,305,883,278,874,263,811,289,801,300,802,310,902,376,899,352,967,331,955,318,910,291,899,307,901,333,885,322"-->
+                    <!--                        />-->
+                    <!--                        <polygon id="pol2"-->
+                    <!--                                 class="tooltip-class poly-css"-->
+                    <!--                                 onclick="goToPage('../pages/kapel.html')"-->
+                    <!--                                 onmouseover="myFunc(this)"-->
+                    <!--                                 onmouseout="myFuncHide(this)"-->
+                    <!--                                 points="803,354,813,348,831,340,827,332,816,323,805,326,798,305,794,326,783,329,776,340,776,350,790,345"-->
+                    <!--                        />-->
+                    <!--                        <polygon id="pol3"-->
+<!--                                                     data-bs-toggle="tooltip" data-bs-placement="top"  data-bs-title="Het Pesthuys"-->
+<!--                                                     class="tooltip-class poly-css"-->
+                    <!--                                 onclick="goToPage('../pages/pesthuis.html')"-->
+
+                    <!--                                 points="720,475,709,457,652,404,638,412,558,433,558,458,619,515,627,516,628,498"-->
+                    <!--                        />-->
+                    <!--                    </svg>-->

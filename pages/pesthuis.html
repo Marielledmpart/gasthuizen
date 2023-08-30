@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Museum - Museum Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- all css here -->
+    <!--    private css-->
+    <link rel="stylesheet" href="../css/midevcss/style-private.css">
+    <!-- bootstrap v5.3.1  css -->
+    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">
+    <!-- bootstrap v3.3.6 css -->
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- flat-icon css -->
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- jquery-ui.min css -->
+<!--    <link rel="stylesheet" href="../css/jquery-ui.min.css">-->
+    <!-- jquery-ui.min css 1.13 -->
+    <link rel="stylesheet" href="../css/jquery-1-13/jquery-ui-1-13.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="../css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!-- Header Area Start Here -->
+<header>
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="../index.html"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <nav>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="active"><a href="../index11.html">Home</a></li>
+                                <li><a href="../about1.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact1.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Area End Here -->
+<!-- Slider Area Start Here -->
+<div class="slider-area ">
+    <div>
+        <img src="../images/midev/svg/pesthuis-01.svg" class="img-fluid">
+        <div id="pesthuis-container" class="container ">
+            <!--            go to map button start-->
+            <div  class="btn-group-vertical position-fixed  link-light btn-group-div" role="group">
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right"
+                        data-bs-original-title="Amsterdamse oude kaart"
+                        onclick="goToPage('map.html')"
+                        id="goToMap" role="button" class="btn   no-borders link-light " href="map.html">
+                    <i class="bi bi-map" style="font-size: 2vw !important;"></i>
+                </button>
+
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Back"
+                        onclick="history.back()"
+                        id="backToHall" role="button"
+                        class="move-right-left btn btn-back-to-hall no-borders link-light  tooltip-class">
+                    <i class="bi bi-caret-left-fill" style="font-size: 3vw"></i>
+                </button>
+            </div>
+            <div id="card-rows-info" class="row hide-on-load ontvangsthal"
+                 style="display: block;float: left;position: absolute; left: 14%;top: 1%">
+                <div class="d-flex justify-content-center col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <div id="cardFirst" class="card my-0 mx-0  wow zoomIn w-75" data-wow-delay="0.5s"
+                         style="visibility: visible; animation-delay: 3s; animation-name: zoomIn;
+                         background: rgba(0, 0, 0, .5) !important;color: white; !important;">
+                        <div class="card-body m-0 p-0">
+                            <h5 class="card-title ps-3">Het Pesthuis</h5>
+                            <p class="card-text px-3 mb-1">
+                                Aan het eind van de jaren ’50 van de 16e eeuw krijgt Amsterdam te maken met een
+                                pestepidemie. In 1557 worden regelmatig vermeende pestlijders uit de pestilentie en het
+                                mannen huis naar Haarlem gestuurd
+                            </p>
+                            <p id="collapseExample" class="collapse card-text px-3 mb-1">
+                                voor een schouw en druppelen de giften van mensen wiens familieleden in het gasthuis
+                                gestorven zijn aan de pest mondjesmaat binnen . Aanvankelijk lijkt de zaak nog onder
+                                controle en verzoekt de vroedschap van Amsterdam in oktober 1557 om de kapel van het St.
+                                Pietersgasthuis en later het gehele gasthuis als pesthuis in te richten . Maar in 1558
+                                breekt de pestepidemie zo hard door dat de vroedschap samen met de gasthuismeesters van
+                                het St. Pietersgasthuis een nieuw pesthuis inricht op de zolder van het Bushuis, zodat
+                                arme mensen geholpen worden en niet op straat hoeven te sterven.
+                            </p>
+                            <button id="btn-collapse" class="btn  pull-right button-green no-borders" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                <i id="icon-collapse" class="bi bi-chevron-down icon-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card-rows" class=" p-0 m-0 row position-absolute wow zoomIn " data-wow-delay="0.5s"
+                 style="top:2% !important; left: 15% !important;visibility: visible; animation-delay: 3s; animation-name: zoomIn;">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ">
+                    <div class="card fade-in-right p-0 card-pieters ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="col-1 text-center ">
+                                    <a id="icon-previous" class="hide-on-load" role="button"><i
+                                            class="bi bi-chevron-double-left icon-white"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="col-1 pull-right text-center ">
+                                    <a id="icon-next" role="button"><i
+                                            class="bi bi-chevron-double-right icon-white"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 ">
+
+                            <div class="col-md-2">
+                                <img id="img-card" class="pesthuis bushuis img-fluid rounded-start"
+                                     src="../images/midev/pesthuis/bushuis.png" alt="Het Bushuis">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-light">
+                                    <h5 id="card-title" class="card-title ">Het Bushuis</h5>
+                                    <p id="text-card" class="card-text lh-base font-monospace "
+                                       style="font-size: 12px !important;">Het Bushuis is gevestigd aan de Vesten achter
+                                        het Paulusbroedersklooster. Het gebouw was bedoeld als bewaarplaats van het
+                                        geschut van de stad en om in tijden van nood ten behoeve van de stad ingezet te
+                                        worden. Het huidige adres van het Bushuis of Oost-Indisch huis is
+                                        Kloveniersburgwal 48 . Het gebouw is, heel toepasselijk, tegenwoordig in gebruik
+                                        door o.a. de Faculteit geschiedenis van de Universiteit van Amsterdam. Op de
+                                        korenzolders, boven het wapenmagazijn, werd in 1558 en 1559 het Nieuwe Pesthuis
+                                        an het St. Pietersgasthuis ingericht.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--                        <div id="chevron-right" class="card-footer">-->
+                        <!--                            <button  class="btn pull-right button-green no-borders" type="button" data-toggle="collapse"-->
+                        <!--                                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+                        <!--                                <i class="bi bi-chevron-double-right icon-white"></i>-->
+                        <!--                            </button>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myTooltip"></div>
+<span id="pol1Title" title="St. Pieters Gasthuys"></span>
+<span id="pol2Title" title="De Kapel"></span>
+<span id="pol3Title" title="Het Pesthuys"></span>
+<span id="map-a-tag" title="Amsterdam Old Map"></span>
+<span id="goInToBuilding" title="Ga naar Ontvangsthal"></span>
+<span id="infoOnt" title="Informatie over Ontvangsthal"></span>
+<span id="dogTitle" title="To code later"></span>
+<span id="munkTitle" title="To code later"></span>
+<span id="up-staires" title="De Regentekamer"></span>
+<span id="patient-room" title="De Ziekenkamer"></span>
+<span id="into-kitchen" title="De Keuken"></span>
+<!-- Slider Area End Here -->
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Hours & Admissions</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum</h4>
+                                <!--                                <p>2087 Sunny Glen Lane<br>Brook Park, OH 44142</p>-->
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum </h4>
+                                <!--                                <p>4342 Longview Avenue<br>Bronx, NY 10461</p>-->
+                            </div>
+                        </div>
+                        <div class="clock">
+                            <img src="../images/clock.png" alt="">
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <!--                                <p>Gallery Admission: $5*<br>Children -12: No Charge<br>* Special Exhibitions: $10+</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Corporate Sponsors</h2>
+                        <div class="sponser sisss">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/partner-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-4.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-5.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-6.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-7.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-8.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h2>Flickr Feed</h2>
+                        <div class="sponser">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/8.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/9.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/10.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/11.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <h2>Upcoming Events</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/12.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Snapshots from the Peter Cohen Gift</h4>
+                                <p>April 8, 2016 – July 3, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/13.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack Levine & Bloom: Against the Grain</h4>
+                                <p>April 12, 2016 – July 23, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/14.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Syd Solomon: Concealed & Revealed</h4>
+                                <p>April 10, 2016 – July 16, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Flickr</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright">
+                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End Here -->
+<!-- all js here -->
+<!-- jquery latest version -->
+<!--<script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
+<script src="../js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
+<!--private js-->
+<script src="../js/midevjs/jq-costum.js"></script>
+<!--<script src="../js/midevjs/jquery.maphilight.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
+<!-- bootstrap js -->
+<script src="../js/bs5js/bootstrap.min.js"></script>
+<!-- bootstrap js -->
+<script src="../js/bs5js/bootstrap.min.js"></script>
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<!-- owl.carousel js -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- meanmenu js -->
+<script src="../js/jquery.meanmenu.js"></script>
+<!-- jquery-ui js -->
+<script src="../js/jquery-ui.min.js"></script>
+<!-- jquery-ui js 1.13 -->
+<script src="../js/jquery-ui-js-1-13/jquery-ui-1-13.js"></script>
+<!-- wow js -->
+<script src="../js/wow.min.js"></script>
+<!-- plugins js -->
+<script src="../js/plugins.js"></script>
+<!-- main js -->
+<script src="../js/main.js"></script>
+</body>
+</html>

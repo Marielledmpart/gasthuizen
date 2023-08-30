@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Museum - Museum Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- all css here -->
+    <!--    private css-->
+    <link rel="stylesheet" href="../css/midevcss/style-private.css">
+    <!-- bootstrap v5.3.1  css -->
+    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">
+    <!-- bootstrap v3.3.6 css -->
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- flat-icon css -->
+    <link rel="stylesheet" href="../css/flaticon.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="../css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- modernizr css -->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!-- Header Area Start Here -->
+<header>
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-area">
+                        <a href="../index.html"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <nav>
+                        <div class="main-menu">
+                            <ul>
+                                <li class="active"><a href="../index11.html">Home</a></li>
+                                <li><a href="../about1.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact1.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul>
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <!--                                <li><a href="../prices.html">Opening Times & Prices</a></li>-->
+                                <!--                                <li><a>Pages <i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                                <!--                                    <ul>-->
+                                <!--                                        <li><a href="../activities.html">Activities</a></li>-->
+                                <!--                                        <li><a href="../events.html">Events</a></li>-->
+                                <!--                                        <li><a href="../single-event.html">Single Event</a></li>-->
+                                <!--                                    </ul>-->
+                                <!--                                </li>-->
+                                <!--                                <li><a href="../membership.html">Membership</a></li>-->
+                                <li><a href="../contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header Area End Here -->
+<!-- Slider Area Start Here -->
+<div class="slider-area ">
+    <div>
+        <img src="../images/midev/svg/Kapel-01.svg" class="img-fluid">
+        <div id="kapel-container" class="container ">
+            <!--            go to map button start-->
+            <div  class="btn-group-vertical position-fixed  link-light btn-group-div" role="group">
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right"
+                        data-bs-original-title="Amsterdamse oude kaart"
+                        onclick="goToPage('map.html')"
+                        id="goToMap" role="button" class="btn   no-borders link-light " href="map.html">
+                    <i class="bi bi-map" style="font-size: 2vw !important;"></i>
+                </button>
+                <button
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Back"
+                        onclick="history.back()"
+                        id="backToHall" role="button"
+                        class="move-right-left btn btn-back-to-hall no-borders link-light  tooltip-class">
+                    <i class="bi bi-caret-left-fill" style="font-size: 3vw"></i>
+                </button>
+            </div>
+            <div id="card-rows-info" class="row hide-on-load ontvangsthal"
+                 style="display: block;float: left;position: absolute; left: 14%;top: 1%">
+                <div class="d-flex justify-content-center col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <div id="cardFirst" class="card my-0 mx-0  wow zoomIn w-75" data-wow-delay="0.5s"
+                         style="visibility: visible; animation-delay: 3s; animation-name: zoomIn;
+                         background: rgba(0, 0, 0, .5) !important;color: white; !important;">
+                        <div class="card-body m-0 p-0">
+                            <h5 class="card-title ps-3">De Kapel</h5>
+                            <p class="card-text px-3 mb-1">
+                                In 1382 werd de St. Pieterskapel in de wijk Gansoord opgericht door het Sint
+                                Pietersgilde van de viskopers en de vleeshouwers. Iets meer dan een decennium later werd
+                                de kapel uitgebreid met het gasthuis en al
+                            </p>
+                            <p id="collapseExample" class="collapse card-text px-3 mb-1">
+                                snel overvleugelde het Sint Pietersgasthuis de kapel, waardoor de Sint Pieterskapel in
+                                de 15e eeuw min of meer devalueerde tot gasthuiskapel. Het St. Pietersgilde was toen al
+                                min of meer uit beeld verdwenen.
+                                Kort na de fusie van het St. Pietersgasthuis met het Oude gasthuis krijgen de kapel en
+                                het gasthuis van St. Pieter in 1492 het recht om missen te laten lezen in de kapel door
+                                hun eigen priester en om in het gasthuis overleden zieken en vreemdelingen op een eigen
+                                kerkhof te begraven . Ook mag het heilig sacrament en het heilig oliesel door de
+                                priester van het gasthuis toegediend worden aan de gasthuiszieken en het inwonende
+                                personeel en aan niemand anders. De gasthuispriester wordt door de pastoor van de Oude
+                                Kerk benoemd. Het gasthuis, de zieken, vreemdelingen en de dienaren die er woonden
+                                bleven onder het ambt van de Oude Kerk vallen. Daarvoor betaalden de gasthuismeesters
+                                elk jaar een gouden Engelse Henricus nobel.
+                            </p>
+                            <button id="btn-collapse" class="btn  pull-right button-green no-borders" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                <i id="icon-collapse" class="bi bi-chevron-down icon-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="card-rows" class=" p-0 m-0 row position-absolute wow zoomIn " data-wow-delay="0.5s"
+                 style="top:2% !important; left: 15% !important;visibility: visible; animation-delay: 3s; animation-name: zoomIn;">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ">
+                    <div class="card fade-in-right p-0 card-pieters ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="col-1 text-center ">
+                                    <a id="icon-previous" class="hide-on-load" role="button"><i
+                                            class="bi bi-chevron-double-left icon-white"></i></a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="col-1 pull-right text-center ">
+                                    <a id="icon-next" role="button"><i
+                                            class="bi bi-chevron-double-right icon-white"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 ">
+
+                            <div class="col-md-2">
+                                <img id="img-card" class="kapel priester img-fluid rounded-start"
+                                     src="../images/midev/kapel/priester.png" alt="Priester">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-light">
+                                    <h5 id="card-title" class="card-title ">Een priester met hart voor de zieken</h5>
+                                    <p id="text-card" class="card-text lh-base font-monospace "
+                                       style="font-size: 12px !important;">Op 1 januari 1550 wordt meester Willem
+                                        Kinnesz, de pastoor van de nieuwe Kerk, door de gasthuismeesters aangenomen om
+                                        voor de zieken te preken in het gasthuis. Dat Willem werkelijk hart had voor de
+                                        zieken en inzag dat zij meer nodig hadden dan geestelijke zorg alleen blijkt uit
+                                        de administratie van de jaren 1551 tot en met 1554. Willem geeft in die jaren
+                                        een steeds toenemend bedrag van zijn loon terug aan de gasthuismeesters als
+                                        geschenk voor de armen en om hen maaltijden voor te zetten. Daarna eindigt in de
+                                        gasthuisadministratie de notatie van loonkosten van deze priester. Wel komen we
+                                        Willem nog een keer tegen in 1556 wanneer hij een testament overdraagt aan de
+                                        gasthuismeesters van een persoon die niet genoemd wil worden . In een ander deel
+                                        van de gasthuisadministratie lezen we dat meester Willem Kinnesz een lijfrente
+                                        van twaalf Karolusgulden per jaar het St. Pietersgasthuis had. De uitkering van
+                                        deze rente stopt als Willem op 17 oktober 1571 sterft.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--                        <div id="chevron-right" class="card-footer">-->
+                        <!--                            <button  class="btn pull-right button-green no-borders" type="button" data-toggle="collapse"-->
+                        <!--                                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+                        <!--                                <i class="bi bi-chevron-double-right icon-white"></i>-->
+                        <!--                            </button>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myTooltip"></div>
+<span id="pol1Title" title="St. Pieters Gasthuys"></span>
+<span id="pol2Title" title="De Kapel"></span>
+<span id="pol3Title" title="Het Pesthuys"></span>
+<span id="map-a-tag" title="Amsterdam Old Map"></span>
+<span id="goInToBuilding" title="Ga naar Ontvangsthal"></span>
+<span id="infoOnt" title="Informatie over Ontvangsthal"></span>
+<span id="dogTitle" title="To code later"></span>
+<span id="munkTitle" title="To code later"></span>
+<span id="up-staires" title="De Regentekamer"></span>
+<span id="patient-room" title="De Ziekenkamer"></span>
+<span id="into-kitchen" title="De Keuken"></span>
+<!-- Slider Area End Here -->
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Hours & Admissions</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum</h4>
+                                <!--                                <p>2087 Sunny Glen Lane<br>Brook Park, OH 44142</p>-->
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Museum </h4>
+                                <!--                                <p>4342 Longview Avenue<br>Bronx, NY 10461</p>-->
+                            </div>
+                        </div>
+                        <div class="clock">
+                            <img src="../images/clock.png" alt="">
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <!--                                <p>Gallery Admission: $5*<br>Children -12: No Charge<br>* Special Exhibitions: $10+</p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="widget">
+                        <h2>Corporate Sponsors</h2>
+                        <div class="sponser sisss">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/partner-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-4.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-5.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-6.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-7.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/partner-8.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h2>Flickr Feed</h2>
+                        <div class="sponser">
+                            <ul>
+                                <li><a href="#"><img src="../images/sponser/8.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/9.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/10.png" alt=""></a></li>
+                                <li><a href="#"><img src="../images/sponser/11.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <h2>Upcoming Events</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/12.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Snapshots from the Peter Cohen Gift</h4>
+                                <p>April 8, 2016 – July 3, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/13.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Jack Levine & Bloom: Against the Grain</h4>
+                                <p>April 12, 2016 – July 23, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img src="../images/sponser/14.png" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Syd Solomon: Concealed & Revealed</h4>
+                                <p>April 10, 2016 – July 16, 2016</p>
+                                <div class="read-more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Flickr</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright">
+                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End Here -->
+<!-- all js here -->
+<!-- jquery latest version -->
+<script src="../js/vendor/jquery-1.12.0.min.js"></script>
+<!--private js-->
+<script src="../js/midevjs/jq-costum.js"></script>
+<script src="../js/midevjs/jquery.maphilight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="../js/bs5js/bootstrap.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!-- owl.carousel js -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- meanmenu js -->
+<script src="../js/jquery.meanmenu.js"></script>
+<!-- jquery-ui js -->
+<script src="../js/jquery-ui.min.js"></script>
+<!-- wow js -->
+<script src="../js/wow.min.js"></script>
+<!-- plugins js -->
+<script src="../js/plugins.js"></script>
+<!-- main js -->
+<script src="../js/main.js"></script>
+</body>
+</html>
