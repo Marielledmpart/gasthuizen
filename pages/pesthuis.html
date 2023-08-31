@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/midevcss/style-private.css">
     <link rel="stylesheet" href="../sass/css/custom.css">
     <!-- bootstrap v5.3.1  css -->
-<!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
+    <!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
     <!-- bootstrap v3.3.6 css -->
     <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <!-- flat-icon css -->
@@ -24,7 +24,7 @@
     <!-- animate css -->
     <link rel="stylesheet" href="../css/animate.css">
     <!-- jquery-ui.min css -->
-<!--    <link rel="stylesheet" href="../css/jquery-ui.min.css">-->
+    <!--    <link rel="stylesheet" href="../css/jquery-ui.min.css">-->
     <!-- jquery-ui.min css 1.13 -->
     <link rel="stylesheet" href="../css/jquery-1-13/jquery-ui-1-13.css">
     <!-- meanmenu css -->
@@ -107,7 +107,18 @@
 <!--TODO: create polygons and modals for it-->
 <div class="slider-area ">
     <div>
-        <img src="../images/midev/svg/pesthuis-01.svg" class="img-fluid">
+        <img src="../images/midev/svg/pesthuis-01.svg" class="img-fluid highLightMap" usemap="#workmap">
+        <map id="workmap" name="workmap">
+
+        </map>
+        <svg class="ontvangsthal" height="100" width="100"
+             style="position: absolute; left:50%;top: 43%">
+            <circle cx="50" cy="50" r="40" stroke="white" stroke-opacity="1" stroke-width="3" fill="white"
+                    opacity="0.6"/>
+        </svg>
+        <div id="polDiv" class=" svg1">
+
+        </div>
         <button
                 type="button"
                 id="btn-info"
@@ -119,7 +130,7 @@
         </button>
         <div id="pesthuis-container" class="container ">
             <!--            go to map button start-->
-            <div  class="btn-group-vertical position-fixed  link-light btn-group-div" role="group">
+            <div class="btn-group-vertical position-fixed  link-light btn-group-div" role="group">
                 <button
                         data-bs-toggle="tooltip" data-bs-placement="right"
                         data-bs-original-title="Amsterdamse oude kaart"
@@ -139,7 +150,8 @@
         </div>
     </div>
 </div>
-<div id="page-info" class=" showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1" aria-hidden="true">
+<div id="page-info" class=" showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1"
+     aria-hidden="true">
     <div class=" modal-dialog  modal-dialog-centered info-card-element  ">
         <div class="modal-content bg-text-white text-light ">
             <div class="modal-header border-0">
@@ -430,8 +442,10 @@
 <script src="../js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
 <!--private js-->
 <script src="../js/midevjs/jq-costum.js"></script>
-<!--<script src="../js/midevjs/jquery.maphilight.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../js/midevjs/jquery.maphilight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+        integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
 <!-- bootstrap js -->
 <script src="../js/bs5js/bootstrap.min.js"></script>

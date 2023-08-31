@@ -465,20 +465,20 @@ $(document).ready(function () {
     });
 
 
-    $('.highLightMap').maphilight({
-        fill: true,
-        fillColor: 'FFFFFF',
-        fillOpacity: 0.1,
-        stroke: true,
-        strokeColor: 'FFFFFF',
-        alwaysOn: true,
-        strokeWidth: 2,
-        fade: true,
-        strokeOpacity: 0.5,
-        shadow: true,
-        shadowColor: 'FFFFFF',
-        shadowPosition: 'inside'
-    });
+    // $('.highLightMap').maphilight({
+    //     fill: true,
+    //     fillColor: 'FFFFFF',
+    //     fillOpacity: 0.1,
+    //     stroke: true,
+    //     strokeColor: 'FFFFFF',
+    //     alwaysOn: true,
+    //     strokeWidth: 2,
+    //     fade: true,
+    //     strokeOpacity: 0.5,
+    //     shadow: true,
+    //     shadowColor: 'FFFFFF',
+    //     shadowPosition: 'inside'
+    // });
     $("#kitchendoor").on('click', function () {
         $(".displayNone").css("display", "none");
         $("#goToBuilding").css("display", "none");
@@ -660,29 +660,29 @@ document.addEventListener('click', function (e) {
     var img1x = $('#img1').pageX;
     var xPercent = xCord / $(document).width() * 100;
     var yPercent = yCord / $(document).height() * 100;
-    // console.log('left', e.pageX, xPercent + '%');
-    // console.log('top', e.pageY, yPercent + '%');
-    // console.log('width: ' + xCord)
-    // console.log('height: ' + y1Cord )
-    // navigator.clipboard.writeText(xCord + ',' + y1Cord)
-    // jQuery('<area/>', {
-    //     coords : cor,
-    //     shape:"circle",
-    // }).appendTo('#workmap');
-    // $('.highLightMap').maphilight({
-    //     fill: true,
-    //     fillColor: 'FFFFFF',
-    //     fillOpacity: 0.1,
-    //     stroke: true,
-    //     strokeColor: 'FFFFFF',
-    //     alwaysOn: true,
-    //     strokeWidth: 2,
-    //     fade: true,
-    //     strokeOpacity: 0.5,
-    //     shadow: true,
-    //     shadowColor: 'FFFFFF',
-    //     shadowPosition: 'inside'
-    // });
+    console.log('left', e.pageX, xPercent + '%');
+    console.log('top', e.pageY, yPercent + '%');
+    console.log('width: ' + xCord)
+    console.log('height: ' + y1Cord )
+    navigator.clipboard.writeText(xCord + ',' + y1Cord)
+    jQuery('<area/>', {
+        coords : cor,
+        shape:"circle",
+    }).appendTo('#workmap');
+    $('.highLightMap').maphilight({
+        fill: true,
+        fillColor: 'FFFFFF',
+        fillOpacity: 0.1,
+        stroke: true,
+        strokeColor: 'FFFFFF',
+        alwaysOn: true,
+        strokeWidth: 2,
+        fade: true,
+        strokeOpacity: 0.5,
+        shadow: true,
+        shadowColor: 'FFFFFF',
+        shadowPosition: 'inside'
+    });
 })
 
 function goToPage(pageHtml) {
