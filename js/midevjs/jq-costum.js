@@ -524,7 +524,6 @@ function showContent(){
     },2000)
     $('#showContent').removeClass('d-none')
 }
-
 function showHideObjects() {
     let cardRowsInfo = $('.info-card-element');
     cardRowsInfo.on('hide.bs.modal', () => {
@@ -539,7 +538,6 @@ function showHideObjects() {
         $(".ontvangsthal").fadeOut('slow');
     })
 }
-
 function initObjcet() {
     let modalDataArray;
     fetch('./modalData.json')
@@ -576,8 +574,6 @@ function initObjcet() {
     })
 }
 
-// $('svg').css('z-index',2)
-$('#cardFirst').css('z-index', 1)
 
 $("#btn-collapse").on('click', function () {
     if ($("#icon-collapse").hasClass('bi-chevron-down')) {
@@ -655,6 +651,7 @@ document.addEventListener('mousemove', function (e) {
 document.addEventListener('click', function (e) {
     var xCord = e.pageX;
     var yCord = e.pageY
+    console.log('h',yCord)
     var y1Cord = yCord - 226;
     var cor = xCord + ',' + y1Cord + ',' + '1'
     var img1x = $('#img1').pageX;

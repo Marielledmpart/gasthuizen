@@ -1,13 +1,24 @@
 /* CSS by Nami */
 
 
-@media only screen and (max-width: 479px){
 
+@media only screen and (max-width: 479px){
+    .top-position-modal-5{
+        top:5% !important;
+    }
 }
 @media only screen and (max-width: 767px){
-
+    .top-position-modal-5{
+        top:5% !important;
+    }
 }
 @media only screen and (max-width: 992px){
+
+}
+@media only screen and (max-width: 1200px){
+
+}
+@media only screen and (max-width: 1400px){
 
 }
 #myTooltip {
@@ -203,6 +214,7 @@ img-background {
 }
 .bg-text-white{
     background: rgba(0, 0, 0, .7) !important;
+    /*opacity: 0.8;*/
 }
 
 
