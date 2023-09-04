@@ -5,7 +5,21 @@
 // $('#dog').onclick(function (){
 //     dogModalJq.show();
 // })
+function drawPoly(){
+    let polystr = ''
+    $('map area').each((i,e)=>{
+        let coordsAtt = $(e).attr('coords')
+        coordsAtt = coordsAtt.slice(0, -1);
+        polystr += coordsAtt
+    })
+    jQuery('<area/>', {
+        coords : polystr,
+        shape:"poly",
+    }).appendTo('#workmap');
+    console.log('poly',polystr)
+}
 $(document).ready(function () {
+    // drawPoly();
     $(function () {
         $('body').show();
 
@@ -652,7 +666,7 @@ document.addEventListener('click', function (e) {
     var xCord = e.pageX;
     var yCord = e.pageY
     console.log('h',yCord)
-    var y1Cord = yCord - 226;
+    var y1Cord = yCord - 178;
     var cor = xCord + ',' + y1Cord + ',' + '1'
     var img1x = $('#img1').pageX;
     var xPercent = xCord / $(document).width() * 100;
