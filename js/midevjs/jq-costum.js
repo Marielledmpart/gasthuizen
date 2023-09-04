@@ -99,7 +99,8 @@ function ajRequest(){
     })
 }
 $(document).ready(function () {
-    xhrRequest()
+    getData()
+    // xhrRequest()
     // ajRequest();
     // postManCode()
 // var objectD = new mongoose.Schema({
@@ -332,6 +333,17 @@ function initObjcet() {
 
         })
     })
+}
+function getData(){
+    var settings = {
+        "url": "http://217.121.204.3:9090/objects",
+        "method": "GET",
+        "timeout": 0,
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
 }
 function submitObject() {
     $('#objectDataForm').submit(function (e) {
