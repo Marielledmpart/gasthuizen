@@ -1,11 +1,38 @@
 // import '../../js/bootstrap.min'
+// import {mongoose} from "./unpkg.com_mongoose@7.3.1_dist_browser.umd";
 // import * as bootstrap from '../../js/bootstrap.min'
 // window.bootstrap = bootstrap;
 // let dogModalJq = new bootstrap.modal('dogModal');
 // $('#dog').onclick(function (){
 //     dogModalJq.show();
 // })
+// import('../../js/midevjs/unpkg.com_mongoose@7.3.1_dist_browser.umd') ;
+// const myVar = require('https://unpkg.com/mongoose@7.3.1/dist/browser.umd.js');
+// import mongoose from 'https://unpkg.com/mongoose@7.3.1/dist/browser.umd.js'
+const mongoose = window.mongoose;
+// const schema = mongoose.Schema;
+// async function connectToDatabase() {
+//     await mongoose.connect('mongodb+srv://namighadri:gtOLCo7RkUa6KDlX@cluster-history.gxhrvo5.mongodb.net/',{
+//         usenewurlparser: true,
+//         useunifiedtopology: true
+//     }).then(() => {
+//
+//         console.log('Database is connected')
+//     })
+// }
 $(document).ready(function () {
+// var objectD = new mongoose.Schema({
+//         id: String,
+//         objectId: String,
+//         title: String,
+//         imagePath: String,
+//         textBody:String
+//     });
+
+    // connectToDatabase().catch(err => console.log(err))
+    // fetch('mongodb+srv://namighadri:gtOLCo7RkUa6KDlX@cluster-history.gxhrvo5.mongodb.net/')
+    //     .then(response => response.json())
+    //     .then(data => console.log('fetch',data));
     submitObject()
     $('#loadElement').removeClass('d-none')
     window.onload = function () {

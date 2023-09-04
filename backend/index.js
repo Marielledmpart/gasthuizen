@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 let objectsRouter = require('./objectRoute');
 async function connectToDatabase() {
-    await mongoose.connect('mongodb://127.0.0.1/test').then(() => {
+    await mongoose.connect('mongodb+srv://namighadri:gtOLCo7RkUa6KDlX@cluster-history.gxhrvo5.mongodb.net/').then(() => {
         console.log('Database is connected')
     })
 }
