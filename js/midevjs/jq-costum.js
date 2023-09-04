@@ -18,7 +18,33 @@ function drawPoly(){
     }).appendTo('#workmap');
     console.log('poly',polystr)
 }
+function postManCode(){
+    var settings = {
+        "url": "https://eu-central-1.aws.data.mongodb-api.com/app/data-gfhas/endpoint/nami",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Request-Headers": "*",
+            "Accept": "application/json",
+            "api-key": "qbKJu1KHpdxtGI9jMx7zClVHtSwj4tzjfZ6ew0PnROI5drfhNBlbVYq9DhOUTT1h"
+        },
+        "data": JSON.stringify({
+            "collection": "objectdatas",
+            "database": "test",
+            "dataSource": "Cluster-history",
+            "projection": {
+                "_id": "64f4b62a2e813d40e0927f74"
+            }
+        }),
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+}
 $(document).ready(function () {
+    postManCode()
     // drawPoly();
     $(function () {
         $('body').show();
