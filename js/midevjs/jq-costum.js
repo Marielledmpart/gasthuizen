@@ -44,7 +44,7 @@ function postManCode(){
     });
 }
 $(document).ready(function () {
-    postManCode()
+    // postManCode()
     // drawPoly();
     $(function () {
         $('body').show();
