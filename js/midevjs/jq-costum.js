@@ -43,7 +43,19 @@ function postManCode(){
         console.log(response);
     });
 }
+function getData(){
+    var settings = {
+        "url": "http://217.121.204.3:9090/objects",
+        "method": "GET",
+        "timeout": 0,
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+}
 $(document).ready(function () {
+    getData()
     // postManCode()
     // drawPoly();
     $(function () {
