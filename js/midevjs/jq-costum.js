@@ -20,7 +20,88 @@ const mongoose = window.mongoose;
 //         console.log('Database is connected')
 //     })
 // }
+function postManCode(){
+    var settings = {
+        "url": "https://eu-central-1.aws.data.mongodb-api.com/app/data-gfhas/endpoint/nami",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Request-Headers": "*",
+            "Accept": "application/json",
+            "api-key": "qbKJu1KHpdxtGI9jMx7zClVHtSwj4tzjfZ6ew0PnROI5drfhNBlbVYq9DhOUTT1h"
+        },
+        "data": JSON.stringify({
+            "collection": "objectdatas",
+            "database": "test",
+            "dataSource": "Cluster-history",
+            "projection": {
+                "_id": "64f4b62a2e813d40e0927f74"
+            }
+        }),
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+}
+function xhrRequest(){
+    // WARNING: For GET requests, body is set to null by browsers.
+    var data = JSON.stringify({
+        "collection": "objectdatas",
+        "database": "test",
+        "dataSource": "Cluster-history",
+        "projection": {
+            "_id": "64f4b62a2e813d40e0927f74"
+        }
+    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+        if(this.readyState === 4) {
+            console.log(this.responseText);
+        }
+    });
+
+    xhr.open("GET", "https://eu-central-1.aws.data.mongodb-api.com/app/data-gfhas/endpoint/nami");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.setRequestHeader("Access-Control-Request-Headers", "*");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("api-key", "qbKJu1KHpdxtGI9jMx7zClVHtSwj4tzjfZ6ew0PnROI5drfhNBlbVYq9DhOUTT1h");
+
+    xhr.send(data);
+}
+function ajRequest(){
+    var Success = false;
+    $.ajax({
+        type:'GET',
+        url:'https://eu-central-1.aws.data.mongodb-api.com/app/data-gfhas/endpoint/nami/',
+        headers:{
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            // "Access-Control-Allow-Headers": "*",
+            "api-key": "qbKJu1KHpdxtGI9jMx7zClVHtSwj4tzjfZ6ew0PnROI5drfhNBlbVYq9DhOUTT1h",
+            "Accept":'application/json'
+        },
+        dataType:'json',
+        // data:dataObjects,
+        success: function (data){
+            Success = true
+            console.log(data)
+            console.log(Success)
+        },
+        error: function (errorThrown) {
+            console.log(errorThrown);
+        }
+    })
+}
 $(document).ready(function () {
+    xhrRequest()
+    // ajRequest();
+    // postManCode()
 // var objectD = new mongoose.Schema({
 //         id: String,
 //         objectId: String,
