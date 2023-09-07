@@ -390,13 +390,14 @@ polygon{
     stroke-opacity: 0.6;
     stroke-width: 2;
     cursor: pointer;
-    transition: all 3s ease;
-    -webkit-transition: all 3s ease;
+    /*transition: all 3s ease;*/
+    /*-webkit-transition: all 3s ease;*/
 }
 polygon:hover {
     fill-opacity: 0;
     stroke-opacity: 0.9;
     stroke-width: 2;
+    stroke: white;
     transition: all 1s ease;
 }
 .svg1 {
