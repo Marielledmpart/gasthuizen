@@ -377,7 +377,7 @@ img-background {
     /*stroke-width: 2;*/
     /*cursor: pointer;*/
     /*transition: all 3s ease;*/
-    animation: fadein 5s ease-in alternate infinite;
+    animation: fadein 3s ease-in alternate infinite;
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -390,14 +390,14 @@ polygon{
     stroke-opacity: 0.6;
     stroke-width: 2;
     cursor: pointer;
-    transition: all 5s ease;
-    -webkit-transition: all 5s ease;
+    transition: all 3s ease;
+    -webkit-transition: all 3s ease;
 }
 polygon:hover {
     fill-opacity: 0;
     stroke-opacity: 0.9;
     stroke-width: 2;
-    transition: all 5s ease;
+    transition: all 1s ease;
 }
 .svg1 {
     width: 100%;
