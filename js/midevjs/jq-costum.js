@@ -634,7 +634,7 @@ function showHideObjects() {
         $('#phone11').removeClass('hide-on-load')
         setTimeout(() => {
             $(".ontvangsthal").removeClass('hide-on-load')
-        }, 2000)
+        }, )
         $(".ontvangsthal").fadeIn('slow');
     })
     cardRowsInfo.on('shown.bs.modal', () => {
