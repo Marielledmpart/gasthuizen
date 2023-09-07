@@ -546,10 +546,18 @@ function distroyTooltipsShowLabels() {
 }
 
 function tooptipLabelsSwitch() {
-    if ($(window).width() <= 767) {
+     if ($(window).width() <= 767 && $(window).width() < $(window).height()){
+        console.log('width is smaller thank height')
         distroyTooltipsShowLabels()
-    }else {
+        $('.mobile-landscape').removeClass('d-none')
+    }
+    else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+        distroyTooltipsShowLabels()
+         $('.mobile-landscape').addClass('d-none')
+    }
+    else {
         initTooltipsDisplayLabels()
+        $('.mobile-landscape').addClass('d-none')
     }
 }
 
