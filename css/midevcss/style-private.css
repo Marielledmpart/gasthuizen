@@ -1,6 +1,56 @@
 /* CSS by Nami */
-
-
+.phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 10px;
+    /*animation: rotate 1.5s ease-in-out infinite alternate;*/
+    /* display: none; */
+}
+@keyframes footerHover {
+    from { transform: scale(1.5) rotate(0deg); }
+    to { transform: scale(1.5) rotate(90deg); }
+}
+.icon-mobile-rotate{
+    /*transform: scaleX(-1);*/
+    /*transition: all 2s ease;*/
+    /*animation: flipThenBounce 3s ease infinite;*/
+    /*transition: opacity 2s;*/
+    /*opacity: 1;*/
+    /*font-size: 15vw !important;*/
+    /*transform: scaleX(-1);*/
+    /*rotate(-90deg)*/
+    /*animation-name: flipThenBounce;*/
+    /*animation-duration: 5s;*/
+    /*animation-iteration-count:  infinite;*/
+    animation-name: zoomIn, flipThenBounce;
+    animation-duration: 2s, 3s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 2s;
+}
+.icon-mobile-thumb-up{
+    animation-name: zoomIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+@keyframes flipThenBounce {
+    0% {
+        transform: scale(-1) rotate(180deg);
+        /*font-size: 30vw*/
+        /*opacity: 1;*/
+    }
+    75% {
+        transform: scale(-1) rotate(90deg);
+        /*opacity: 0;*/
+        /*font-size: 30vw*/
+    }
+    100% {
+        transform: scale(-1) rotate(180deg);
+        /*opacity: 0;*/
+        /*font-size: 30vw*/
+    }
+}
 
 @media only screen and (max-width: 479px){
     .top-position-modal-5{
@@ -20,6 +70,42 @@
 }
 @media only screen and (max-width: 1400px){
 
+}
+.opBackground1
+{
+    /*height:300px;*/
+    /*width:300px;*/
+    /*border:1px solid black;*/
+    /*font-size:30px;*/
+    /*background: linear-gradient(130deg, #ff7e00, #ffffff, #5cff00);*/
+    /*background: linear-gradient(90deg,rgb(0,0,0,0.2), rgba(0,0,0,0.5), rgb(255,255,255,0.2));*/
+    background:rgba(0, 0, 0, 0.5) !important;
+    border-radius: 5px;
+    margin:0px;
+    padding:0px;
+    line-height: 200%;
+    background-size: 200% 200%;
+    font-family: 'Unlock', cursive !important;
+    /*background-color: chocolate;*/
+    /*-webkit-animation: Animation 5s ease infinite;*/
+    /*-moz-animation: Animation 5s ease infinite;*/
+    /*animation: Animation 5s ease infinite;*/
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
 }
 #myTooltip {
     display: inline-block;

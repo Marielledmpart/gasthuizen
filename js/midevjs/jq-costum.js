@@ -1,31 +1,44 @@
-// import '../../js/bootstrap.min'
-// import * as bootstrap from '../../js/bootstrap.min'
-// window.bootstrap = bootstrap;
-// let dogModalJq = new bootstrap.modal('dogModal');
-// $('#dog').onclick(function (){
-//     dogModalJq.show();
-// })
 $(document).ready(function () {
-    // getData()
-    // postManCode()
-    // drawPoly();
+    $(window).resize(() => {
+        tooptipLabelsSwitch()
+    })
+    tooptipLabelsSwitch();
+
+    $(function () {
+        $('.tlt').textillate({
+            autoStart: true,
+            // delayScale: 4,
+            loop: true,
+            type: 'char',
+            in: {
+                effect: 'flipInY',
+                squence: true,
+                delay: 20,
+                // callback: function (){
+                //     alert('hello')
+                // }
+            },
+            out: {
+                effect: 'flipOutY',
+                squence: true,
+                // delay:50
+            }
+        });
+    })
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 300)
     $(function () {
         $('body').show();
 
     }); // end ready
-    // showContent();
-    if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')){
+    if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')) {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         modalCardInfo.show();
     }
     showHideObjects()
     initObjcet()
-    $("[data-tt=tooltip]").tooltip();
-    $("#card-info1").fadeIn(3000);
-    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
-    tooltipelements.forEach((el) => {
-        new bootstrap.Tooltip(el);
-    });
+
 
     // https://jsfiddle.net/eFjnU/
     function goToBuildingCycle() {
@@ -515,20 +528,46 @@ $(document).ready(function () {
 
 
 });
-function drawPoly(){
+
+function initTooltipsDisplayLabels() {
+    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
+    tooltipelements.forEach((el) => {
+        $(el).tooltip();
+    });
+    $('.tooltips-lables').addClass('d-none')
+}
+
+function distroyTooltipsShowLabels() {
+    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
+    tooltipelements.forEach((el) => {
+        $(el).tooltip().tooltip('dispose')
+    });
+    $('.tooltips-lables').removeClass('d-none')
+}
+
+function tooptipLabelsSwitch() {
+    if ($(window).width() <= 767) {
+        distroyTooltipsShowLabels()
+    }else {
+        initTooltipsDisplayLabels()
+    }
+}
+
+function drawPoly() {
     let polystr = ''
-    $('map area').each((i,e)=>{
+    $('map area').each((i, e) => {
         let coordsAtt = $(e).attr('coords')
         coordsAtt = coordsAtt.slice(0, -1);
         polystr += coordsAtt
     })
     jQuery('<area/>', {
-        coords : polystr,
-        shape:"poly",
+        coords: polystr,
+        shape: "poly",
     }).appendTo('#workmap');
-    console.log('poly',polystr)
+    console.log('poly', polystr)
 }
-function postManCode(){
+
+function postManCode() {
     var settings = {
         "url": "https://eu-central-1.aws.data.mongodb-api.com/app/data-gfhas/endpoint/nami",
         "method": "GET",
@@ -553,7 +592,8 @@ function postManCode(){
         console.log(response);
     });
 }
-function getData(){
+
+function getData() {
     var settings = {
         "url": "http://217.121.204.3:9090/objects",
         "method": "GET",
@@ -564,22 +604,26 @@ function getData(){
         console.log(response);
     });
 }
-function showContent(){
-    $('#startZoomIn').css('animation-name','')
-    $('#startZoomIn').css('animation-name','zoomOut')
-    setTimeout(()=>{
+
+function showContent() {
+    $('#startZoomIn').css('animation-name', '')
+    $('#startZoomIn').css('animation-name', 'zoomOut')
+    setTimeout(() => {
         $('#startZoomIn').addClass('d-none')
-        if (document.getElementById('page-info')){
+        if (document.getElementById('page-info')) {
             let modalCardInfo = new bootstrap.Modal('#page-info')
             modalCardInfo.show();
         }
-    },2000)
+    }, 2000)
     $('#showContent').removeClass('d-none')
 }
+
 function showHideObjects() {
     let cardRowsInfo = $('.info-card-element');
     cardRowsInfo.on('hide.bs.modal', () => {
         $('#discoverBuilding').removeClass('hide-on-load')
+        $('#phone1').removeClass('hide-on-load')
+        $('#phone11').removeClass('hide-on-load')
         setTimeout(() => {
             $(".ontvangsthal").removeClass('hide-on-load')
         }, 2000)
@@ -590,9 +634,10 @@ function showHideObjects() {
         $(".ontvangsthal").fadeOut('slow');
     })
 }
+
 function initObjcet() {
     let modalDataArray;
-    if (!$('body').hasClass('noJson')){
+    if (!$('body').hasClass('noJson')) {
         fetch('./modalData.json')
             .then((response) => response.json())
             .then((json) => {
