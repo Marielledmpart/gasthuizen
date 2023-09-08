@@ -42,7 +42,7 @@
     <!-- modernizr css -->
     <script src="./js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body class="noJson">
+<body class="noJson ">
 <!-- Header Area Start Here -->
 <header>
     <div class="header-area">
@@ -105,105 +105,87 @@
 </header>
 <!-- Header Area End Here -->
 <!-- Slider Area Start Here -->
-<div class="position-relative">
-    <!--    this is a zoomIn text in beging of index1.html (index.html>-->
-<!--    <div id="phone1" class="mobile-landscape d-none row position-absolute  text-light  "-->
-<!--         style="top:10%;left: 30%;">-->
-<!--        <span  class="icon-mobile-rotate col-lg-12 col-md-12 col-sm-12 col-xs-12 ">-->
-<!--            <i style="font-size: 40vw !important;" class="bi bi-phone"></i>-->
-<!--        </span>-->
-<!--    </div>-->
-<!--    <div id="phone11" class="row position-absolute  text-light  hide-on-load"-->
-<!--         style="top:10%;left: 30%;">-->
-<!--        <span  class="icon-mobile-thumb-up col-lg-12 col-md-12 col-sm-12 col-xs-12 ">-->
-<!--            <i style="font-size: 10vw !important;" class="bi bi-hand-thumbs-up"></i>-->
-
-<!--        </span>-->
-<!--    </div>-->
-    <div id="startZoomIn" class="row position-absolute  text-light"
-         style="top:15%;left: 20%; animation-name: zoomIn; animation-duration:2s">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h2 class=" " style="font-size: 3.5vw">Write something interesting <br>about the website that has nice
-                impact <br>on visitors.</h2>
-            <div onclick="showContent()" class="read-more"><a href="#">Discover More</a></div>
-        </div>
-    </div>
-    <div id="discoverBuilding" class="row position-absolute  text-light  hide-on-load"
-         style="top:15%;left: 20%;  animation-name: zoomIn; animation-duration:2s">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h2 id="textD"
-                data-bs-title="De kapel" style="font-size: 1.5vw; font-family: 'Javanese Text'">click on the highlited
-                buildings on the map to discover more..</h2>
-        </div>
-    </div>
-    <div id="pieters-label-id" style="top:30%;right: 35%;"
-         class="row hide-on-load ontvangsthal tooltips-lables position-absolute">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <div id="pieters-label-info" class="tlt  opBackground1  text-light px-2"
-                 style="font-size: 1vw !important;">Dr. Pieters
+<div class="slider-area">
+    <div>
+        <div id="startZoomIn" class="row position-absolute  text-light"
+             style="top:15%;left: 20%; animation-name: zoomIn; animation-duration:2s">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2 class=" " style="font-size: 3.5vw">Write something interesting <br>about the website that has nice
+                    impact <br>on visitors.</h2>
+                <div onclick="showContent()" class="read-more"><a href="#">Discover More</a></div>
             </div>
         </div>
-    </div>
-    <div id="kapel-id" style="top:41%;right: 47%;"
-         class="row hide-on-load ontvangsthal tooltips-lables position-absolute">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <div id="kapel-label-info" class="tlt  opBackground1  text-light px-2"
-                 style="font-size: 1vw !important;">De Kapel
+        <div id="discoverBuilding" class="row position-absolute  text-light  hide-on-load"
+             style="top:15%;left: 20%;  animation-name: zoomIn; animation-duration:2s">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2 id="textD"
+                    data-bs-title="De kapel" style="font-size: 1.5vw; font-family: 'Javanese Text'">click on the
+                    highlited
+                    buildings on the map to discover more..</h2>
             </div>
         </div>
-    </div>
-    <div id="pesthuis-id" style="top:57%;right: 63%;"
-         class="row hide-on-load ontvangsthal tooltips-lables position-absolute">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-            <div id="pesthuis-label-info" class="tlt  opBackground1  text-light px-2"
-                 style="font-size: 1vw !important;">Het Pesthuis
+        <div id="pieters-label-id" style="top:30%;right: 30%;" class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div id="pieters-label-info"  class="tlt  opBackground1  text-light px-2"
+                     style="font-size: 1.5vw !important;" >Dr. Pieters</div>
             </div>
         </div>
-    </div>
-    <img alt="..." id="img1" class="img-fluid" src="./images/midev/map.jpg"  usemap="#workmap">
-    <div id="showContent" class="d-none">
-        <button
-                type="button"
-                id="btn-info"
-                style="top:5%;right: 5%"
-                data-bs-toggle="modal" data-bs-target="#page-info"
-                aria-controls="page-info"
-                class=" btn link-light  no-borders hide-on-load ontvangsthal  z-3 position-absolute  link-light ">
-            <i id="nfoIcon" class="bi bi-info-circle bi--lg" style="font-size: 2vw;"></i>
-        </button>
-        <!--        polygon shapes start-->
-        <div id="polDiv" class="ontvangsthal hide-on-load polygon">
-            <!--
-              preserveAspectRatio: makes sure the triangle is scalable
-              viewbox: points stretches from the parent
-            -->
-
-            <svg class="svg1" preserveAspectRatio="none" viewBox="0 0 1519 854">
-                <polygon id="pietersPoly" class="polygon1 no-borders"
-                         data-bs-title="Dr Pieters" data-bs-toggle="tooltip" data-bs-placement="top"
-                         onclick="goToPage('./pages/pieters.html')"
-                         points="922,318,927,312,940,332,944,341,949,352,952,364,948,372,929,380,958,404,955,367,963,353,964,345,971,350,1017,383,1032,401,959,430,956,451,856,372,857,367,856,357,864,340,868,342"
-                ></polygon>
-                <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="left"
-                         data-bs-title="De kapel"
-                         onclick="goToPage('./pages/kapel.html')"
-                         points="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426"
-                ></polygon>
-                <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="top"
-                         data-bs-title="Het Pesthuis"
-                         onclick="goToPage('./pages/pesthuis.html')"
-                         points="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641"
-                ></polygon>
-            </svg>
+        <div id="kapel-label-id" style="top:41%;right: 47%;" class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div id="kapel-label-info"  class="tlt  opBackground1  text-light px-2"
+                     style="font-size: 1.5vw !important;" >De Kapel</div>
+            </div>
         </div>
-        <!--        polygon shapes end-->
-        <div id="map-container" class="container">
+        <div id="pesthuis-label-id" style="top:57%;right: 63%;" class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div id="pesthuis-label-info"  class="tlt  opBackground1  text-light px-2"
+                     style="font-size: 1.5vw !important;" >Het Pesthuis</div>
+            </div>
+        </div>
+        <img alt="..." id="img1" class="img-fluid" src="./images/midev/map.jpg" usemap="#workmap">
+        <div id="showContent" class="d-none">
+            <button
+                    type="button"
+                    id="btn-info"
+                    style="top:5%;right: 5%"
+                    data-bs-toggle="modal" data-bs-target="#page-info"
+                    aria-controls="page-info"
+                    class=" btn link-light  no-borders hide-on-load ontvangsthal  z-3 position-absolute  link-light ">
+                <i id="nfoIcon" class="bi bi-info-circle bi--lg" style="font-size: 2vw;"></i>
+            </button>
+            <!--        polygon shapes start-->
+            <div id="polDiv" class="ontvangsthal hide-on-load polygon">
+                <!--
+                  preserveAspectRatio: makes sure the triangle is scalable
+                  viewbox: points stretches from the parent
+                -->
 
+                <svg class="svg1" preserveAspectRatio="none" viewBox="0 0 1519 854">
+                    <polygon id="pietersPoly" class="polygon1 no-borders"
+                             data-bs-title="Dr Pieters" data-bs-toggle="tooltip" data-bs-placement="top"
+                             onclick="goToPage('./pages/pieters.html')"
+                             points="922,318,927,312,940,332,944,341,949,352,952,364,948,372,929,380,958,404,955,367,963,353,964,345,971,350,1017,383,1032,401,959,430,956,451,856,372,857,367,856,357,864,340,868,342"
+                    ></polygon>
+                    <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="left"
+                             data-bs-title="De kapel"
+                             onclick="goToPage('./pages/kapel.html')"
+                             points="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426"
+                    ></polygon>
+                    <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="top"
+                             data-bs-title="Het Pesthuis"
+                             onclick="goToPage('./pages/pesthuis.html')"
+                             points="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641"
+                    ></polygon>
+                </svg>
+            </div>
+            <!--        polygon shapes end-->
+            <div id="map-container" class="container">
+
+
+            </div>
 
         </div>
-
     </div>
-
 </div>
 
 <div id="page-info" class=" top-position-modal-5 modal info-card-element fade-scale   modal-xl" tabindex="-1"

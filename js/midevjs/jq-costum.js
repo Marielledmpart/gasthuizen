@@ -1,3 +1,7 @@
+// document.addEventListener("DOMContentLoaded",()=>{
+//     console.log('loaded now')
+//     $('body').removeClass('d-none')
+// })
 $(document).ready(function () {
     $(window).resize(() => {
         tooptipLabelsSwitch()
@@ -29,7 +33,7 @@ $(document).ready(function () {
         scrollTop: $('body').offset().top
     }, 300)
     $(function () {
-        $('body').show();
+        // $('body').removeClass('d-none')
 
     }); // end ready
     if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')) {
@@ -548,15 +552,18 @@ function distroyTooltipsShowLabels() {
 function tooptipLabelsSwitch() {
      if ($(window).width() <= 767 && $(window).width() < $(window).height()){
         console.log('width is smaller thank height')
+         $('.svgResponsive').attr('viewBox','0 0 1519 854')
         distroyTooltipsShowLabels()
         $('.mobile-landscape').removeClass('d-none')
     }
     else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
         distroyTooltipsShowLabels()
+         $('.svgResponsive').attr('viewBox','0 0 1519 854')
          $('.mobile-landscape').addClass('d-none')
     }
     else {
         initTooltipsDisplayLabels()
+         $('.svgResponsive').attr('viewBox','0 0 1538 854')
         $('.mobile-landscape').addClass('d-none')
     }
 }
