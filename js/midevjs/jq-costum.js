@@ -35,13 +35,13 @@ function getCookie(name) {
 }
 $(document).ready(function () {
     // drawPoly()
-    let startZoomInValue = getCookie('HistoryZoom')
-    if (startZoomInValue){
-        $('#startZoomIn').addClass('d-none')
-        showContent()
-    }else {
-        $('#startZoomIn').removeClass('d-none')
-    }
+    // let startZoomInValue = getCookie('HistoryZoom')
+    // if (startZoomInValue){
+    //     $('#startZoomIn').addClass('d-none')
+    //     showContent()
+    // }else {
+    //     $('#startZoomIn').removeClass('d-none')
+    // }
     $(window).resize(() => {
         tooptipLabelsSwitch()
     })
@@ -670,7 +670,7 @@ function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
     localStorage.setItem("startZoomInValue", "true");
-    setCookie('HistoryZoom','true', 20);
+    // setCookie('HistoryZoom','true', 20);
     setTimeout(() => {
         $('#startZoomIn').addClass('d-none')
         if (document.getElementById('page-info')) {
