@@ -2,17 +2,17 @@
 //     console.log('loaded now')
 //     $('body').removeClass('d-none')
 // })
+// if(Modernizr.touch){
+//     console.log('it is touch')
+// }else {
+//     console.log('it is not touch')
+// }
 $(document).ready(function () {
-    // if(Modernizr.touch){
-    //     console.log('it is touch')
-    // }else {
-    //     console.log('it is not touch')
-    // }
     // drawPoly()
+
     $(window).resize(() => {
         tooptipLabelsSwitch()
     })
-    tooptipLabelsSwitch();
 
     $(function () {
         $('.tlt').textillate({
@@ -539,6 +539,13 @@ $(document).ready(function () {
 
 });
 
+function mobileLandscape(){
+    $('#startZoomInMobile').removeClass('d-none')
+    $('#startZoomInMobile').addClass('icon-mobile-rotate')
+    setTimeout(() =>{
+        $('#startZoomInMobile').addClass('d-none')
+    },12000)
+}
 function initTooltipsDisplayLabels() {
     let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
     tooltipelements.forEach((el) => {
@@ -558,16 +565,19 @@ function distroyTooltipsShowLabels() {
 function tooptipLabelsSwitch() {
     if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
         console.log('width is smaller thank height')
-        $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+        mobileLandscape()
+        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         distroyTooltipsShowLabels()
         $('.mobile-landscape').removeClass('d-none')
     } else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+        mobileLandscape()
         distroyTooltipsShowLabels()
-        $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         $('.mobile-landscape').addClass('d-none')
-    } else {
+    }
+    else {
         initTooltipsDisplayLabels()
-        $('.svgResponsive').attr('viewBox', '0 0 1538 854')
+        // $('.svgResponsive').attr('viewBox', '0 0 1538 854')
         $('.mobile-landscape').addClass('d-none')
     }
 }
@@ -643,6 +653,7 @@ function showHideObjects() {
         $('#discoverBuilding').removeClass('hide-on-load')
         $('#phone1').removeClass('hide-on-load')
         $('#phone11').removeClass('hide-on-load')
+        tooptipLabelsSwitch();
         setTimeout(() => {
             $(".ontvangsthal").removeClass('hide-on-load')
         },)

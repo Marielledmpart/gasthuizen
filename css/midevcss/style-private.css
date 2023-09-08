@@ -8,10 +8,12 @@
     /* display: none; */
 }
 @keyframes footerHover {
-    from { transform: scale(1.5) rotate(0deg); }
-    to { transform: scale(1.5) rotate(90deg); }
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(-90deg); }
 }
 .icon-mobile-rotate{
+    top:20%;
+    left: 20%;
     /*transform: scaleX(-1);*/
     /*transition: all 2s ease;*/
     /*animation: flipThenBounce 3s ease infinite;*/
@@ -23,11 +25,12 @@
     /*animation-name: flipThenBounce;*/
     /*animation-duration: 5s;*/
     /*animation-iteration-count:  infinite;*/
-    animation-name: zoomIn, flipThenBounce , mobileFadeOut;
-    animation-duration: 2s, 3s, 1s;
-    animation-iteration-count: 1, 3;
+    animation-name: zoomIn, footerHover , zoomOut;
+    animation-duration: 2s, 3s, 2s;
+    animation-iteration-count: 1, 3, 1;
     animation-delay: 0s, 2s,10s;
 }
+
 .icon-mobile-thumb-up{
     animation-name: zoomIn;
     animation-duration: 3s;
@@ -40,15 +43,17 @@
 }
 @keyframes flipThenBounce {
     0% {
-        transform: scale(-1) rotate(180deg);
+        transform: scale(1) rotate(0deg);
         /*font-size: 30vw*/
         /*opacity: 1;*/
     }
     100% {
-        transform: scale(-1) rotate(90deg);
-        opacity: 0;
+        transform: scale(1) rotate(-90deg);
+        /*height: 0;*/
+        /*opacity: 0;*/
         /*font-size: 30vw*/
     }
+
 }
 
 @media only screen and (max-width: 479px){
@@ -364,6 +369,10 @@ img-background {
     stroke-opacity: 0.9;
     stroke-width: 6;
 }
+.polygon1{
+    animation-name: zoomIn;
+    animation-duration:3s
+}
 .polygon {
     /*z-index: 0;*/
     height: 100%;
@@ -378,7 +387,7 @@ img-background {
     /*stroke-width: 2;*/
     /*cursor: pointer;*/
     /*transition: all 3s ease;*/
-    animation: fadein 3s ease-in alternate infinite;
+    animation: fadein 2s ease-in alternate infinite;
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -399,7 +408,8 @@ polygon:hover {
     stroke-opacity: 0.9;
     stroke-width: 2;
     stroke: white;
-    transition: all 1s ease;
+    transition: all 3s ease;
+
 }
 .svg1 {
     width: 100%;
