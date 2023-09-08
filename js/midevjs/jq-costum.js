@@ -9,7 +9,12 @@
 // }
 $(document).ready(function () {
     // drawPoly()
-
+    let startZoomInValue = localStorage.getItem("startZoomInValue")
+    if (startZoomInValue){
+        console.log('no need for zoomin start')
+        $('#startZoomIn').addClass('d-none')
+        showContent()
+    }
     $(window).resize(() => {
         tooptipLabelsSwitch()
     })
@@ -637,6 +642,8 @@ function getData() {
 function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
+    localStorage.setItem("startZoomInValue", "true");
+
     setTimeout(() => {
         $('#startZoomIn').addClass('d-none')
         if (document.getElementById('page-info')) {
