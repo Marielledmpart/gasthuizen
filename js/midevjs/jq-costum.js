@@ -3,11 +3,11 @@
 //     $('body').removeClass('d-none')
 // })
 $(document).ready(function () {
-    if(Modernizr.touch){
-        console.log('it is touch')
-    }else {
-        console.log('it is not touch')
-    }
+    // if(Modernizr.touch){
+    //     console.log('it is touch')
+    // }else {
+    //     console.log('it is not touch')
+    // }
     // drawPoly()
     $(window).resize(() => {
         tooptipLabelsSwitch()
