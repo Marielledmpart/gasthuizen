@@ -190,14 +190,14 @@ ul {
 .read-more {
   display: inline-block;
 }
-.read-more a {
+.read-more span {
   background: #ffffff;
   color: #52716e;
   display: inline-block;
   padding: 10px 20px;
   transition: all 0.5s ease 0s;
 }
-.read-more a:hover {
+.read-more span:hover {
   background: #385a57;
   color: #ffffff;
 }
