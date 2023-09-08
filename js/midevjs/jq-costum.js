@@ -761,39 +761,39 @@ function myFuncHide(el) {
 //     document.getElementById("myTooltip").style.top = (e.pageY + 5) + "px";
 //
 // });
-document.addEventListener('click', function (e) {
-    var xCord = e.pageX;
-    var yCord = e.pageY
-    console.log('h',yCord)
-    var y1Cord = yCord - 105;
-    var cor = xCord + ',' + y1Cord + ',' + '1'
-    var img1x = $('#img1').pageX;
-    var xPercent = xCord / $(document).width() * 100;
-    var yPercent = yCord / $(document).height() * 100;
-    console.log('left', e.pageX, xPercent + '%');
-    console.log('top', e.pageY, yPercent + '%');
-    console.log('width: ' + xCord)
-    console.log('height: ' + y1Cord )
-    navigator.clipboard.writeText(xCord + ',' + y1Cord)
-    jQuery('<area/>', {
-        coords : cor,
-        shape:"circle",
-    }).appendTo('#workmap');
-    $('.highLightMap').maphilight({
-        fill: true,
-        fillColor: 'FFFFFF',
-        fillOpacity: 0.1,
-        stroke: true,
-        strokeColor: 'FFFFFF',
-        alwaysOn: true,
-        strokeWidth: 2,
-        fade: true,
-        strokeOpacity: 0.5,
-        shadow: true,
-        shadowColor: 'FFFFFF',
-        shadowPosition: 'inside'
-    });
-})
+// document.addEventListener('click', function (e) {
+//     var xCord = e.pageX;
+//     var yCord = e.pageY
+//     console.log('h',yCord)
+//     var y1Cord = yCord - 105;
+//     var cor = xCord + ',' + y1Cord + ',' + '1'
+//     var img1x = $('#img1').pageX;
+//     var xPercent = xCord / $(document).width() * 100;
+//     var yPercent = yCord / $(document).height() * 100;
+//     console.log('left', e.pageX, xPercent + '%');
+//     console.log('top', e.pageY, yPercent + '%');
+//     console.log('width: ' + xCord)
+//     console.log('height: ' + y1Cord )
+//     navigator.clipboard.writeText(xCord + ',' + y1Cord)
+//     jQuery('<area/>', {
+//         coords : cor,
+//         shape:"circle",
+//     }).appendTo('#workmap');
+//     $('.highLightMap').maphilight({
+//         fill: true,
+//         fillColor: 'FFFFFF',
+//         fillOpacity: 0.1,
+//         stroke: true,
+//         strokeColor: 'FFFFFF',
+//         alwaysOn: true,
+//         strokeWidth: 2,
+//         fade: true,
+//         strokeOpacity: 0.5,
+//         shadow: true,
+//         shadowColor: 'FFFFFF',
+//         shadowPosition: 'inside'
+//     });
+// })
 
 function goToPage(pageHtml) {
     location.href = pageHtml;
