@@ -7,13 +7,40 @@
 // }else {
 //     console.log('it is not touch')
 // }
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+const getCookieValue = (name) => (
+    console.log(document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '')
+)
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0){
+            historyZoom = c.substring(nameEQ.length, c.length);
+            // console.log(historyZoom)
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
 $(document).ready(function () {
     // drawPoly()
-    let startZoomInValue = localStorage.getItem("startZoomInValue")
+    let startZoomInValue = getCookie('HistoryZoom')
     if (startZoomInValue){
-        console.log('no need for zoomin start')
         $('#startZoomIn').addClass('d-none')
         showContent()
+    }else {
+        $('#startZoomIn').removeClass('d-none')
     }
     $(window).resize(() => {
         tooptipLabelsSwitch()
@@ -643,7 +670,7 @@ function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
     localStorage.setItem("startZoomInValue", "true");
-
+    setCookie('HistoryZoom','true', 20);
     setTimeout(() => {
         $('#startZoomIn').addClass('d-none')
         if (document.getElementById('page-info')) {
