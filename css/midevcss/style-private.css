@@ -370,6 +370,10 @@ img-background {
     stroke-width: 6;
 }
 .polygon1{
+    /*animation-name: zoomIn;*/
+    /*animation-duration:3s*/
+}
+.polygon-animate{
     animation-name: zoomIn;
     animation-duration:3s
 }

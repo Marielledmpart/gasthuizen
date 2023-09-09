@@ -34,6 +34,7 @@ function getCookie(name) {
     return null;
 }
 $(document).ready(function () {
+    $('.polygon1').addClass('polygon-animate')
     // drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
     // if (startZoomInValue){
@@ -669,7 +670,7 @@ function getData() {
 function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
-    localStorage.setItem("startZoomInValue", "true");
+    // localStorage.setItem("startZoomInValue", "true");
     // setCookie('HistoryZoom','true', 20);
     setTimeout(() => {
         $('#startZoomIn').addClass('d-none')
@@ -679,6 +680,7 @@ function showContent() {
         }
     }, 2000)
     $('#showContent').removeClass('d-none')
+
 }
 
 function showHideObjects() {
@@ -711,6 +713,7 @@ function initObjcet() {
     $('.objectModal').each((i, element) => {
         let elementID = element.id
         $(`#${elementID}`).on('click', () => {
+            $('.polygon1').removeClass('polygon-animate')
             $('#modalFooterUl').empty();
             modalDataArray.forEach((elementData, i) => {
                 if (elementData.id === elementID) {
