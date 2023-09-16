@@ -6,7 +6,7 @@
     "textFooter":[
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/4\" target=\"_blank\"><sup\n                                id=\"voetNote6\">6</sup> GH (342), inv.nr. 83, scan 124</a>"
     ],
-    "image":"../images/midev/charitas-small.png"
+    "image":"../images/midev/charitas.png"
   },
   {
     "id": "monk",
@@ -36,7 +36,7 @@
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/9\" target=\"_blank\"><sup\n                                id=\"voetNote15\">15</sup> GH (342), inv.nr 83, scan 129</a>",
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/2\" target=\"_blank\"><sup\n                                id=\"voetNote16\">16</sup> GH (342), inv.nr 83, scan 32</a>"
     ],
-    "image":"none"
+    "image":"../images/midev/regentekamer/fondsenwerving.png"
   },
   {
     "id": "big-books",
@@ -59,7 +59,7 @@
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/50/limit/10/highlight/1\" target=\"_blank\"><sup\n                                id=\"voetNote21\">21</sup> GH (342), inv.nr. 83, scan 51 t/m scan 55</a>",
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/50/limit/10/highlight/3\" target=\"_blank\"><sup\n                                id=\"voetNote22\">22</sup> GH (342), inv.nr. 83, scan 53</a>"
     ],
-    "image":"none"
+    "image":"../images/midev/regentekamer/duurzaamheid.png"
   },
   {
     "id": "chair",
@@ -79,7 +79,7 @@
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/5\" target=\"_blank\"><sup\n                                id=\"voetNote12\">12</sup> GH (342), inv.nr. 83, scan 125</a>",
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/7\" target=\"_blank\"><sup\n                                id=\"voetNote13\">13</sup> GH (342), inv.nr. 83, scan 127</a>"
     ],
-    "image":"none"
+    "image":"../images/midev/regentekamer/personeel.png"
   },
   {
     "id": "two-men",
