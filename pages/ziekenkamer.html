@@ -106,7 +106,8 @@
         <div id="back-label-id" style="top:15%;left: 6%;"
              class="row  move-right-left tooltips-lables position-absolute">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="back-laidy-label-info" hidden class=" hide-on-load ontvangsthal  opBackground1  text-light px-2"
+                <div id="back-laidy-label-info" hidden
+                     class=" hide-on-load ontvangsthal  opBackground1  text-light px-2"
                      style="font-size: 0.75vw !important;">Back
                 </div>
             </div>
@@ -115,13 +116,15 @@
              class="row hide-on-load ontvangsthal  tooltips-lables position-absolute">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div id="sick-man-right-label-info" class="tlt  opBackground1  text-light px-2"
-                     style="font-size: 1vw !important;">Mannen en vrouwenhuis</div>
+                     style="font-size: 1vw !important;">Mannen en vrouwenhuis
+                </div>
             </div>
         </div>
         <div id="doctor-right-label-id" style="top:17%;left: 83%;"
              class="row hide-on-load ontvangsthal  tooltips-lables position-absolute">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="doctor-right-label-info" class="tlt  opBackground1  text-light px-2">Stuivers voor de zieken</div>
+                <div id="doctor-right-label-info" class="tlt  opBackground1  text-light px-2">Stuivers voor de zieken
+                </div>
             </div>
         </div>
         <div id="cleaning-nurs-label-id" style="top:17%;left: 48%;"
@@ -142,7 +145,10 @@
                 <div id="nurs-label-info" class="tlt  opBackground1  text-light px-2">Voedsel voor zielenheil</div>
             </div>
         </div>
-        <img src="../images/midev/svg/ziekenkamer-01(1).jpg" class="img-fluid " usemap="#workmap">
+        <img src="../images/midev/svg/ziekenkamer-01(1).jpg" class="img-fluid highLightMap" usemap="#workmap">
+<!--        <map name="workmap" id="workmap">-->
+<!--            <area coords="879,160,875,162,872,164,868,164,864,165,861,164,856,165,851,166,846,169,841,170,838,174,832,177,826,180,820,182,813,184,803,183,793,179,783,175,777,170,772,166,770,160,769,155,769,152,769,146,766,144,759,143,751,143,744,143,738,141,736,135,735,130,735,123,736,117,737,111,741,109,746,107,751,107,755,107,759,110,762,110,766,110,769,112,770,115,772,117,775,119,779,121,782,123,784,126,783,130,784,135,787,139,791,144,795,150,799,158,800,163,803,167,808,168,813,168,828,163,836,159,842,158,849,157,855,156,860,154,865,152,870,152,874,154,877,157," shape="poly">-->
+<!--        </map>-->
         <button
                 type="button"
                 id="btn-info"
@@ -153,6 +159,7 @@
             <i id="nfoIcon" class="bi bi-info-circle bi--lg" style="font-size: 2vw;"></i>
         </button>
         <div id="polDivPieters" class="polygon hide-on-load ontvangsthal">
+
             <!--
               preserveAspectRatio: makes sure the triangle is scalable
               viewbox: points stretches from the parent
@@ -160,7 +167,7 @@
             <svg class="svg1 svgResponsive" preserveAspectRatio="none" viewBox="0 0 1538 854">
                 <polygon id="sick-man-right" class="polygon1 objectModal" data-bs-toggle="tooltip"
                          data-bs-placement="left"
-                         data-bs-title="Mannen en vrouwenhuis"
+                         data-bs-title="Proveniers"
                          points="1068,133,1063,134,1060,136,1058,138,1054,142,1052,146,1050,149,1049,153,1049,156,1050,159,1050,162,1052,166,1053,170,1054,173,1054,176,1056,178,1060,179,1064,180,1066,182,1066,185,1067,188,1067,190,1064,192,1062,195,1059,199,1057,202,1055,206,1057,208,1060,207,1064,205,1071,202,1078,199,1085,196,1093,193,1101,190,1107,188,1111,183,1111,179,1106,179,1100,179,1096,175,1097,170,1098,164,1098,157,1097,151,1095,143,1092,137,1087,133,1082,131,1077,130,1073,130"
                 ></polygon>
                 <polygon id="doctor-hand" class="polygon1 objectModal"
@@ -183,6 +190,21 @@
                 <polygon id="nurs" class="polygon1 objectModal" data-bs-toggle="tooltip" data-bs-placement="right"
                          data-bs-title="Voedsel voor zielenheil"
                          points="293,264,299,264,304,264,307,265,311,266,314,267,317,269,320,270,326,273,330,277,333,284,335,290,342,304,347,315,351,322,354,328,355,333,354,337,353,341,353,343,356,343,363,344,367,346,372,350,381,358,389,368,394,373,399,384,403,397,407,411,410,423,413,441,413,448,416,455,420,460,424,468,430,475,433,482,438,485,442,490,444,496,446,502,450,504,454,506,458,507,461,507,466,512,467,514,472,517,478,518,480,533,480,555,480,587,480,603,479,614,479,622,479,626,471,626,451,625,441,624,429,627,424,632,421,640,418,647,412,653,400,664,393,670,389,674,383,679,382,688,383,697,385,710,387,722,388,733,388,740,387,743,383,746,378,748,374,750,368,751,362,757,357,762,349,765,336,768,324,770,316,764,310,758,307,753,301,750,294,749,294,743,285,739,267,737,254,735,243,731,233,727,226,726,216,730,206,730,195,730,189,727,188,718,190,712,186,708,186,701,193,695,202,682,208,671,211,660,217,646,221,633,227,615,231,603,235,592,237,583,239,575,243,569,249,561,254,555,251,550,243,549,236,546,235,536,237,521,236,511,239,500,244,492,249,482,254,477,251,470,240,465,229,460,221,456,219,451,222,444,224,439,218,436,210,435,201,432,194,429,192,423,189,417,186,414,189,412,194,409,200,408,203,406,207,403,211,406,217,408,222,410,226,413,229,415,232,412,235,408,240,408,244,410,247,412,251,413,252,407,253,403,251,398,250,393,252,388,254,379,258,372,261,366,264,361,267,354,269,347,268,341,267,335,264,331,262,325,261,318,257,307,256,300,255,293,255,285,259,279,264,276,270,273,276,270,281,267,286,264"
+                ></polygon>
+                <polygon id="man-back-green-blanket" class="polygon1 objectModal" data-bs-toggle="tooltip"
+                         data-bs-placement="left"
+                         data-bs-title="Mannen- en vrouwenhuis"
+                         points="683,165,686,163,688,159,688,155,687,151,687,147,688,144,690,142,695,142,698,142,704,140,709,138,713,134,715,128,715,122,714,116,711,113,708,109,704,106,699,105,695,106,691,108,687,111,682,112,679,115,676,118,673,121,672,123,667,123,662,122,656,121,652,121,656,128,661,135,665,143,671,150,675,157,678,161"
+                ></polygon>
+                <polygon id="man-left-red-blanket" class="polygon1 objectModal" data-bs-toggle="tooltip"
+                         data-bs-placement="top"
+                         data-bs-title="Een trouwe huurder die geen afscheid kan nemen"
+                         points="428,182,427,178,425,173,422,168,419,163,414,158,410,155,406,151,411,147,416,142,417,136,421,128,423,121,424,113,421,105,418,99,414,95,409,92,402,90,394,89,388,91,382,93,377,97,374,103,371,108,369,114,367,119,365,124,364,129,365,134,366,138,369,139,371,139,370,142,368,144,361,146,353,147,346,149,339,150,335,154,332,160,329,166,332,168,339,169,347,171,356,171,370,173,379,174,390,175,398,177,406,179,413,181,419,183,423,185"
+                ></polygon>
+                <polygon id="man-back-red-blanket" class="polygon1 objectModal" data-bs-toggle="tooltip"
+                         data-bs-placement="top"
+                         data-bs-title="Vreemdelingen"
+                         points="879,160,875,162,872,164,868,164,864,165,861,164,856,165,851,166,846,169,841,170,838,174,832,177,826,180,820,182,813,184,803,183,793,179,783,175,777,170,772,166,770,160,769,155,769,152,769,146,766,144,759,143,751,143,744,143,738,141,736,135,735,130,735,123,736,117,737,111,741,109,746,107,751,107,755,107,759,110,762,110,766,110,769,112,770,115,772,117,775,119,779,121,782,123,784,126,783,130,784,135,787,139,791,144,795,150,799,158,800,163,803,167,808,168,813,168,828,163,836,159,842,158,849,157,855,156,860,154,865,152,870,152,874,154,877,157"
                 ></polygon>
             </svg>
         </div>
@@ -226,11 +248,15 @@
                 <p id="infoModalBody" class="card-text  fontSize-12">
                     Het verzorgen van een bed en maaltijden voor arme zieken, zieke vreemdelingen en proveniers was één
                     van de primaire taken van het St. Pietersgasthuis. Wie de zieken verzorgde is echter moeilijk op te
-                    maken uit de aantekeningen van de gasthuismeesters. In de personeelslijst<a href="#voetNote1"><sup>1</sup></a> van de gasthuismeesters
-                    komen geen ziekenverzorgers voor, maar uit de aantekeningen in verschillende registers uit de 15<sup>e</sup>
+                    maken uit de aantekeningen van de gasthuismeesters. In de personeelslijst<a
+                        href="#voetNote1"><sup>1</sup></a> van de gasthuismeesters
+                    komen geen ziekenverzorgers voor, maar uit de aantekeningen in verschillende registers uit de
+                    15<sup>e</sup>
                     eeuw van het St. Pietersgasthuis blijkt dat die er wel degelijk waren. Zo maakt een legger van vaste
-                    baten en lasten uit 1478<a href="#voetNote2"><sup>2</sup></a> melding van een zieke moder en een zieke meyt en in een memoriaal over de
-                    jaren 1474-1498<a href="#voetNote3"><sup>3</sup></a> huren de gasthuismeesters Lucye vander Schellinc tot een siec moder. Soms waren deze
+                    baten en lasten uit 1478<a href="#voetNote2"><sup>2</sup></a> melding van een zieke moder en een
+                    zieke meyt en in een memoriaal over de
+                    jaren 1474-1498<a href="#voetNote3"><sup>3</sup></a> huren de gasthuismeesters Lucye vander
+                    Schellinc tot een siec moder. Soms waren deze
                     ziekenmoeders zelf provenier en dus inwonend in het St. Pietersgasthuis. De proveniers, ook zij die
                     niet als ziekenmoeder in het gasthuis werden opgenomen, lijken sowieso een groot aandeel gehad te
                     hebben in de verzorgende taken op de ziekenzaal. In de contracten die de proveniers met de
@@ -239,18 +265,24 @@
                 </p>
 
             </div>
-            <div  class="modal-footer border-0 flex-column align-items-start">
+            <div class="modal-footer border-0 flex-column align-items-start">
                 <ul id="infoUl" class="fontSize-8">
                     <li>
-                        <a class=" fontSize-8" href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/3" target="_blank"><sup
+                        <a class=" fontSize-8"
+                           href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/120/limit/10/highlight/3"
+                           target="_blank"><sup
                                 id="voetNote1">1</sup> GH (342) inv. nr. 83 scan 123 t/m 132</a>
                     </li>
                     <li>
-                        <a class="fontSize-8" href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.1.4/start/40/limit/10/highlight/6" target="_blank"><sup
+                        <a class="fontSize-8"
+                           href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.1.4/start/40/limit/10/highlight/6"
+                           target="_blank"><sup
                                 id="voetNote2">2</sup> GH (342) inv. nr. 66 scan 46, 47 en 49</a>
                     </li>
                     <li>
-                        <a class="fontSize-8" href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.2.1/start/20/limit/10/highlight/7" target="_blank"><sup
+                        <a class="fontSize-8"
+                           href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.2.1/start/20/limit/10/highlight/7"
+                           target="_blank"><sup
                                 id="voetNote3">3</sup> GH (342) inv. nr. 81 scan 27</a>
                     </li>
                 </ul>

@@ -118,13 +118,30 @@
   "image":"../images/midev/keuken/dagelijkse-kost.png"
   },{
     "id": "sick-man-right",
-    "title": "Mannen en vrouwenhuis",
-    "textBody": "Het St. Pietersgasthuis maakte al in de 15e eeuw onderscheid tussen een mannenhuis en een vrouwenhuis voor de zieken en de proveniers. In de jaren ’50 van de 16<sup>e</sup> eeuw werd door het uitbreken van een pestepidemie in de stad ook een afzonderlijk pesthuis ingericht.  \nDat we interessante informatie uit oersaaie financiële administratie kunnen halen blijkt uit de post ‘olie en zeep’.  Hier specificeerden de gasthuismeesters nauwkeurig, aan welke afdelingen van het gasthuis zeep werd geleverd<a href=\"#voetNote4\"><sup>4</sup></a> . Daarbij vermeldt de administratie welke hoeveelheden zeep aan het mannen-, het vrouwen- en het pesthuis werden geleverd. Over de jaren 1550-1559 maken we daaruit op dat in het mannen- en het vrouwenhuis ongeveer gelijke hoeveelheden zeep aangeschaft werden en in het pesthuis iets minder. Dit lijkt erop te wijzen dat er in deze periode ongeveer evenveel mannen als vrouwen in het gasthuis lagen, al neemt naar het eind van de jaren vijftig in verhouding het aantal mannen en zeker het aantal pestpatiënten toe<a href=\"#voetNote5\"><sup>5</sup></a> . In 1559 bereikt het totale zeepverbruik in het register zijn hoogtepunt met 9½ tonnen zeep in een jaar tijd. Hieruit kunnen we afleiden dat er in dit jaar sprake is van piek in de bezetting van de bedden van het gasthuis.\n",
+    "title": "Proveniers",
+    "textBody": "Proveniers waren personen die zich tegen betaling van een eenmalig bedrag inkochten in het gasthuis. Meestal droegen zij hiervoor hun hele bezit over aan het St. Pietersgasthuis. Het ging hier meestal om bejaarde en alleenstaande mannen of vrouwen die weinig of geen familie meer hadden die hen zouden kunnen onderhouden<a href=\"#voetNote18\"><sup>18</sup></a> . In de provenierscontracten die het St. Pietersgasthuis hiervoor opstelde wordt beschreven welke vorm van zorg de proveniers ontvingen en ook wat daar tegenover stond. In het register van ontvangsten en uitgaven over de jaren 1550-1559 zijn slechts drie provenierscontracten vermeld, waaronder die van Gerrit Ghijssen<a href=\"#voetNote19\"><sup>19</sup></a> .",
     "textFooter":[
-      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/110/limit/10/highlight/7\" target=\"_blank\"><sup\n                                id=\"voetNote4\">4</sup>  GH (342) inv. nr. 83 scan 117 t/m 120</a>",
-      "<div  class=\"w-50\"><sup>5</sup> Deze uitkomst is gebaseerd op eigen telling van alle inkoopgegevens. Het verbruik naar mannen-, vrouwen-, pesthuis en keuken wordt in 1550 niet gespecificeerd, in 1551 en van 1557-59 deels gespecificeerd en tussen 1552-1556 volledig gespecificeerd</div>"
+      "<div><sup>18</sup> De Melker, Metamorfose van stad en devotie, p. 413</div>",
+      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/6\" target=\"_blank\"><sup\n                                id=\"voetNote19\">19</sup> GH (342), inv.nr. 83, scan 36</a>"
     ],
-    "image":"../images/midev/ziekenkamer/mannen-en-vrouwen.png"
+    "image":"../images/midev/ziekenkamer/proveniers.png"
+  },{
+    "id": "man-left-red-blanket",
+    "title": "Een trouwe huurder die geen afscheid kan nemen",
+    "textBody": "Gerrit Ghijssen van Sloten sluit op 17 april 1553 een overeenkomst met de gasthuismeesters van het St. Pietersgasthuis<a href=\"#voetNote20\"><sup>20</sup></a> . De gasthuismeesters nemen Gerrit die dag voor zijn leven lang aan als provenier van het gasthuis. Dit doen zij omdat Gerrit al 37 jaar op het gasthuisland Pollenburg bij de Overtoom heeft gewoond ‘ende daar een groote penninc in heeft geschoten’. Gerrit heeft blijkbaar geen onroerend goed in zijn bezit. Hij zal namelijk een bedrag van honderddertig Karolus guldens aan de gasthuismeesters overdragen. Daarnaast zal hij naar vermogen arbeid verrichten, waaronder het dienen van missen en het houden van toezicht op het gasthuisland en de koeien. Daarvoor zal hij zijn maaltijden in de keuken mogen genieten en zal hij slapen in het koehuis. Mocht hij voor langere tijd door ziekte en krankheid bevangen worden dan zal hij in het gasthuis opgenomen worden net als andere zieken. Hij mag een proefjaar nemen voor dertig gulden, in een keer te betalen. \nDe aantekeningen van betaling vertellen ons dat Gerrit op zowel 20 mei als 17 juli 1554 vijftien gulden heeft betaald voor het proefjaar van dertig gulden.\nOp 13 juni van datzelfde jaar heeft Gerrit Ghijsbertz al verklaard dat hij tevreden is met de voorwaarden, mits zijn kleding, beddengoed en ander toebehoren dat hij mee het gasthuis in heeft genomen na zijn dood aan zijn drie zoons toekomen. Op die dag betaalt hij de resterende honderd gulden. Lang heeft hij niet van zijn verblijf in het St. Pietersgasthuis kunnen genieten, want op 13 januari 1555 is Gerrit gestorven. Moge hij rusten in vrede.\n",
+    "textFooter":[
+      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/6\" target=\"_blank\"><sup\n                                id=\"voetNote20\">20</sup> GH (342), inv.nr. 83, scan 36</a>"
+    ],
+    "image":"none"
+  },{
+    "id": "man-back-red-blanket",
+    "title": "Vreemdelingen",
+    "textBody": "De taak van het St. Pietersgasthuis was niet alleen het opvangen en verzorgen van arme Amsterdammers, maar ook van vreemdelingen die ziek werden en geen ander heenkomen hadden dan het gasthuis. Onder de post inkomsten uit ‘Extro ordinarye’ zien we al snel dat zich in het Amsterdam van de 16e eeuw een flink aantal handelslieden, schippers en ambachtslieden van buiten de stad en zelfs uit de omliggende landen moet hebben opgehouden en dat een aantal van hen ziek in het gasthuis terecht kwam en er zelfs stierf<a href=\"#voetNote21\"><sup>21</sup></a> . \nEen Friese schipper schenkt een buidel geld met een sleutel, Koert van Coevorden en Jan van Steenwijk sterven beide in het gasthuis net als Cornels Jansz, een dijker uit Lexmond. En ook een Schot, mannen uit Ieper en Lubeck en een Waal stierven in het pesthuis. Mary Dircks uit Bergen Noorwegen heeft het gasthuis een godspenning geschonken. Aandoenlijk is het verhaal van een schuitvoerer die het pesthuis beloofd had 6 gulden te betalen, maar te arm was dat bedrag op te hoesten. Goede lieden zijn bijgesprongen om zijn belofte in te lossen<a href=\"#voetNote22\"><sup>22</sup></a> .\n",
+    "textFooter":[
+      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8\" target=\"_blank\"><sup\n                                id=\"voetNote21\">21</sup> GH (342), inv.nr. 83, scan 38 t/m 46</a>",
+      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/40/limit/10/highlight/5\" target=\"_blank\"><sup\n                                id=\"voetNote22\">22</sup>  GH (342), inv.nr. 83, scan 45</a>"
+    ],
+    "image":"none"
   },{
     "id": "sick-man-left",
     "title": "Het echte werk",
@@ -175,6 +192,15 @@
       "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/160/limit/10/highlight/5\" target=\"_blank\"><sup\n                                id=\"voetNote16\">16</sup> GH (342), inv.nr. 83, scan 165</a>"
     ],
     "image":"../images/midev/ziekenkamer/medische-zorg.png"
+  },{
+    "id": "man-back-green-blanket",
+    "title": "Mannen- en vrouwenhuis",
+    "textBody": "Het St. Pietersgasthuis maakte al in de 15e eeuw onderscheid tussen een mannenhuis en een vrouwenhuis voor de zieken en de proveniers. In de jaren ’50 van de 16<sup>e</sup> eeuw werd door het uitbreken van een pestepidemie in de stad ook een afzonderlijk pesthuis ingericht.  \nDat we interessante informatie uit oersaaie financiële administratie kunnen halen blijkt uit de post ‘olie en zeep’.  Hier specificeerden de gasthuismeesters nauwkeurig, aan welke afdelingen van het gasthuis zeep werd geleverd<a href=\"#voetNote4\"><sup>4</sup></a> . Daarbij vermeldt de administratie welke hoeveelheden zeep aan het mannen-, het vrouwen- en het pesthuis werden geleverd. Over de jaren 1550-1559 maken we daaruit op dat in het mannen- en het vrouwenhuis ongeveer gelijke hoeveelheden zeep aangeschaft werden en in het pesthuis iets minder. Dit lijkt erop te wijzen dat er in deze periode ongeveer evenveel mannen als vrouwen in het gasthuis lagen, al neemt naar het eind van de jaren vijftig in verhouding het aantal mannen en zeker het aantal pestpatiënten toe<a href=\"#voetNote5\"><sup>5</sup></a> . In 1559 bereikt het totale zeepverbruik in het register zijn hoogtepunt met 9½ tonnen zeep in een jaar tijd. Hieruit kunnen we afleiden dat er in dit jaar sprake is van piek in de bezetting van de bedden van het gasthuis.\n",
+    "textFooter":[
+      "<a class=\" fontSize-8\" href=\"https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/110/limit/10/highlight/7\" target=\"_blank\"><sup\n                                id=\"voetNote4\">4</sup>  GH (342) inv. nr. 83 scan 117 t/m 120</a>",
+      "<div  class=\"w-50\"><sup>5</sup> Deze uitkomst is gebaseerd op eigen telling van alle inkoopgegevens. Het verbruik naar mannen-, vrouwen-, pesthuis en keuken wordt in 1550 niet gespecificeerd, in 1551 en van 1557-59 deels gespecificeerd en tussen 1552-1556 volledig gespecificeerd</div>"
+    ],
+  "image":"../images/midev/ziekenkamer/mannen-en-vrouwen.png"
   },
   {
     "id": "clock",

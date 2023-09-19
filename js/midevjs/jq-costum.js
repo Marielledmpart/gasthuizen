@@ -35,7 +35,7 @@ function getCookie(name) {
 }
 $(document).ready(function () {
     $('.polygon1').addClass('polygon-animate')
-    // drawPoly()
+    drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
     // if (startZoomInValue){
     //     $('#startZoomIn').addClass('d-none')
