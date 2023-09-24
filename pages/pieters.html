@@ -144,26 +144,15 @@
         </div>
         <img id="img1" alt="..." src="../images/midev/Ontvangsthal-01.png" class="img-fluid " usemap="#workmap">
         <div id="showContent">
-            <div id="btnGroup"  style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;" class="btn-group position-absolute z-3" role="group" aria-label="Basic outlined example">
-                <a href="index.html" class="btn btn-outline-light">Home</a>
-                <a href="pages/about.html" class="btn btn-outline-light">About</a>
-                <a href="pages/contact.html" class="btn btn-outline-light">Contact</a>
-            </div>
-            <div class="btn-group-vertical position-absolute z-3 no-borders" role="group" aria-label="Vertical button group" style="top:5.7%;right: 5%">
-                <button id="toggleMenu"
-                        class=" btn btn-secondary no-borders bg-transparent hide-on-load ontvangsthal"
-                        type="button">
-                    <i id="iButton" class="bi bi-list" style="font-size: 2vw"></i>
-                </button>
-                <button
-                        type="button"
-                        id="btn-info"
-                        data-bs-toggle="modal" data-bs-target="#page-info"
-                        aria-controls="page-info"
-                        class=" btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i id="nfoIcon" class="bi bi-info-circle bi--lg" style="font-size: 2vw;"></i>
-                </button>
-            </div>
+            <button
+                    type="button"
+                    id="btn-info"
+                    style="top:5%;right: 5%"
+                    data-bs-toggle="modal" data-bs-target="#page-info"
+                    aria-controls="card-rows-info"
+                    class="btn link-light  no-borders hide-on-load ontvangsthal  z-3 position-absolute  link-light ">
+                <i id="nfoIcon" class="bi bi-info-circle" style="font-size: 2vw"></i>
+            </button>
             <div id="polDivPieters" class="polygon hide-on-load ontvangsthal">
                 <!--
                   preserveAspectRatio: makes sure the triangle is scalable
