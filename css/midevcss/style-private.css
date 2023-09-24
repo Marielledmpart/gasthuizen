@@ -397,6 +397,9 @@ img-background {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+.text-decor{
+    text-decoration: underline wavy white
+}
 
 .li-dash::before{
     content: "— ";
@@ -410,6 +413,7 @@ img-background {
     list-style-type: circle  !important;
     padding-left:1em !important;
     margin-left:1em;
+    list-style: inside;
 }
 .li-bullet{
     list-style-type: disc;

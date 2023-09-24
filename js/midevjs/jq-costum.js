@@ -34,6 +34,9 @@ function getCookie(name) {
     return null;
 }
 $(document).ready(function () {
+    toggleMenu();
+    console.log($(window).width())
+    console.log($(window).height())
     $('.polygon1').addClass('polygon-animate')
     drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
@@ -44,6 +47,8 @@ $(document).ready(function () {
     //     $('#startZoomIn').removeClass('d-none')
     // }
     $(window).resize(() => {
+        console.log($(window).width())
+        console.log($(window).height())
         tooptipLabelsSwitch()
     })
 
@@ -626,7 +631,26 @@ function drawPoly() {
         coords: polystr,
         shape: "poly",
     }).appendTo('#workmap');
-    console.log('poly', polystr)
+    // console.log('poly', polystr)
+}
+function toggleMenu(){
+    $("#toggleMenu").on('click',function (){
+        $('#btnGroup').animate({
+            width:'toggle'
+        })
+    })
+    $(document).mouseup(function(e)
+    {
+        var container = $('#btnGroup');
+        var buttonI = $('#toggleMenu')
+        var iButton = $('#iButton')
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0 && !buttonI.is(e.target) && !iButton.is(e.target))
+        {
+            container.hide(500);
+        }
+    });
 }
 
 function postManCode() {
@@ -678,7 +702,7 @@ function showContent() {
             let modalCardInfo = new bootstrap.Modal('#page-info')
             modalCardInfo.show();
         }
-    }, 2000)
+    }, 1000)
     $('#showContent').removeClass('d-none')
 
 }
