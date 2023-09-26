@@ -505,9 +505,9 @@ polygon:hover {
 .fade-scale {
     transform: scale(0);
     opacity: 0;
-    -webkit-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
 .fade-scale.show {

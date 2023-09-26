@@ -35,8 +35,6 @@ function getCookie(name) {
 }
 $(document).ready(function () {
     toggleMenu();
-    console.log($(window).width())
-    console.log($(window).height())
     $('.polygon1').addClass('polygon-animate')
     drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
@@ -47,8 +45,6 @@ $(document).ready(function () {
     //     $('#startZoomIn').removeClass('d-none')
     // }
     $(window).resize(() => {
-        console.log($(window).width())
-        console.log($(window).height())
         tooptipLabelsSwitch()
     })
 
