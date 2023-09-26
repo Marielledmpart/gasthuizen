@@ -34,6 +34,7 @@ function getCookie(name) {
     return null;
 }
 $(document).ready(function () {
+    console.log($(window).width())
     toggleMenu();
     $('.polygon1').addClass('polygon-animate')
     drawPoly()
@@ -45,6 +46,7 @@ $(document).ready(function () {
     //     $('#startZoomIn').removeClass('d-none')
     // }
     $(window).resize(() => {
+        console.log($(window).width())
         tooptipLabelsSwitch()
     })
 
