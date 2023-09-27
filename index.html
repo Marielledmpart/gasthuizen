@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Museum - Museum Home</title>
+    <title>Amsterdam Midev</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
@@ -113,14 +113,14 @@
         <div id="startZoomIn" class=" row position-absolute  text-light"
              style="top:15%;left: 15%; animation-name: zoomIn; animation-duration:2s">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
-                <h2 class="px-3 py-3 " style="width: 80%;font-family: 'Athelas '">
+                <h2 class="px-3 py-3 " style="font-size: 2.5vw !important; width: 80%;font-family: 'Athelas '">
                     Welkom in Middeleeuws Amsterdam! Je bent aangeland in de jaren
                     1587 - …… <br>Leer over het dagelijks leven van de oudste bewoners van de stad Amsterdam. Wat hield
                     Middeleeuwse Amsterdammers dagelijks bezig? Hoe zag het leven eruit in de eerste ziekenhuizen
                     (Gasthuizen) van de stad? Wat voor beroepen hadden Amsterdammers in de tijd? Hoe zorgden zij voor
                     elkaar? Klik op de afbeeldingen om de verhalen te ontdekken.</h2>
             </div>
-            <div class="read-more"><span role="button" onclick="showContent()">Discover More</span></div>
+            <div class="read-more"><span role="button" onclick="showContent()" >Discover More</span></div>
         </div>
         <div id="discoverBuilding" class="row position-absolute  text-light  hide-on-load"
              style="top:15%;left: 20%;  animation-name: zoomIn; animation-duration:2s">
@@ -133,23 +133,21 @@
         <div id="pieters-label-id" style="top:33%;right: 24%;"
              class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="opBackground1 px-2  tlt text-light">Dr Pieters</div>
+                <div class="opBackground1 px-2 text-light">Dr Pieters</div>
             </div>
         </div>
         <div id="kapel-label-id" style="top:41%;right: 47%;"
              class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="kapel-label-info" class="tlt  opBackground1  text-light px-2"
-                     style="font-size: 1.5vw !important;">De kapel
-                </div>
+                <div id="kapel-label-info" class="opBackground1  text-light px-2"
+                     style="font-size: 1.5vw !important;">De kapel</div>
             </div>
         </div>
         <div id="pesthuis-label-id" style="top:57%;right: 63%;"
              class="row  hide-on-load ontvangsthal tooltips-lables position-absolute">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="pesthuis-label-info" class="tlt  opBackground1  text-light px-2"
-                     style="font-size: 1.5vw !important;">Het Pietshuis
-                </div>
+                <div id="pesthuis-label-info" class="opBackground1  text-light px-2"
+                     style="font-size: 1.5vw !important;">Het Pietshuis</div>
             </div>
         </div>
         <img alt="..." id="img1" class="w-100 img-fluid highLightMap" src="./images/midev/map1.jpg" usemap="#workmap">
@@ -166,8 +164,8 @@
             <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
                  class="btn-group position-absolute z-3" role="group" aria-label="Basic outlined example">
                 <a href="#img1" class="btn btn-outline-light">Home</a>
-                <a href="#indexFooter" class="btn btn-outline-light">About</a>
-                <a href="pages/contact.html" class="btn btn-outline-light">Contact</a>
+                <a href="#aboutDiv" class="btn btn-outline-light">About</a>
+                <a href="#contactDiv" class="btn btn-outline-light">Contact</a>
             </div>
             <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
                  aria-label="Vertical button group" style="top:5.7%;right: 5%">
@@ -200,7 +198,7 @@
                              onclick="goToPage('./pages/pieters.html')"
                              points="927,294,924,297,920,300,914,304,901,310,885,316,874,320,868,322,865,320,862,321,861,327,858,331,857,334,857,338,857,344,857,347,851,349,850,353,864,361,876,370,894,380,909,392,921,404,932,410,947,421,953,425,958,427,958,404,976,396,999,389,1013,384,1022,380,1028,376,1016,361,1000,351,987,343,976,336,970,332,968,328,965,325,963,329,963,332,956,342,955,356,956,364,958,373,960,380,946,372,933,363,928,359,943,352,950,347,951,341,949,335,947,330,942,321,939,313,934,305,931,299"
                     ></polygon>
-                    <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="left"
+                    <polygon id="kapelPoly" class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="left"
                              data-bs-title="De Kapel"
                              onclick="goToPage('./pages/kapel.html')"
                              points="846,354,846,360,845,367,846,374,841,376,837,378,833,374,830,372,829,378,829,384,825,389,824,396,825,402,836,400,837,397,846,396,850,402,854,409,858,398,861,396,864,396,880,391,880,385,879,381,871,368,869,366,864,367,860,370,853,373,853,366,852,360,851,355,848,351"
@@ -871,7 +869,7 @@
     <div class="container p-3">
         <div class="d-flex flex-column">
             <div class="flex-row">
-                <h5>About</h5>
+                <h5 id="aboutDiv" >About</h5>
             </div>
             <div class="flex-row">
                 <p>
@@ -895,7 +893,7 @@
             </div>
         </div>
         <div class="flex-row">
-            <h5>Contact</h5>
+            <h5 id="contactDiv">Contact</h5>
         </div>
         <div class="flex-row">
             <p>

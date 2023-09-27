@@ -596,6 +596,7 @@ function distroyTooltipsShowLabels() {
         $(el).tooltip().tooltip('dispose')
     });
     $('.tooltips-lables').removeClass('d-none')
+    // $('#kapelPoly').tooltip().tooltip('show')
 }
 
 function tooptipLabelsSwitch() {
@@ -610,6 +611,8 @@ function tooptipLabelsSwitch() {
         distroyTooltipsShowLabels()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         $('.mobile-landscape').addClass('d-none')
+    } else if ( "ontouchstart" in window){
+        alert('you screen in touch')
     }
     else {
         initTooltipsDisplayLabels()
