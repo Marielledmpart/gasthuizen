@@ -600,7 +600,10 @@ function distroyTooltipsShowLabels() {
 }
 
 function tooptipLabelsSwitch() {
-    if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
+if ( "ontouchstart" in window){
+        alert('you screen in touch')
+    }
+    else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
         console.log('width is smaller thank height')
         mobileLandscape()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
@@ -611,8 +614,6 @@ function tooptipLabelsSwitch() {
         distroyTooltipsShowLabels()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         $('.mobile-landscape').addClass('d-none')
-    } else if ( "ontouchstart" in window){
-        alert('you screen in touch')
     }
     else {
         initTooltipsDisplayLabels()
