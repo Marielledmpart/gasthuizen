@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah|Times New Roman:300,400,700,900');
 /*-------------------------------------
     Template Name: Zooks - Zoo, Cinema, Museum, Comedy Club, Circus & Aquarium HTML5 Responsive Template
     Template URI: http://envalab.com/
@@ -45,7 +45,7 @@ body {
   height: 100%;
   font-size: 15px;
   color: #222222;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   vertical-align: baseline;
   line-height: 26px;
   font-weight: 400;
@@ -94,7 +94,7 @@ h5,
 h6 {
   margin: 0 0 26px;
   font-weight: 600;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Times New Roman', cursive;
 }
 a {
   transition: all 0.5s ease 0s;
@@ -147,7 +147,7 @@ ul {
 }
 .section-title h2 {
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 30px;
   color: #385a57;
   text-transform: uppercase;
@@ -176,7 +176,7 @@ ul {
   width: 150px;
 }
 .section-title h2 span {
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Times New Roman', cursive;
   text-transform: capitalize;
   color: #adb4b3;
   font-size: 40px;
@@ -280,7 +280,7 @@ ul {
   padding: 200px 0;
 }
 .slider-area .single-slider h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 65px;
   color: #ffffff;
 }
@@ -360,7 +360,7 @@ ul {
   padding-bottom: 30px;
 }
 .reason-to-come-zoo-area .single-reason h3 a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 18px;
   color: #385a57;
   transition: all 0.5s ease 0s;
@@ -418,7 +418,7 @@ ul {
 }
 .showcase-area .showcase-slider .single-showcase .overley .information h3 > a {
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #ffffff;
   border: none;
   padding: 0;
@@ -475,7 +475,7 @@ ul {
 }
 .promo-area .promo-text h2 {
   font-size: 60px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-weight: 600;
 }
 .promo-area .promo-text p {
@@ -488,7 +488,7 @@ ul {
 .current-exibition-area h2 {
   color: #385a57;
   font-size: 30px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-weight: bold;
   border-bottom: 1px solid #dddddd;
   text-transform: uppercase;
@@ -584,7 +584,7 @@ ul {
   border: none !important;
 }
 .exhibition-content-area .exhibition-details h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 30px;
   color: #385a57;
 }
@@ -635,7 +635,7 @@ ul {
   background: #f7f7f7;
 }
 .video-area .video-content h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   text-transform: uppercase;
   color: #385a57;
   font-weight: 800;
@@ -714,7 +714,7 @@ ul {
 .recent-zooks-photo-area .single-recent-photos .overley .photos-informations h3 {
   margin-bottom: 20px;
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #ffffff;
   border: none;
   padding: 0;
@@ -748,7 +748,7 @@ ul {
   background-size: cover;
 }
 .footer-top .widget h2 {
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Times New Roman', cursive;
   font-size: 26px;
   color: #385a57;
   position: relative;
@@ -773,7 +773,7 @@ ul {
   color: #385a57;
 }
 .footer-top .widget .media .media-body h4.media-heading {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 16px;
   color: #385a57;
 }
@@ -820,7 +820,7 @@ ul {
 .news-letter .text h2 {
   color: #ffffff;
   margin-bottom: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   text-align: right;
   font-weight: 400;
 }
@@ -861,7 +861,7 @@ ul {
 .footer-bottom-area .footer-menu ul li a {
   display: block;
   padding: 0 20px;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Times New Roman', cursive;
   font-size: 18px;
   transition: all 0.5s ease 0s;
   color: #9f9f9f;
@@ -889,7 +889,7 @@ ul {
 }
 .breadcumb-area .breadcumb h2 {
   color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   margin-bottom: 0;
   padding: 40px 0;
   font-size: 40px;
@@ -908,7 +908,7 @@ ul {
   margin-top: 60px;
 }
 .meseum-cafe-area .meseum-cafe-content h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #ffffff;
   font-size: 60px;
 }
@@ -990,7 +990,7 @@ ul {
 }
 .tutor-area .tutor-content .tutor-title h2 {
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 30px;
   color: #385a57;
   text-transform: uppercase;
@@ -1109,7 +1109,7 @@ ul {
   text-align: center;
 }
 .pulication-area .single-publication .publication-details h3 a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #385a57;
   font-size: 17px;
   transition: all 0.5s ease 0s;
@@ -1328,7 +1328,7 @@ ul {
   padding: 100px 0;
 }
 .opening-price-area .meseum-openning-area h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #385a57;
   font-size: 30px;
   text-transform: uppercase;
@@ -1372,7 +1372,7 @@ ul {
 .sidebar-area .widget h2 {
   font-size: 24px;
   color: #385a57;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   border-bottom: 1px solid #385a57;
   padding-bottom: 15px;
 }
@@ -1417,7 +1417,7 @@ ul {
   margin-bottom: 20px;
 }
 .sidebar-area .widget .media .media-body h4 a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 18px;
   color: #707070;
 }
@@ -1455,7 +1455,7 @@ ul {
 .calender-area .table-responsive h3 {
   background: #385a57 none repeat scroll 0 0;
   color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   padding: 25px;
   text-align: center;
   margin: -15px -15px 0 -15px;
@@ -1545,7 +1545,7 @@ ul {
   padding-bottom: 0;
 }
 .activities-area .topbar-area .title-text h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   color: #385a57;
@@ -1657,7 +1657,7 @@ ul {
   margin-bottom: 20px;
 }
 .activities-area .tab-content .tab-pane .media .media-body h4 a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 22px;
   color: #707070;
   line-height: 1.5;
@@ -1692,7 +1692,7 @@ ul {
   padding-bottom: 0;
 }
 .events-area .topbar-area .title-text h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   color: #385a57;
@@ -1801,7 +1801,7 @@ ul {
   margin-right: 15px;
 }
 .events-area .tab-pane .single-events .events-details h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   margin-bottom: 20px;
 }
 .events-area .tab-pane .single-events .events-details h3 a {
@@ -1839,7 +1839,7 @@ ul {
 }
 .single-events-area .page-title h2 {
   color: #385a57;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   text-transform: uppercase;
   margin: 0 0 10px;
 }
@@ -1856,7 +1856,7 @@ ul {
   opacity: .9;
 }
 .single-events-area .events-area .events-details h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   margin-bottom: 20px;
 }
 .single-events-area .events-area .events-details h3 a {
@@ -1951,7 +1951,7 @@ ul {
   margin: 25px 0;
 }
 .membership-area .membership .price h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 40px;
   color: #385a57;
   position: relative;
@@ -1968,7 +1968,7 @@ ul {
   content: "";
 }
 .membership-area .membership .details h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   color: #385a57;
   font-size: 18px;
   margin-bottom: 15px;
@@ -2009,7 +2009,7 @@ ul {
   color: #385a57;
   font-weight: 300;
   margin-bottom: 15px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Times New Roman', cursive;
 }
 .contact-area .contact-text ul li .single-contact p {
   color: #707070;
@@ -2117,7 +2117,7 @@ ul {
 }
 .contact-details .content-contact .right-content h2 {
   color: #385a57;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Times New Roman', cursive;
 }
 .contact-details .content-contact .right-content p {
   font-size: 15px;

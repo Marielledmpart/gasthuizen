@@ -601,7 +601,7 @@ polygon:hover {
     --bs-tooltip-bg: rgba(0, 0, 0, 0.5) !important;
     --bs-tooltip-font-size: 1rem !important;
     /*font-family: 'Unlock', cursive!important;*/
-    font-family: 'Unlock', cursive !important;
+    font-family: 'Times New Roman', cursive !important;
 }
 
 .tooltip-mob {
