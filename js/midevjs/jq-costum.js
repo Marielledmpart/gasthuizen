@@ -601,7 +601,10 @@ function distroyTooltipsShowLabels() {
 
 function tooptipLabelsSwitch() {
 if ( "ontouchstart" in window){
-        alert('you screen in touch')
+    mobileLandscape()
+    // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+    distroyTooltipsShowLabels()
+    $('.mobile-landscape').removeClass('d-none')
     }
     else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
         console.log('width is smaller thank height')
