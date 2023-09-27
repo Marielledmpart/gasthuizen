@@ -34,6 +34,7 @@ function getCookie(name) {
     return null;
 }
 $(document).ready(function () {
+    $('.tooltips-lables').addClass('d-none')
     console.log($(window).width())
     toggleMenu();
     $('.polygon1').addClass('polygon-animate')
@@ -588,6 +589,7 @@ function initTooltipsDisplayLabels() {
         $(el).tooltip();
     });
     $('.tooltips-lables').addClass('d-none')
+    $('.tooltips-lablesIndex').addClass('d-none')
 }
 
 function distroyTooltipsShowLabels() {
@@ -595,16 +597,16 @@ function distroyTooltipsShowLabels() {
     tooltipelements.forEach((el) => {
         $(el).tooltip().tooltip('dispose')
     });
-    $('.tooltips-lables').removeClass('d-none')
+    $('.tooltips-lablesIndex').removeClass('d-none')
     // $('#kapelPoly').tooltip().tooltip('show')
 }
 
 function tooptipLabelsSwitch() {
-if ( "ontouchstart" in window){
+if ( "ontouchstart" in window || $(window).width() <= 767 ){
     mobileLandscape()
     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
     distroyTooltipsShowLabels()
-    $('.mobile-landscape').removeClass('d-none')
+    // $('.mobile-landscape').removeClass('d-none')
     }
     else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
         console.log('width is smaller thank height')
@@ -613,7 +615,7 @@ if ( "ontouchstart" in window){
         distroyTooltipsShowLabels()
         $('.mobile-landscape').removeClass('d-none')
     } else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
-        mobileLandscape()
+        // mobileLandscape()
         distroyTooltipsShowLabels()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         $('.mobile-landscape').addClass('d-none')
