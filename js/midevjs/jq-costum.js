@@ -38,7 +38,7 @@ $(document).ready(function () {
     console.log($(window).width())
     toggleMenu();
     $('.polygon1').addClass('polygon-animate')
-    drawPoly()
+    // drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
     // if (startZoomInValue){
     //     $('#startZoomIn').addClass('d-none')
@@ -602,19 +602,22 @@ function distroyTooltipsShowLabels() {
 }
 
 function tooptipLabelsSwitch() {
-if ( "ontouchstart" in window || $(window).width() <= 767 ){
+
+    // TODO adjust the if statement to have if ontouchstart and inside it the conditionar window width
+if ( "ontouchstart" in window || ($(window).width() <= 767 ) && $(window).width() < $(window).height()){
     mobileLandscape()
     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
     distroyTooltipsShowLabels()
     // $('.mobile-landscape').removeClass('d-none')
     }
-    else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
-        console.log('width is smaller thank height')
-        mobileLandscape()
-        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-        distroyTooltipsShowLabels()
-        $('.mobile-landscape').removeClass('d-none')
-    } else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+    // else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
+    //     console.log('width is smaller thank height')
+    //     mobileLandscape()
+    //     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+    //     distroyTooltipsShowLabels()
+    //     $('.mobile-landscape').removeClass('d-none')
+    // }
+    else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
         // mobileLandscape()
         distroyTooltipsShowLabels()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
@@ -622,8 +625,10 @@ if ( "ontouchstart" in window || $(window).width() <= 767 ){
     }
     else {
         initTooltipsDisplayLabels()
+
         // $('.svgResponsive').attr('viewBox', '0 0 1538 854')
         $('.mobile-landscape').addClass('d-none')
+    $('.tooltips-lablesIndex').addClass('d-none')
     }
 }
 
