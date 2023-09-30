@@ -304,7 +304,7 @@ img-background {
     border-radius: 10px;
 }
 .bg-text-white{
-    background: rgba(0, 0, 0, .7) !important;
+    background: rgba(0, 0, 0, .6) !important;
     /*opacity: 0.8;*/
 }
 
@@ -374,8 +374,8 @@ img-background {
     /*animation-duration:3s*/
 }
 .polygon-animate{
-    animation-name: zoomIn;
-    animation-duration:3s
+    /*animation-name: zoomIn;*/
+    /*animation-duration:3s*/
 }
 .polygon {
     /*z-index: 0;*/
@@ -391,7 +391,9 @@ img-background {
     /*stroke-width: 2;*/
     /*cursor: pointer;*/
     /*transition: all 3s ease;*/
-    animation: fadein 2s ease-in alternate infinite;
+    opacity: 0;
+    animation: fadein 3s  ease-in  alternate infinite;
+    /*animation-delay: 1s;*/
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -423,7 +425,7 @@ polygon{
     fill-opacity: 0.4;
     stroke: white;
     stroke-opacity: 0.6;
-    stroke-width: 2;
+    stroke-width: 1;
     cursor: pointer;
     /*transition: all 3s ease;*/
     /*-webkit-transition: all 3s ease;*/
