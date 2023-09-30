@@ -303,6 +303,9 @@ img-background {
     border: 2px solid rgba(255, 255, 230, .9);
     border-radius: 10px;
 }
+.mobile-text-size {
+    font-size: 2.5vw !important;
+}
 .bg-text-white{
     background: rgba(0, 0, 0, .4) !important;
     /*opacity: 0.8;*/
