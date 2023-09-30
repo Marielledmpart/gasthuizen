@@ -82,6 +82,10 @@ $(document).ready(function () {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         modalCardInfo.show();
     }
+    let pageModal = document.getElementById('page-info')
+    pageModal.addEventListener('hidden.bs.modal',()=>{
+        showContent()
+    })
 
     showHideObjects()
     initObjcet()
