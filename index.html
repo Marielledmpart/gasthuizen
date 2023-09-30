@@ -110,16 +110,16 @@
 <!-- Slider Area Start Here -->
 <div class="slider-area">
     <div>
-        <div id="startZoomIn" class=" row position-absolute  text-light"
-             style="top:15%;left: 15%; animation-name: zoomIn; animation-duration:2s">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="">
-                <h2 class="px-3 py-3 " style="font-size: 2.5vw !important; width: 80%;font-family: 'Athelas '">
-                    Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de oudste
-                    archieven van Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van
-                    </h2>
-            </div>
-            <div class="read-more"><span role="button" onclick="showContent()">Discover More</span></div>
-        </div>
+        <!--        <div id="startZoomIn" class=" row position-absolute  text-light"-->
+        <!--             style="top:15%;left: 15%; animation-name: zoomIn; animation-duration:2s">-->
+        <!--            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="">-->
+        <!--                <h2 class="px-3 py-3 " style="font-size: 2.5vw !important; width: 80%;font-family: 'Athelas '">-->
+        <!--                    Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de oudste-->
+        <!--                    archieven van Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van-->
+        <!--                    </h2>-->
+        <!--            </div>-->
+        <!--            <div class="read-more"><span role="button" onclick="showContent()">Discover More</span></div>-->
+        <!--        </div>-->
         <div id="discoverBuilding" class="row position-absolute  text-light  hide-on-load"
              style="top:15%;left: 20%;  animation-name: zoomIn; animation-duration:2s">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -220,14 +220,43 @@
         </div>
     </div>
 </div>
+<div id="web-intro" class=" top-position-modal-5 modal info-card-element fade-scale modal-xl" tabindex="-1"
+     aria-hidden="true">
+    <div class=" modal-dialog  modal-dialog-centered info-card-element">
+        <div class="modal-content bg-text-white text-light border  border-1 border-light ">
+            <div class="modal-header border-0">
+                <h1 id="infoModalLabel1" class="modal-title fs-5">Over deze website</h1>
+            </div>
+            <div class="modal-body ">
+                <p id="infoModalBody1" class="  ">
+                    Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de oudste
+                    archieven van Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van
+                    ontvangsten en uitgaven van het St. Pietersgasthuis over de jaren 1550 – 1559 . Alleen al de
+                    boodschappenlijstjes van de gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken
+                    boekdelen. Toename van de inkoop van zeep duidt op epidemieën en houtaankopen wijzen op de verhoogde
+                    vraag naar grafkisten. De kaart van middeleeuws Amsterdam uit 1538 leidt de bezoeker het St. Pieters
+                    Gasthuis, de gasthuiskapel of het pesthuis binnen. Door in de afbeeldingen op omlijnde figuren of
+                    objecten te klikken verschijnt informatie over het reilen en zijlen van het St. Pietersgasthuis.
+                    Alle informatie komt direct uit de administratie van de gasthuismeesters. Via de voetnoten bij de
+                    teksten komt u vanzelf bij de scans van de bronnen waaruit de informatie afkomstig is.
+                </p>
+            </div>
+            <div class="modal-footer no-borders flex-column align-items-end">
+                <button  type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
+                        class="display-5  btn btn-outline-light float-end" aria-label="Close">Plattegrond
+                </button>
+            </div>
 
+        </div>
+    </div>
+</div>
 <div id="page-info" class=" top-position-modal-5 modal info-card-element fade-scale   modal-xl" tabindex="-1"
      aria-hidden="true">
     <div class=" modal-dialog  modal-dialog-centered info-card-element ">
         <div class="modal-content bg-text-white text-light border border-1 border-light ">
             <div class="modal-header border-0">
                 <h1 id="infoModalLabel" class="modal-title fs-5">Inleiding algemeen</h1>
-                <button type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
+                <button onclick="showContent()" type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
                         class="btn-close btn-close-white float-end" aria-label="Close">
                 </button>
             </div>
@@ -867,10 +896,10 @@
 <!-- Recent Zooks Photos End Here -->
 <!-- Footer Start Here -->
 <footer style="background-color:  #283D27 " class="text-light border-top border-1 border-light">
-    <div class="container p-3">
+    <div class="container p-4">
         <div class="d-flex flex-column">
             <div class="flex-row">
-                <h5 id="aboutDiv">About</h5>
+                <h4 id="aboutDiv">About</h4>
             </div>
             <div class="flex-row">
                 <p>
@@ -894,7 +923,7 @@
             </div>
         </div>
         <div class="flex-row">
-            <h5 id="contactDiv">Contact</h5>
+            <h4 id="contactDiv">Contact</h4>
         </div>
         <div class="flex-row">
             <p>

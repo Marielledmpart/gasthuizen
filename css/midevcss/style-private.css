@@ -304,7 +304,7 @@ img-background {
     border-radius: 10px;
 }
 .bg-text-white{
-    background: rgba(0, 0, 0, .6) !important;
+    background: rgba(0, 0, 0, .4) !important;
     /*opacity: 0.8;*/
 }
 

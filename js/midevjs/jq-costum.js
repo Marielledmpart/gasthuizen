@@ -34,8 +34,8 @@ function getCookie(name) {
     return null;
 }
 $(document).ready(function () {
+    websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
-    console.log($(window).width())
     toggleMenu();
     // $('.polygon1').addClass('polygon-animate')
     // drawPoly()
@@ -47,7 +47,6 @@ $(document).ready(function () {
     //     $('#startZoomIn').removeClass('d-none')
     // }
     $(window).resize(() => {
-        console.log($(window).width())
         tooptipLabelsSwitch()
     })
 
@@ -83,6 +82,7 @@ $(document).ready(function () {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         modalCardInfo.show();
     }
+
     showHideObjects()
     initObjcet()
 
@@ -702,18 +702,32 @@ function getData() {
         console.log(response);
     });
 }
+function websiteIntroductionModal(){
+    if (document.getElementById('web-intro')){
+        let webModal= document.getElementById('web-intro')
+        let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
+        modalWebsiteIntroductionModal.show();
+        webModal.addEventListener('hidden.bs.modal',() =>{
+            showContentCloseIntroModal();
+        })
+    }
+}
 
+function showContentCloseIntroModal(){
+    $('#startZoomIn').addClass('d-none')
+    if (document.getElementById('page-info')) {
+        let modalCardInfo = new bootstrap.Modal('#page-info')
+        modalCardInfo.show();
+    }
+}
 function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
     // localStorage.setItem("startZoomInValue", "true");
     // setCookie('HistoryZoom','true', 20);
     setTimeout(() => {
-        $('#startZoomIn').addClass('d-none')
-        if (document.getElementById('page-info')) {
-            let modalCardInfo = new bootstrap.Modal('#page-info')
-            modalCardInfo.show();
-        }
+        // websiteIntroductionModal()
+
     }, 1000)
     $('#showContent').removeClass('d-none')
 
