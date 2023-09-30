@@ -37,7 +37,7 @@ $(document).ready(function () {
     $('.tooltips-lables').addClass('d-none')
     console.log($(window).width())
     toggleMenu();
-    $('.polygon1').addClass('polygon-animate')
+    // $('.polygon1').addClass('polygon-animate')
     // drawPoly()
     // let startZoomInValue = getCookie('HistoryZoom')
     // if (startZoomInValue){
