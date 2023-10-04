@@ -1,4 +1,40 @@
 /* CSS by Nami */
+.shadow-body-inset::after {
+    box-shadow:inset -1px 30px 30px 30px rgba(69,84,50,0.9) ;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.footermain {
+    position : relative;
+    /*background: rgb(40, 61, 39);*/
+    /*width: 100%;*/
+    -moz-box-shadow: 0 -5px 6px rgba(0,0,0,0.9);
+    -webkit-box-shadow: 0 -5px 6px rgba(0,0,0,0.5);
+    box-shadow: 10px -20px 20px 100px rgba(69,84,50,0.7)
+    /*rgb(40, 61, 39,0.5)*/
+    /*#283D27*/
+}
+
+.background-militarty-color{
+    background-color: #57683e !important;
+}
+.img-thumbnail{
+    background-color: transparent !important;
+    /*border: none !important;*/
+    border-width: 3px !important;
+    border-radius:0px !important; ;
+}
+.footerinner {
+    box-shadow: 10px -10px 20px 50px rgba(69,84,50,1);
+    /*height: 150px;*/
+    /*width: 960px;*/
+    position: relative;
+    margin: 0 auto;
+}
 .phone {
     height: 50px;
     width: 100px;

@@ -42,7 +42,7 @@
     <!-- modernizr css -->
     <script src="./js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body class="noJson ">
+<body class="noJson " style="background-color: #455432 ">
 <script>
 
 </script>
@@ -108,7 +108,7 @@
 <!--</header>-->
 <!-- Header Area End Here -->
 <!-- Slider Area Start Here -->
-<div class="slider-area">
+<div class="slider-area ">
     <div>
         <!--        <div id="startZoomIn" class=" row position-absolute  text-light"-->
         <!--             style="top:15%;left: 15%; animation-name: zoomIn; animation-duration:2s">-->
@@ -150,7 +150,10 @@
                 </div>
             </div>
         </div>
-        <img alt="..." id="img1" class="w-100 img-fluid highLightMap" src="./images/midev/map1.jpg" usemap="#workmap">
+        <div class="shadow-body-inset">
+            <img alt="..." id="img1" class="w-100 img-fluid highLightMap" src="./images/midev/map1.jpg" usemap="#workmap">
+        </div>
+
 
         <div id="showContent" class="d-none">
             <div id="startZoomInMobile" class="row  position-absolute d-none  text-light"
@@ -172,7 +175,7 @@
                 <button id="toggleMenu"
                         class="p-0 btn btn-secondary no-borders bg-transparent hide-on-load ontvangsthal"
                         type="button">
-                    <i id="iButton" class="mobile-text-size bi bi-list" ></i>
+                    <i id="iButton" class="mobile-text-size bi bi-list"></i>
                 </button>
                 <button
                         type="button"
@@ -180,7 +183,7 @@
                         data-bs-toggle="modal" data-bs-target="#page-info"
                         aria-controls="page-info"
                         class="p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i id="nfoIcon" class="mobile-text-size bi bi-info-circle" ></i>
+                    <i id="nfoIcon" class="mobile-text-size bi bi-info-circle"></i>
                 </button>
             </div>
             <!--        polygon shapes start-->
@@ -226,7 +229,7 @@
         <div class="modal-content bg-text-white text-light border  border-1 border-light ">
             <div class="modal-header border-0">
                 <h1 id="infoModalLabel1" class="modal-title fs-5">Over deze website</h1>
-                <button  type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
                         class="btn-close btn-close-white float-end" aria-label="Close">
                 </button>
             </div>
@@ -245,7 +248,7 @@
                 </p>
             </div>
             <div class="modal-footer no-borders flex-column align-items-end">
-                <button  type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
                         class="fs-4  btn btn-outline-light float-end" aria-label="Close">Plattegrond
                 </button>
             </div>
@@ -898,170 +901,195 @@
 <!--</div>-->
 <!-- Recent Zooks Photos End Here -->
 <!-- Footer Start Here -->
-<footer style="background-color:  #283D27 " class="text-light border-top border-1 border-light">
-    <div class="container p-4">
-        <div class="d-flex flex-column">
-            <div class="flex-row">
-                <h4 id="aboutDiv">About</h4>
-            </div>
-            <div class="flex-row">
-                <p>
-                    <strong>Stichting Middeleeuwse geschiedenis Amsterdam</strong><br>
-                    De Stichting Middeleeuwse Archieven Amsterdam (hierna: SMAA) wil de toegankelijkheid,
-                    beschikbaarheid en het gebruik bevorderen van de middeleeuwse archieven van en over de stad
-                    Amsterdam. Wij willen namelijk de kennis over middeleeuwse Amsterdam vergroten onder een zo breed
-                    mogelijk publiek.
-                    SMAA wil mensen uit en buiten Amsterdam bewust maken van hoe de stad er in haar eerste eeuwen uitzag
-                    en functioneerde. Dat doen wij door de parallellen en verschillen tussen heden en verleden zichtbaar
-                    te maken op maatschappelijke thema’s als welvaart, zorg, jeugd, migratie, integratie, diversiteit en
-                    gemeenschapszin.
-                    Gedurende 2019 en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse gasthuisarchieven
-                    tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen beter toegankelijk. De stukken
-                    werden geconserveerd en de archieven kregen een nieuwe inventaris. De meest bijzondere bronnen uit
-                    deze archieven werden vertaald in modern Nederlands. De archieven kunnen digitaal worden
-                    geraadpleegd via de website van het Stadsarchief Amsterdam. En om het geheel compleet te maken is
-                    voor de wetenschappelijke onderzoeker een bronnenuitgave van de meest bijzondere registers
-                    toegevoegd
-                </p>
-            </div>
-        </div>
-        <div class="flex-row">
-            <h4 id="contactDiv">Contact</h4>
-        </div>
-        <div class="flex-row">
-            <p>
-                Contactgegevens Stichting Middeleeuwse Archieven Amsterdam</p>
-            <p>E-mail: middeleeuwsamsterdam@gmail.com</p>
-            <p>Voor inhoudelijke vragen<br>
-                E-mail: marielle@dmpart.nl</p>
-        </div>
-    </div>
-    </div>
-</footer>
-<!--<footer id="indexFooter">-->
-<!--    <div class="footer-top">-->
+
+<!--<div class="container-fluid footermain">-->
+<!--    <div class="footerinner">-->
 <!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
-<!--                    <div class="widget">-->
-<!--                        <h2>Hours & Admissions</h2>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa fa-home" aria-hidden="true"></i>-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                <h4 class="media-heading">Museum</h4>-->
-<!--                                &lt;!&ndash;                                <p>2087 Sunny Glen Lane<br>Brook Park, OH 44142</p>&ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa fa-home" aria-hidden="true"></i>-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                <h4 class="media-heading">Museum </h4>-->
-<!--                                &lt;!&ndash;                                <p>4342 Longview Avenue<br>Bronx, NY 10461</p>&ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="clock">-->
-<!--                            <img src="./images/clock.png" alt="">-->
-<!--                        </div>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa fa-home" aria-hidden="true"></i>-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                &lt;!&ndash;                                <p>Gallery Admission: $5*<br>Children -12: No Charge<br>* Special Exhibitions: $10+</p>&ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+<!--            <div class="row gap-5">-->
+<!--                <div class="card shadow col  text-light" style="background-color: #57683e">-->
+<!--                    <h5 class="card-title pt-3">Over deze website</h5>-->
+<!--                    <p class="card-text">-->
+<!--                        Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de oudste archieven van-->
+<!--                        Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van ontvangsten en-->
+<!--                        uitgaven van het St. Pietersgasthuis over de jaren 1550 – 1559 . Alleen al de boodschappenlijstjes van de-->
+<!--                        gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken boekdelen. Toename van de inkoop van zeep-->
+<!--                        duidt op epidemieën en houtaankopen wijzen op de verhoogde vraag naar grafkisten. De kaart van middeleeuws-->
+<!--                        Amsterdam uit 1538 leidt de bezoeker het St. Pieters Gasthuis, de gasthuiskapel of het pesthuis binnen. Door-->
+<!--                        in de afbeeldingen op omlijnde figuren of objecten te klikken verschijnt informatie over het reilen en-->
+<!--                        zijlen van het St. Pietersgasthuis. Alle informatie komt direct uit de administratie van de-->
+<!--                        gasthuismeesters. Via de voetnoten bij de teksten komt u vanzelf bij de scans van de bronnen waaruit de-->
+<!--                        informatie afkomstig is.-->
+<!--                    </p>-->
 <!--                </div>-->
-<!--                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">-->
-<!--                    <div class="widget">-->
-<!--                        <h2>Corporate Sponsors</h2>-->
-<!--                        <div class="sponser sisss">-->
-<!--                            <ul>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-1.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-2.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-3.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-4.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-6.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-7.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-8.png" alt=""></a></li>-->
-<!--                            </ul>-->
+<!--                <div class="card col shadow gap-3 p-3" style="background-color: #57683e">-->
+<!--                    <div class=" row gap-3 ">-->
+<!--                        <div  class="col ">-->
+<!--                            <img src="images/midev/keuken/eerliek-mael-150.png" alt="..." class="img-thumbnail ">-->
+<!--                        </div>-->
+<!--                        <div class="col   ">-->
+<!--                            <img src="images/midev/keuken/eerliek-mael-150.png" alt="..." class="img-thumbnail">-->
 <!--                        </div>-->
 <!--                    </div>-->
-<!--                    <div class="widget">-->
-<!--                        <h2>Flickr Feed</h2>-->
-<!--                        <div class="sponser">-->
-<!--                            <ul>-->
-<!--                                <li><a href="#"><img src="./images/sponser/8.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/9.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/10.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/11.png" alt=""></a></li>-->
-<!--                            </ul>-->
+<!--                    <div class="row gap-3 ">-->
+<!--                        <div class="col ">-->
+<!--                            <img src="images/midev/keuken/eerliek-mael-150.png" alt="..." class="img-thumbnail">-->
 <!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
-<!--                    <div class="widget">-->
-<!--                        <h2>Upcoming Events</h2>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="./images/sponser/12.png" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                <h4 class="media-heading">Snapshots from the Peter Cohen Gift</h4>-->
-<!--                                <p>April 8, 2016 – July 3, 2016</p>-->
-<!--                                <div class="read-more">-->
-<!--                                    <a href="#">Read More</a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <hr>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="./images/sponser/13.png" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                <h4 class="media-heading">Jack Levine & Bloom: Against the Grain</h4>-->
-<!--                                <p>April 12, 2016 – July 23, 2016</p>-->
-<!--                                <div class="read-more">-->
-<!--                                    <a href="#">Read More</a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <hr>-->
-<!--                        <div class="media">-->
-<!--                            <div class="pull-left">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="./images/sponser/14.png" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="media-body">-->
-<!--                                <h4 class="media-heading">Syd Solomon: Concealed & Revealed</h4>-->
-<!--                                <p>April 10, 2016 – July 16, 2016</p>-->
-<!--                                <div class="read-more">-->
-<!--                                    <a href="#">Read More</a>-->
-<!--                                </div>-->
-<!--                            </div>-->
+<!--                        <div class="col   ">-->
+<!--                            <img src="images/midev/keuken/eerliek-mael-150.png" alt="..." class="img-thumbnail">-->
 <!--                        </div>-->
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
-<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+
+<footer id="indexFooter" class="footermain">
+    <div class="footer-top footerinner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="widget p-3 shadow background-militarty-color text-light">
+                        <h2 class="">Over deze website</h2>
+                        <p class="card-text">
+                            Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de
+                            oudste archieven van
+                            Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van
+                            ontvangsten en
+                            uitgaven van het St. Pietersgasthuis over de jaren 1550 – 1559 . Alleen al de
+                            boodschappenlijstjes van de
+                            gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken boekdelen. Toename van de
+                            inkoop van zeep
+                            duidt op epidemieën en houtaankopen wijzen op de verhoogde vraag naar grafkisten. De kaart
+                            van middeleeuws
+                            Amsterdam uit 1538 leidt de bezoeker het St. Pieters Gasthuis, de gasthuiskapel of het
+                            pesthuis binnen. Door
+                            in de afbeeldingen op omlijnde figuren of objecten te klikken verschijnt informatie over het
+                            reilen en
+                            zijlen van het St. Pietersgasthuis. Alle informatie komt direct uit de administratie van de
+                            gasthuismeesters. Via de voetnoten bij de teksten komt u vanzelf bij de scans van de bronnen
+                            waaruit de
+                            informatie afkomstig is.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="widget p-3 card shadow background-militarty-color">
+                        <h2 class="">Corporate Sponsors </h2>
+                        <div class="sponser sisss">
+                            <ul>
+                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/sponser/partner-6.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/sponser/partner-7.png" alt=""></a></li>
+                                <li><a href="#"><img src="./images/sponser/partner-8.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--                    <div class="widget">-->
+                    <!--                        <h2>Flickr Feed</h2>-->
+                    <!--                        <div class="sponser">-->
+                    <!--                            <ul>-->
+                    <!--                                <li><a href="#"><img src="./images/sponser/8.png" alt=""></a></li>-->
+                    <!--                                <li><a href="#"><img src="./images/sponser/9.png" alt=""></a></li>-->
+                    <!--                                <li><a href="#"><img src="./images/sponser/10.png" alt=""></a></li>-->
+                    <!--                                <li><a href="#"><img src="./images/sponser/11.png" alt=""></a></li>-->
+                    <!--                            </ul>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                </div>
+                <!--                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">-->
+                <!--                    <div class="widget">-->
+                <!--                        <h2>Upcoming Events</h2>-->
+                <!--                        <div class="media">-->
+                <!--                            <div class="pull-left">-->
+                <!--                                <a href="#">-->
+                <!--                                    <img src="./images/sponser/12.png" alt="">-->
+                <!--                                </a>-->
+                <!--                            </div>-->
+                <!--                            <div class="media-body">-->
+                <!--                                <h4 class="media-heading">Snapshots from the Peter Cohen Gift</h4>-->
+                <!--                                <p>April 8, 2016 – July 3, 2016</p>-->
+                <!--                                <div class="read-more">-->
+                <!--                                    <a href="#">Read More</a>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <hr>-->
+                <!--                        <div class="media">-->
+                <!--                            <div class="pull-left">-->
+                <!--                                <a href="#">-->
+                <!--                                    <img src="./images/sponser/13.png" alt="">-->
+                <!--                                </a>-->
+                <!--                            </div>-->
+                <!--                            <div class="media-body">-->
+                <!--                                <h4 class="media-heading">Jack Levine & Bloom: Against the Grain</h4>-->
+                <!--                                <p>April 12, 2016 – July 23, 2016</p>-->
+                <!--                                <div class="read-more">-->
+                <!--                                    <a href="#">Read More</a>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <hr>-->
+                <!--                        <div class="media">-->
+                <!--                            <div class="pull-left">-->
+                <!--                                <a href="#">-->
+                <!--                                    <img src="./images/sponser/14.png" alt="">-->
+                <!--                                </a>-->
+                <!--                            </div>-->
+                <!--                            <div class="media-body">-->
+                <!--                                <h4 class="media-heading">Syd Solomon: Concealed & Revealed</h4>-->
+                <!--                                <p>April 10, 2016 – July 16, 2016</p>-->
+                <!--                                <div class="read-more">-->
+                <!--                                    <a href="#">Read More</a>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+            <div class="row pt-5">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget p-3 shadow background-militarty-color text-light">
+                        <h2 class="">Stichting Middeleeuwse geschiedenis Amsterdam</h2>
+                        <p class="card-text">
+                            De Stichting Middeleeuwse Archieven Amsterdam (hierna: SMAA) wil de toegankelijkheid,
+                            beschikbaarheid en het gebruik bevorderen van de middeleeuwse archieven van en over de stad
+                            Amsterdam. Wij willen namelijk de kennis over middeleeuwse Amsterdam vergroten onder een zo
+                            breed mogelijk publiek.
+                            SMAA wil mensen uit en buiten Amsterdam bewust maken van hoe de stad er in haar eerste
+                            eeuwen uitzag en functioneerde. Dat doen wij door de parallellen en verschillen tussen heden
+                            en verleden zichtbaar te maken op maatschappelijke thema’s als welvaart, zorg, jeugd,
+                            migratie, integratie, diversiteit en gemeenschapszin.
+                            Gedurende 2019 en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse
+                            gasthuisarchieven tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen beter
+                            toegankelijk. De stukken werden geconserveerd en de archieven kregen een nieuwe inventaris.
+                            De meest bijzondere bronnen uit deze archieven werden vertaald in modern Nederlands. De
+                            archieven kunnen digitaal worden geraadpleegd via de website van het Stadsarchief Amsterdam.
+                            En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker een
+                            bronnenuitgave van de meest bijzondere registers toegevoegd.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget p-3 shadow background-militarty-color text-light">
+                        <h2 class="">Contact</h2>
+                        <p class="card-text">
+                            E-mail: middeleeuwsamsterdam@gmail.com <br>
+                            Voor inhoudelijke vragen<br>
+                            E-mail: marielle@dmpart.nl
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!--    <div class="footer-bottom-area">-->
 <!--        <div class="container">-->
@@ -1083,7 +1111,7 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-<!--</footer>-->
+</footer>
 <!-- Footer End Here -->
 <!-- all js here -->
 <!-- jquery latest version -->
