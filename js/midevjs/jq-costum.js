@@ -36,7 +36,7 @@ function getCookie(name) {
 
 $(document).ready(function () {
 
-    websiteIntroductionModal()
+    // websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
     toggleMenu();
     // $('.polygon1').addClass('polygon-animate')
