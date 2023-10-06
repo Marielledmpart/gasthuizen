@@ -16,16 +16,21 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
-const getCookieValue = (name) => (
-    console.log(document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '')
-)
+
+const getCookieValue = (name) => {
+    let zoomIntrueOrFalse = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+    console.log(zoomIntrueOrFalse)
+    return zoomIntrueOrFalse
+}
+
+
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0){
+        if (c.indexOf(nameEQ) == 0) {
             historyZoom = c.substring(nameEQ.length, c.length);
             // console.log(historyZoom)
             return c.substring(nameEQ.length, c.length);
@@ -35,19 +40,16 @@ function getCookie(name) {
 }
 
 $(document).ready(function () {
-
+    let cTest = getCookieValue('test')
+    if (cTest !== 'true'){
+        $('#startZoomIn').removeClass('d-none');
+    }else if (cTest === 'true'){
+        showContentCloseIntroModal();
+    }
+    console.log(cTest)
     // websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
     toggleMenu();
-    // $('.polygon1').addClass('polygon-animate')
-    // drawPoly()
-    // let startZoomInValue = getCookie('HistoryZoom')
-    // if (startZoomInValue){
-    //     $('#startZoomIn').addClass('d-none')
-    //     showContent()
-    // }else {
-    //     $('#startZoomIn').removeClass('d-none')
-    // }
     $(window).resize(() => {
         tooptipLabelsSwitch()
     })
@@ -85,7 +87,7 @@ $(document).ready(function () {
         modalCardInfo.show();
     }
     let pageModal = document.getElementById('page-info')
-    pageModal.addEventListener('hidden.bs.modal',()=>{
+    pageModal.addEventListener('hidden.bs.modal', () => {
         showContent()
     })
 
@@ -214,13 +216,14 @@ $(document).ready(function () {
 
 });
 
-function mobileLandscape(){
+function mobileLandscape() {
     $('#startZoomInMobile').removeClass('d-none')
     $('#startZoomInMobile').addClass('icon-mobile-rotate')
-    setTimeout(() =>{
+    setTimeout(() => {
         $('#startZoomInMobile').addClass('d-none')
-    },12000)
+    }, 12000)
 }
+
 function initTooltipsDisplayLabels() {
     let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
     tooltipelements.forEach((el) => {
@@ -242,31 +245,30 @@ function distroyTooltipsShowLabels() {
 function tooptipLabelsSwitch() {
 
     // TODO adjust the if statement to have if ontouchstart and inside it the conditionar window width
-if ( "ontouchstart" in window || ($(window).width() <= 767 ) && $(window).width() < $(window).height()){
-    mobileLandscape()
-    // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-    distroyTooltipsShowLabels()
-    // $('.mobile-landscape').removeClass('d-none')
+    if ("ontouchstart" in window || ($(window).width() <= 767) && $(window).width() < $(window).height()) {
+        mobileLandscape()
+        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+        distroyTooltipsShowLabels()
+        // $('.mobile-landscape').removeClass('d-none')
     }
-    // else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
-    //     console.log('width is smaller thank height')
-    //     mobileLandscape()
-    //     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-    //     distroyTooltipsShowLabels()
-    //     $('.mobile-landscape').removeClass('d-none')
+        // else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
+        //     console.log('width is smaller thank height')
+        //     mobileLandscape()
+        //     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
+        //     distroyTooltipsShowLabels()
+        //     $('.mobile-landscape').removeClass('d-none')
     // }
     else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
         // mobileLandscape()
         distroyTooltipsShowLabels()
         // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
         $('.mobile-landscape').addClass('d-none')
-    }
-    else {
+    } else {
         initTooltipsDisplayLabels()
 
         // $('.svgResponsive').attr('viewBox', '0 0 1538 854')
         $('.mobile-landscape').addClass('d-none')
-    $('.tooltips-lablesIndex').addClass('d-none')
+        $('.tooltips-lablesIndex').addClass('d-none')
     }
 }
 
@@ -283,21 +285,20 @@ function drawPoly() {
     }).appendTo('#workmap');
     // console.log('poly', polystr)
 }
-function toggleMenu(){
-    $("#toggleMenu").on('click',function (){
+
+function toggleMenu() {
+    $("#toggleMenu").on('click', function () {
         $('#btnGroup').animate({
-            width:'toggle'
+            width: 'toggle'
         })
     })
-    $(document).mouseup(function(e)
-    {
+    $(document).mouseup(function (e) {
         var container = $('#btnGroup');
         var buttonI = $('#toggleMenu')
         var iButton = $('#iButton')
 
         // if the target of the click isn't the container nor a descendant of the container
-        if (!container.is(e.target) && container.has(e.target).length === 0 && !buttonI.is(e.target) && !iButton.is(e.target))
-        {
+        if (!container.is(e.target) && container.has(e.target).length === 0 && !buttonI.is(e.target) && !iButton.is(e.target)) {
             container.hide(500);
         }
     });
@@ -340,36 +341,40 @@ function getData() {
         console.log(response);
     });
 }
+
 // this function is for going to about and contact div's and disabling the web-intro and page-info modals
 
-function goToAboutContact(pageHtml){
+function goToAboutContact(pageHtml) {
     location.href = pageHtml;
-    $('#web-intro').load('../index.html',()=>{
+    $('#web-intro').load('../index.html', () => {
         $('#web-intro').remove()
     })
-    setTimeout(()=>{
+    setTimeout(() => {
         let webModal = new bootstrap.Modal('#web-intro')
         webModal.hide()
-    },1000)
+    }, 1000)
 }
-function websiteIntroductionModal(){
-    if (document.getElementById('web-intro')){
-        let webModal= document.getElementById('web-intro')
+
+function websiteIntroductionModal() {
+    if (document.getElementById('web-intro')) {
+        let webModal = document.getElementById('web-intro')
         let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
         modalWebsiteIntroductionModal.show();
-        webModal.addEventListener('hidden.bs.modal',() =>{
+        webModal.addEventListener('hidden.bs.modal', () => {
             showContentCloseIntroModal();
         })
     }
 }
 
-function showContentCloseIntroModal(){
+function showContentCloseIntroModal() {
     $('#startZoomIn').addClass('d-none')
     if (document.getElementById('page-info')) {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         modalCardInfo.show();
     }
+    setCookie('test', 'true', 2)
 }
+
 function showContent() {
     $('#startZoomIn').css('animation-name', '')
     $('#startZoomIn').css('animation-name', 'zoomOut')
