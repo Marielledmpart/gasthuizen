@@ -372,7 +372,7 @@ function showContentCloseIntroModal() {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         modalCardInfo.show();
     }
-    setCookie('test', 'true', 2)
+    // setCookie('test', 'true', 2)
 }
 
 function showContent() {
