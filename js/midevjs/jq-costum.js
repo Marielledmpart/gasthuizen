@@ -40,13 +40,13 @@ function getCookie(name) {
 }
 
 $(document).ready(function () {
-    let cTest = getCookieValue('test')
-    if (cTest !== 'true'){
-        $('#startZoomIn').removeClass('d-none');
-    }else if (cTest === 'true'){
-        showContentCloseIntroModal();
-    }
-    console.log(cTest)
+    // let cTest = getCookieValue('test')
+    // if (cTest !== 'true'){
+    //     $('#startZoomIn').removeClass('d-none');
+    // }else if (cTest === 'true'){
+    //     showContentCloseIntroModal();
+    // }
+    // console.log(cTest)
     // websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
     toggleMenu();
