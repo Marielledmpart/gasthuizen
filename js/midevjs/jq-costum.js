@@ -23,6 +23,16 @@ const getCookieValue = (name) => {
     return zoomIntrueOrFalse
 }
 
+function checkCookie(){
+    let cTest = getCookieValue('HistoryZoom')
+    if (cTest !== 'true'){
+        $('#startZoomIn').removeClass('d-none');
+    }else if (cTest === 'true'){
+        // $('#discoverBuilding').addClass('d-none')
+        showContentCloseIntroModal();
+    }
+    console.log(cTest)
+}
 
 function getCookie(name) {
     var nameEQ = name + "=";
@@ -38,15 +48,42 @@ function getCookie(name) {
     }
     return null;
 }
+function websiteIntroductionModal() {
+    if (document.getElementById('web-intro')) {
+        let webModal = document.getElementById('web-intro')
+        let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
+        modalWebsiteIntroductionModal.show();
+        webModal.addEventListener('hidden.bs.modal', () => {
+            showContentCloseIntroModal();
+        })
+    }
+}
 
+function showContentCloseIntroModal() {
+    setCookie('HistoryZoom','true', 20);
+    showContent()
+    showHideObjects()
+
+    if (document.getElementById('page-info')) {
+        let modalCardInfo = new bootstrap.Modal('#page-info')
+        // modalCardInfo.show();
+    }
+    $('#startZoomIn').addClass('d-none')
+}
+
+function showContent() {
+    $('#startZoomIn').css('animation-name', '')
+    $('#startZoomIn').css('animation-name', 'zoomOut')
+    // localStorage.setItem("startZoomInValue", "true");
+    // setCookie('HistoryZoom','true', 20);
+    setTimeout(() => {
+        // websiteIntroductionModal()
+
+    }, 1000)
+    $('#showContent').removeClass('d-none')
+}
 $(document).ready(function () {
-    // let cTest = getCookieValue('test')
-    // if (cTest !== 'true'){
-    //     $('#startZoomIn').removeClass('d-none');
-    // }else if (cTest === 'true'){
-    //     showContentCloseIntroModal();
-    // }
-    // console.log(cTest)
+    checkCookie()
     // websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
     toggleMenu();
@@ -82,16 +119,16 @@ $(document).ready(function () {
         // $('body').removeClass('d-none')
 
     }); // end ready
-    if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')) {
-        let modalCardInfo = new bootstrap.Modal('#page-info')
-        modalCardInfo.show();
-    }
-    let pageModal = document.getElementById('page-info')
-    pageModal.addEventListener('hidden.bs.modal', () => {
-        showContent()
-    })
+    // if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')) {
+    //     let modalCardInfo = new bootstrap.Modal('#page-info')
+    //     modalCardInfo.show();
+    // }
+    // let pageModal = document.getElementById('page-info')
+    // pageModal.addEventListener('hidden.bs.modal', () => {
+    //     showContent()
+    // })
 
-    showHideObjects()
+    // showHideObjects()
     initObjcet()
 
 
@@ -355,41 +392,18 @@ function goToAboutContact(pageHtml) {
     }, 1000)
 }
 
-function websiteIntroductionModal() {
-    if (document.getElementById('web-intro')) {
-        let webModal = document.getElementById('web-intro')
-        let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
-        modalWebsiteIntroductionModal.show();
-        webModal.addEventListener('hidden.bs.modal', () => {
-            showContentCloseIntroModal();
-        })
-    }
-}
 
-function showContentCloseIntroModal() {
-    $('#startZoomIn').addClass('d-none')
-    if (document.getElementById('page-info')) {
-        let modalCardInfo = new bootstrap.Modal('#page-info')
-        modalCardInfo.show();
-    }
-    // setCookie('test', 'true', 2)
-}
-
-function showContent() {
-    $('#startZoomIn').css('animation-name', '')
-    $('#startZoomIn').css('animation-name', 'zoomOut')
-    // localStorage.setItem("startZoomInValue", "true");
-    // setCookie('HistoryZoom','true', 20);
-    setTimeout(() => {
-        // websiteIntroductionModal()
-
-    }, 1000)
-    $('#showContent').removeClass('d-none')
-
-}
 
 function showHideObjects() {
     let cardRowsInfo = $('.info-card-element');
+    $('#discoverBuilding').removeClass('hide-on-load')
+    $('#phone1').removeClass('hide-on-load')
+    $('#phone11').removeClass('hide-on-load')
+    tooptipLabelsSwitch();
+    setTimeout(() => {
+        $(".ontvangsthal").removeClass('hide-on-load')
+    },)
+    $(".ontvangsthal").fadeIn('slow');
     cardRowsInfo.on('hide.bs.modal', () => {
         $('#discoverBuilding').removeClass('hide-on-load')
         $('#phone1').removeClass('hide-on-load')
