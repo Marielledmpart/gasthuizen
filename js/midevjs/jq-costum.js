@@ -74,6 +74,10 @@ function showContentCloseIntroModal() {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         // modalCardInfo.show();
     }
+    if (document.getElementById('reg83')) {
+        let reg83Modal = new bootstrap.Modal('#reg83')
+        // modalCardInfo.show();
+    }
     $('#startZoomIn').addClass('d-none')
 }
 

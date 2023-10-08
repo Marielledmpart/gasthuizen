@@ -147,7 +147,7 @@
             <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
                  class="btn-group position-absolute z-3" role="group" aria-label="Basic outlined example">
                 <a href="../index.html" class="btn btn-outline-light">Home</a>
-                <a  href="../index.html#aboutDiv"  class="btn btn-outline-light">About</a>
+                <a href="../index.html#aboutDiv" class="btn btn-outline-light">About</a>
                 <a id="toContact" href="../index.html#contactDiv" class="btn btn-outline-light">Contact</a>
             </div>
             <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
@@ -163,7 +163,8 @@
                         data-bs-toggle="modal" data-bs-target="#page-info"
                         aria-controls="page-info"
                         class=" p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon" class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
+                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon"
+                       class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
                 </button>
             </div>
             <div id="polDivPieters" class="polygon hide-on-load ontvangsthal">
@@ -189,7 +190,8 @@
                             data-bs-toggle="tooltip" data-bs-placement="right"
                             data-bs-original-title="Plattegrond"
                             onclick="goToPage('../index.html')"
-                            id="goToMap" role="button" class="toopTipNormail btn   no-borders link-light " href="../index.html">
+                            id="goToMap" role="button" class="toopTipNormail btn   no-borders link-light "
+                            href="../index.html">
                         <i class="bi bi-map" style="font-size: 2vw !important;"></i>
                     </button>
                     <!--                this button is model-->
@@ -280,6 +282,53 @@
         </div>
     </div>
 </div>
+<div id="reg83" class=" showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1"
+     aria-hidden="true">
+    <div class=" modal-dialog  modal-dialog-centered info-card-element  ">
+        <div class="modal-content bg-text-white text-light border border-1 border-light">
+            <div class="modal-header border-0">
+                <h1 id="reg83ModalLabel" class="modal-title fs-5">Register 83</h1>
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
+                        class="btn-close btn-close-white float-end" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="reg83ModalImage" src="../images/midev/register-83.png"
+                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"
+                     alt="...">
+                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+                <p id="reg83ModalBody" class="card-text  fontSize-12">
+                    De informatie op deze website over het dagelijks leven in het St. Pietersgasthuis is afkomstig uit
+                    inventarisnummer 83 van het archief van de Amsterdamse gasthuizen. Het is een register van inkomsten
+                    en uitgaven dat bijgehouden werd door de middeleeuwse ziekenhuisdirecteuren uit de jaren 1550-1559.
+                    Financiële administratie lijkt vaak erg saai en onbeduidend. Echter, als we tussen de regels van de
+                    administratie door lezen krijgen we een kijkje van binnenuit op het dagelijks leven in de gasthuizen
+                    en kloosters. Zo komen we bijvoorbeeld te weten wat de bewoners van het St. Pietersgasthuis aten en
+                    welke persoonlijke bezittingen de proveniers meenamen als zij hun kost in het gasthuis kochten. We
+                    zien welke leveranciers producten en diensten aan de gasthuismeesters leverden en hoeveel
+                    medewerkers voor het gasthuis aan het werk waren en waaruit hun loon bestond.
+                </p>
+            </div>
+            <div class="modal-footer border-0 flex-column align-items-start">
+                <ul id="reg83Ul" class="fontSize-8">
+                    <li>
+                        <a class=" fontSize-8"
+                           href="https://archief.amsterdam/inventarissen/scans/342/2.1.2.7/start/0/limit/10/highlight/1"
+                           target="_blank"><sup
+                                id="reg83VoetNote3">3</sup> GH (342) Inv.nr 58</a>
+                    </li>
+                    <li>
+                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
+                                id="reg83VoetNote4">4</sup> P.H.J. van der Laan, Resoluties van de Vroedschap van
+                            Amsterdam
+                            1551-1565, Hilversum Verloren 2008, p. 154.</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
 <div id="page-info" class=" showOnPageLoad modal info-card-element fade-scale   modal-xl" tabindex="-1"
      aria-hidden="true">
     <div class=" modal-dialog  modal-dialog-centered info-card-element  ">
@@ -292,8 +341,7 @@
             </div>
             <div class="modal-body">
                 <img id="infoModalImage" src="../images/midev/verhaal.png"
-                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"
-                     alt="...">
+                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end" alt="...">
                 <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
                 <p id="infoModalBody" class="card-text  fontSize-12">
                     Het Gasthuis was er voor arme zieken, zieke vreemdelingen en ouderen die geen sociaal vangnet
@@ -306,7 +354,10 @@
                     .
                     In de ziekenzaal lag het accent meer op verzorgen dan genezen en lagen de arme zieken en minder
                     vermogende proveniers bij elkaar. Proveniers die veel eigen vermogen in het gasthuis brachten konden
-                    een eigen of een tweepersoonskamer kamer krijgen.
+                    een eigen of een tweepersoonskamer kamer krijgen .....
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#reg83" aria-controls="reg83"
+                       class=" link-primary" >Lees verder
+                    </a>
                 </p>
             </div>
             <div class="modal-footer border-0 flex-column align-items-start">
@@ -324,7 +375,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 </div>
