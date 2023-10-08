@@ -126,8 +126,8 @@
                         id="btn-info"
                         data-bs-toggle="modal" data-bs-target="#page-info"
                         aria-controls="page-info"
-                        class="p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i id="nfoIcon" class="mobile-text-size bi bi-info-circle"></i>
+                        class=" p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
+                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon" class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
                 </button>
             </div>
             <!--        polygon shapes start-->
@@ -140,18 +140,18 @@
                 <!--                                        points="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426"-->
                 <!--                                                    points="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641"-->
                 <svg class="svg1 " preserveAspectRatio="none" viewBox="0 0 1519 854">
-                    <polygon id="pietersPoly" class="polygon1 no-borders"
+                    <polygon id="pietersPoly" class="toolTipOn polygon1 no-borders"
                              data-bs-title="St. Pieters Gasthuys" data-bs-toggle="tooltip" data-bs-placement="top"
                              onclick="goToPage('./pages/pieters.html')"
                              points="927,294,924,297,920,300,914,304,901,310,885,316,874,320,868,322,865,320,862,321,861,327,858,331,857,334,857,338,857,344,857,347,851,349,850,353,864,361,876,370,894,380,909,392,921,404,932,410,947,421,953,425,958,427,958,404,976,396,999,389,1013,384,1022,380,1028,376,1016,361,1000,351,987,343,976,336,970,332,968,328,965,325,963,329,963,332,956,342,955,356,956,364,958,373,960,380,946,372,933,363,928,359,943,352,950,347,951,341,949,335,947,330,942,321,939,313,934,305,931,299"
                     ></polygon>
-                    <polygon id="kapelPoly" class="polygon1 no-borders" data-bs-toggle="tooltip"
+                    <polygon id="kapelPoly" class="toolTipOn polygon1 no-borders" data-bs-toggle="tooltip"
                              data-bs-placement="left"
                              data-bs-title="De Kapel"
                              onclick="goToPage('./pages/kapel.html')"
                              points="846,354,846,360,845,367,846,374,841,376,837,378,833,374,830,372,829,378,829,384,825,389,824,396,825,402,836,400,837,397,846,396,850,402,854,409,858,398,861,396,864,396,880,391,880,385,879,381,871,368,869,366,864,367,860,370,853,373,853,366,852,360,851,355,848,351"
                     ></polygon>
-                    <polygon class="polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <polygon class="toolTipOn polygon1 no-borders" data-bs-toggle="tooltip" data-bs-placement="top"
                              data-bs-title="Het Pesthuis"
                              onclick="goToPage('./pages/pesthuis.html')"
                              points="693,472,688,475,683,479,679,480,673,478,655,484,628,493,608,500,595,502,589,503,590,512,590,520,582,525,600,541,615,557,631,574,645,590,654,598,659,602,667,603,667,594,668,585,670,582,700,573,726,566,745,561,760,555,763,554,758,543,753,532,740,519,722,500,712,487"

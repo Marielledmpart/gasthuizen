@@ -19,19 +19,22 @@ function setCookie(name, value, days) {
 
 const getCookieValue = (name) => {
     let zoomIntrueOrFalse = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
-    console.log(zoomIntrueOrFalse)
+    // console.log(zoomIntrueOrFalse)
     return zoomIntrueOrFalse
 }
 
-function checkCookie(){
+function checkCookie() {
     let cTest = getCookieValue('HistoryZoom')
-    if (cTest !== 'true'){
+    if (cTest !== 'true') {
+        setTimeout(() => {
+        }, 1000)
         $('#startZoomIn').removeClass('d-none');
-    }else if (cTest === 'true'){
+    } else if (cTest === 'true') {
         // $('#discoverBuilding').addClass('d-none')
         showContentCloseIntroModal();
+
     }
-    console.log(cTest)
+    // console.log(cTest)
 }
 
 function getCookie(name) {
@@ -48,6 +51,7 @@ function getCookie(name) {
     }
     return null;
 }
+
 function websiteIntroductionModal() {
     if (document.getElementById('web-intro')) {
         let webModal = document.getElementById('web-intro')
@@ -60,10 +64,12 @@ function websiteIntroductionModal() {
 }
 
 function showContentCloseIntroModal() {
-    setCookie('HistoryZoom','true', 20);
+    setCookie('HistoryZoom', 'true', 20);
     showContent()
     showHideObjects()
-
+    setTimeout(() => {
+        toolTipAlwaysShow()
+    }, 1000)
     if (document.getElementById('page-info')) {
         let modalCardInfo = new bootstrap.Modal('#page-info')
         // modalCardInfo.show();
@@ -82,9 +88,23 @@ function showContent() {
     }, 1000)
     $('#showContent').removeClass('d-none')
 }
+function Scrolldown() {
+    window.location.hash = '#aboutDiv';
+    console.log('window load')
+}
+function goToPage(pageHtml, locationDiv) {
+    location.href = pageHtml;
+    setTimeout(() => {
+        window.load = Scrolldown();
+    },10000)
+
+}
 $(document).ready(function () {
+    if (!window.location.hash){
+        $('html, body').animate({
+        }, 300)
+    }
     checkCookie()
-    // websiteIntroductionModal()
     $('.tooltips-lables').addClass('d-none')
     toggleMenu();
     $(window).resize(() => {
@@ -112,9 +132,6 @@ $(document).ready(function () {
             }
         });
     })
-    $('html, body').animate({
-        scrollTop: $('body').offset().top
-    }, 300)
     $(function () {
         // $('body').removeClass('d-none')
 
@@ -261,10 +278,34 @@ function mobileLandscape() {
     }, 12000)
 }
 
+function toolTipAlwaysShow() {
+    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
+    tooltipElementOn.forEach((el) => {
+        elT = new bootstrap.Tooltip(el, {
+            trigger: 'manual'
+        })
+        elT.show()
+    })
+}
+
+function toolTipAlwaysShowAfterModalHide() {
+    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
+    tooltipElementOn.forEach((el) => {
+        bootstrap.Tooltip.getInstance(el).show()
+    })
+}
+
+function toolTipAlwaysHide() {
+    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
+    tooltipElementOn.forEach((el) => {
+        bootstrap.Tooltip.getInstance(el).hide()
+    })
+}
+
 function initTooltipsDisplayLabels() {
-    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
+    let tooltipelements = document.querySelectorAll('.toopTipNormail');
     tooltipelements.forEach((el) => {
-        $(el).tooltip();
+        $(el).tooltip({})
     });
     $('.tooltips-lables').addClass('d-none')
     $('.tooltips-lablesIndex').addClass('d-none')
@@ -393,7 +434,6 @@ function goToAboutContact(pageHtml) {
 }
 
 
-
 function showHideObjects() {
     let cardRowsInfo = $('.info-card-element');
     $('#discoverBuilding').removeClass('hide-on-load')
@@ -405,6 +445,7 @@ function showHideObjects() {
     },)
     $(".ontvangsthal").fadeIn('slow');
     cardRowsInfo.on('hide.bs.modal', () => {
+        toolTipAlwaysShowAfterModalHide()
         $('#discoverBuilding').removeClass('hide-on-load')
         $('#phone1').removeClass('hide-on-load')
         $('#phone11').removeClass('hide-on-load')
@@ -415,6 +456,7 @@ function showHideObjects() {
         $(".ontvangsthal").fadeIn('slow');
     })
     cardRowsInfo.on('shown.bs.modal', () => {
+        toolTipAlwaysHide()
         $('#discoverBuilding').addClass('hide-on-load')
         $(".ontvangsthal").fadeOut('slow');
     })
@@ -565,6 +607,4 @@ function myFuncHide(el) {
 //     });
 // })
 
-function goToPage(pageHtml) {
-    location.href = pageHtml;
-}
+

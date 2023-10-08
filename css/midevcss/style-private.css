@@ -566,7 +566,22 @@ img-background {
     /*transition: all 3s ease;*/
     opacity: 0;
     animation: fadein 3s  ease-in  alternate infinite;
+    animation-delay: 1s;
+}
+.info-button-fadeIn{
+    opacity: 1;
+    animation: fadeinInfo 3s  ease-in  alternate infinite;
+    transition: all 3s ease;
     /*animation-delay: 1s;*/
+}
+.info-button-fadeIn:hover{
+    animation: none;
+    opacity: 1;
+    transition: all 3s ease;
+}
+@keyframes fadeinInfo {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 @keyframes fadein {
     from { opacity: 0; }
