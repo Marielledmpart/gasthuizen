@@ -64,10 +64,13 @@ function websiteIntroductionModal() {
 }
 
 function showContentCloseIntroModal() {
-    setCookie('HistoryZoom', 'true', 20);
+    $('#startZoomIn').removeClass('zoomIn');
+    $('#startZoomIn').addClass('zoomOut');
+    // setCookie('HistoryZoom', 'true', 20);
     showContent()
     showHideObjects()
     setTimeout(() => {
+        $('#startZoomIn').addClass('d-none')
         toolTipAlwaysShow()
     }, 1000)
     if (document.getElementById('page-info')) {
@@ -78,7 +81,6 @@ function showContentCloseIntroModal() {
         let reg83Modal = new bootstrap.Modal('#reg83')
         // modalCardInfo.show();
     }
-    $('#startZoomIn').addClass('d-none')
 }
 
 function showContent() {
