@@ -66,7 +66,7 @@ function websiteIntroductionModal() {
 function showContentCloseIntroModal() {
     $('#startZoomIn').removeClass('zoomIn');
     $('#startZoomIn').addClass('zoomOut');
-    // setCookie('HistoryZoom', 'true', 20);
+    setCookie('HistoryZoom', 'true', 20);
     showContent()
     showHideObjects()
     setTimeout(() => {
