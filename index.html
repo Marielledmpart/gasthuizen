@@ -45,7 +45,8 @@
 <body class="noJson " style="background-color: #455432 ">
 <div class="slider-area ">
     <div>
-        <div id="startZoomIn" class="d-none w-100 row position-absolute z-3 text-light " style="animation-name: zoomIn; animation-duration:2s; top:25%;left: 15%;">
+        <div id="startZoomIn" class="d-none w-100 row position-absolute z-3 text-light "
+             style="animation-name: zoomIn; animation-duration:2s; top:25%;left: 15%;">
             <div class="row w-100">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
                     <h2 class=" " style=" font-size: 5vw !important;width: 80%;font-family: 'Athelas '">
@@ -57,8 +58,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <button type="button" onclick="showContentCloseIntroModal()" style="font-size: 2vw !important;"
-                            class="bg-text-white   btn btn-outline-light " aria-label="Close"><strong>Ga naar de
-                        Plattegrond</strong>
+                            class="bg-text-white   btn btn-outline-light " aria-label="Close"><strong>Welkom in
+                        Middeleeuws Amsterdam</strong>
                     </button>
                 </div>
             </div>
@@ -112,8 +113,9 @@
             <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
                  class="btn-group position-absolute z-3" role="group" aria-label="Basic outlined example">
                 <a href="#img1" class="btn btn-outline-light">Home</a>
-                <a href="#aboutDiv" class="btn btn-outline-light">About</a>
-                <a href="#contactDiv" class="btn btn-outline-light">Contact</a>
+                <a id="a-about" href="#aboutDiv" class="btn btn-outline-light"
+                   data-bs-toggle="offcanvas"  role="button"
+                   aria-controls="aboutDiv">About</a>
             </div>
             <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
                  aria-label="Vertical button group" style="top:5.7%;right: 5%">
@@ -261,6 +263,54 @@
 <!-- Reason to come the zoo start here -->
 
 
+<div class=" bg-green-color offcanvas-width-75 offcanvas offcanvas-start" tabindex="-1" id="aboutDiv"
+     aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header text-light">
+        <h2 class="offcanvas-title ps-5" id="offcanvasExampleLabel">About</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body text-light">
+        <div class="row d-flex justify-content-center pb-2">
+            <div class="background-militarty-color widget p-4 shadow col-8">
+                <h2 class="mb-3">Over het project</h2>
+                <p class="card-text">
+                    De Stichting Middeleeuwse Archieven Amsterdam wil de toegankelijkheid, beschikbaarheid en het
+                    gebruik
+                    bevorderen van de middeleeuwse archieven van en over de stad Amsterdam. De stichting wil de kennis
+                    over
+                    middeleeuwse Amsterdam vergroten onder een zo breed mogelijk publiek. SMAA wil mensen uit en buiten
+                    Amsterdam bewust maken van hoe de stad er in haar eerste eeuwen uitzag en functioneerde. Dat doen
+                    wij
+                    door de parallellen en verschillen tussen heden en verleden zichtbaar te maken op maatschappelijke
+                    thema’s als welvaart, zorg, jeugd, migratie, integratie, diversiteit en gemeenschapszin. Gedurende
+                    2019
+                    en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse gasthuisarchieven tot 1578’ de
+                    archieven van de Amsterdamse middeleeuwse gasthuizen beter toegankelijk. De stukken werden
+                    geconserveerd
+                    en de archieven kregen een nieuwe inventaris. De meest bijzondere bronnen uit deze archieven werden
+                    vertaald in modern Nederlands. De archieven kunnen digitaal worden geraadpleegd via de website van
+                    het
+                    Stadsarchief Amsterdam. En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker
+                    een
+                    bronnenuitgave van de meest bijzondere registers toegevoegd.
+                </p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center pt-2">
+            <div class="background-militarty-color widget p-4 shadow col-8 ">
+                <h2 class="mb-3">Disclaimer</h2>
+                <p class="card-text">
+                    De inhoud van deze website, zoals tekst, grafieken, afbeeldingen en ander materiaal is uitsluitend
+                    bedoeld om het publiek mee te nemen naar en te verwonderen over de verhalen betreffende de
+                    middeleeuwse Amsterdamse gasthuizen. De bronvermeldingen maken het mogelijk namen, plaatsen,
+                    aantallen en gebeurtenissen in de archieven te verifiëren. De afbeeldingen hebben geen relatie met
+                    het St. Pietersgasthuis en zijn over het algemeen niet uit de periode waarin de gepubliceerde
+                    verhalen spelen.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <footer id="indexFooter" class="footermain">
     <div class="footer-top footerinner">
         <div class="container">
@@ -296,7 +346,7 @@
                             digitaal worden geraadpleegd worden via de website van het Stadsarchief Amsterdam. En om het
                             geheel compleet te maken is voor de wetenschappelijke onderzoeker een bronnenuitgave van de
                             meest bijzondere registers toegevoegd. Heeft u vragen naar aanleiding van de verhalen? Neem
-                            contact op met de projectleider Mariëlle Kruithof: mariëlle@dmpart.nl
+                            contact op met de projectleider Mariëlle Kruithof: <a class="link-offset-2 link-offset-3-hover" href="mailto:mariëlle@dmpart.nl">mariëlle@dmpart.nl</a>
                         </p>
                     </div>
                 </div>
@@ -305,8 +355,10 @@
                         <h2 class="">Mede mogelijk gemaakt door</h2>
                         <div class="sponser sisss">
                             <ul>
-                                <li><a href="#"><img src="images/midev/sponser-logos/PBCF_Logo_wit100.png" alt=""></a></li>
-                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/midev/sponser-logos/PBCF_Logo_wit100.png" alt=""></a>
+                                </li>
+                                <li><a href="#"><img src="images/midev/sponser-logos/fundatie%20logo100.png" alt=""></a>
+                                </li>
                                 <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
                                 <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
                                 <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>
@@ -329,66 +381,74 @@
                     <!--                    </div>-->
                 </div>
             </div>
-            <div id="aboutDiv" class="row pt-5">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="widget p-3 shadow background-militarty-color text-light">
-                        <h2 class="">Stichting Middeleeuwse geschiedenis Amsterdam</h2>
-                        <p class="card-text">
-                            De Stichting Middeleeuwse Archieven Amsterdam (hierna: SMAA) wil de toegankelijkheid,
-                            beschikbaarheid en het gebruik bevorderen van de middeleeuwse archieven van en over de stad
-                            Amsterdam. Wij willen namelijk de kennis over middeleeuwse Amsterdam vergroten onder een zo
-                            breed mogelijk publiek.
-                            SMAA wil mensen uit en buiten Amsterdam bewust maken van hoe de stad er in haar eerste
-                            eeuwen uitzag en functioneerde. Dat doen wij door de parallellen en verschillen tussen heden
-                            en verleden zichtbaar te maken op maatschappelijke thema’s als welvaart, zorg, jeugd,
-                            migratie, integratie, diversiteit en gemeenschapszin.
-                            Gedurende 2019 en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse
-                            gasthuisarchieven tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen beter
-                            toegankelijk. De stukken werden geconserveerd en de archieven kregen een nieuwe inventaris.
-                            De meest bijzondere bronnen uit deze archieven werden vertaald in modern Nederlands. De
-                            archieven kunnen digitaal worden geraadpleegd via de website van het Stadsarchief Amsterdam.
-                            En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker een
-                            bronnenuitgave van de meest bijzondere registers toegevoegd.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="contactDiv" class="row pt-5">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="widget p-3 shadow background-militarty-color text-light">
-                        <h2 class="">Contact</h2>
-                        <p class="card-text">
-                            E-mail: middeleeuwsamsterdam@gmail.com <br>
-                            Voor inhoudelijke vragen<br>
-                            E-mail: marielle@dmpart.nl
+            <!--            <div id="aboutDiv" class="row pt-5">-->
+            <!--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+            <!--                    <div class="widget p-3 shadow background-militarty-color text-light">-->
+            <!--                        <h2 class="">Stichting Middeleeuwse geschiedenis Amsterdam</h2>-->
+            <!--                        <p class="card-text">-->
+            <!--                            De Stichting Middeleeuwse Archieven Amsterdam (hierna: SMAA) wil de toegankelijkheid,-->
+            <!--                            beschikbaarheid en het gebruik bevorderen van de middeleeuwse archieven van en over de stad-->
+            <!--                            Amsterdam. Wij willen namelijk de kennis over middeleeuwse Amsterdam vergroten onder een zo-->
+            <!--                            breed mogelijk publiek.-->
+            <!--                            SMAA wil mensen uit en buiten Amsterdam bewust maken van hoe de stad er in haar eerste-->
+            <!--                            eeuwen uitzag en functioneerde. Dat doen wij door de parallellen en verschillen tussen heden-->
+            <!--                            en verleden zichtbaar te maken op maatschappelijke thema’s als welvaart, zorg, jeugd,-->
+            <!--                            migratie, integratie, diversiteit en gemeenschapszin.-->
+            <!--                            Gedurende 2019 en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse-->
+            <!--                            gasthuisarchieven tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen beter-->
+            <!--                            toegankelijk. De stukken werden geconserveerd en de archieven kregen een nieuwe inventaris.-->
+            <!--                            De meest bijzondere bronnen uit deze archieven werden vertaald in modern Nederlands. De-->
+            <!--                            archieven kunnen digitaal worden geraadpleegd via de website van het Stadsarchief Amsterdam.-->
+            <!--                            En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker een-->
+            <!--                            bronnenuitgave van de meest bijzondere registers toegevoegd.-->
+            <!--                        </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div id="contactDiv" class="row pt-5">-->
+            <!--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+            <!--                    <div class="widget p-3 shadow background-militarty-color text-light">-->
+            <!--                        <h2 class="">Contact</h2>-->
+            <!--                        <p class="card-text">-->
+            <!--                            E-mail: middeleeuwsamsterdam@gmail.com <br>-->
+            <!--                            Voor inhoudelijke vragen<br>-->
+            <!--                            E-mail: marielle@dmpart.nl-->
 
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <!--                        </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
 
-    <!--    <div class="footer-bottom-area">-->
-    <!--        <div class="container">-->
-    <!--            <div class="row">-->
-    <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-    <!--                    <div class="footer-menu">-->
-    <!--                        <ul>-->
-    <!--                            <li><a href="#">Facebook</a></li>-->
-    <!--                            <li><a href="#">Twitter</a></li>-->
-    <!--                            <li><a href="#">Flickr</a></li>-->
-    <!--                        </ul>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-    <!--                    <div class="copyright">-->
-    <!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
+    <div class="footer-bottom-area pb-5 ">
+        <div class="container p-3 pt-5 background-militarty-color shadow">
+            <div class="row ">
+                <p class="card-text text-light">
+                    Deze website is een product gepubliceerd als onderdeel van het project Ontsluiting Middeleeuwse
+                    Gasthuizenarchieven Amsterdam. Het project is uitgevoerd door de Stichting Middeleeuwse Geschiedenis
+                    Amsterdam.
+                    <a class="link-underline-primary link-offset-2 link-offset-3-hover" href="https://www.middeleeuwsamsterdam.nl/" target="_blank">Ga naar de website van de stichting</a>
+                </p>
+            </div>
+<!--            <div class="row">-->
+<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+<!--                    <div class="footer-menu">-->
+<!--                        <ul>-->
+<!--                            <li><a href="#">Facebook</a></li>-->
+<!--                            <li><a href="#">Twitter</a></li>-->
+<!--                            <li><a href="#">Flickr</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+<!--                    <div class="copyright">-->
+<!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
 </footer>
 <!-- Footer End Here -->
 <!-- all js here -->

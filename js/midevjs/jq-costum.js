@@ -94,21 +94,37 @@ function showContent() {
     }, 1000)
     $('#showContent').removeClass('d-none')
 }
+
 function Scrolldown() {
     window.location.hash = '#aboutDiv';
     console.log('window load')
 }
+
 function goToPage(pageHtml, locationDiv) {
     location.href = pageHtml;
     setTimeout(() => {
         window.load = Scrolldown();
-    },10000)
+    }, 10000)
 
 }
+
+function offCanvasShowHide() {
+    const offCanvasAbout = document.getElementById('aboutDiv');
+    if (offCanvasAbout){
+        offCanvasAbout.addEventListener('show.bs.offcanvas', () => {
+            toolTipAlwaysHide();
+        })
+        offCanvasAbout.addEventListener('hidden.bs.offcanvas', () => {
+            toolTipAlwaysShowAfterModalHide();
+        })
+    }
+
+}
+
 $(document).ready(function () {
-    if (!window.location.hash){
-        $('html, body').animate({
-        }, 300)
+    offCanvasShowHide();
+    if (!window.location.hash) {
+        $('html, body').animate({}, 300)
     }
     checkCookie()
     $('.tooltips-lables').addClass('d-none')
@@ -371,7 +387,7 @@ function drawPoly() {
 }
 
 function toggleMenu() {
-    $("#toggleMenu").on('click', function () {
+    $("#toggleMenu,#btnGroup").on('click', function () {
         $('#btnGroup').animate({
             width: 'toggle'
         })

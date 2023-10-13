@@ -1,4 +1,20 @@
 /* CSS by Nami */
+.shadow-offcanvas::after {
+    box-shadow:inset 1px 10px 30px 10px rgba(87,104,62,0.9) ;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.bg-green-color{
+    background-color: rgb(69, 84, 50) !important;
+    --bs-offcanvas-transition: transform 1s ease-in-out !important;
+}
+.offcanvas-width-75{
+    --bs-offcanvas-width: 75% !important;
+}
 .background-militarty-color{
     background-color: #57683e !important;
 }
