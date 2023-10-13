@@ -100,6 +100,54 @@
 <!--</header>-->
 <!-- Header Area End Here -->
 <!-- Slider Area Start Here -->
+<div class=" bg-green-color offcanvas-width-75 offcanvas offcanvas-start" tabindex="-1" id="aboutDiv"
+     aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header text-light">
+        <h2 class="offcanvas-title ps-5" id="offcanvasExampleLabel">About</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body text-light">
+        <div class="row d-flex justify-content-center pb-2">
+            <div class="background-militarty-color widget p-4 shadow col-8">
+                <h2 class="mb-3">Over het project</h2>
+                <p class="card-text">
+                    De Stichting Middeleeuwse Archieven Amsterdam wil de toegankelijkheid, beschikbaarheid en het
+                    gebruik
+                    bevorderen van de middeleeuwse archieven van en over de stad Amsterdam. De stichting wil de kennis
+                    over
+                    middeleeuwse Amsterdam vergroten onder een zo breed mogelijk publiek. SMAA wil mensen uit en buiten
+                    Amsterdam bewust maken van hoe de stad er in haar eerste eeuwen uitzag en functioneerde. Dat doen
+                    wij
+                    door de parallellen en verschillen tussen heden en verleden zichtbaar te maken op maatschappelijke
+                    thema’s als welvaart, zorg, jeugd, migratie, integratie, diversiteit en gemeenschapszin. Gedurende
+                    2019
+                    en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse gasthuisarchieven tot 1578’ de
+                    archieven van de Amsterdamse middeleeuwse gasthuizen beter toegankelijk. De stukken werden
+                    geconserveerd
+                    en de archieven kregen een nieuwe inventaris. De meest bijzondere bronnen uit deze archieven werden
+                    vertaald in modern Nederlands. De archieven kunnen digitaal worden geraadpleegd via de website van
+                    het
+                    Stadsarchief Amsterdam. En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker
+                    een
+                    bronnenuitgave van de meest bijzondere registers toegevoegd.
+                </p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center pt-2">
+            <div class="background-militarty-color widget p-4 shadow col-8 ">
+                <h2 class="mb-3">Disclaimer</h2>
+                <p class="card-text">
+                    De inhoud van deze website, zoals tekst, grafieken, afbeeldingen en ander materiaal is uitsluitend
+                    bedoeld om het publiek mee te nemen naar en te verwonderen over de verhalen betreffende de
+                    middeleeuwse Amsterdamse gasthuizen. De bronvermeldingen maken het mogelijk namen, plaatsen,
+                    aantallen en gebeurtenissen in de archieven te verifiëren. De afbeeldingen hebben geen relatie met
+                    het St. Pietersgasthuis en zijn over het algemeen niet uit de periode waarin de gepubliceerde
+                    verhalen spelen.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <!--TODO:create polygons for kapel and do the modals-->
 <div class="slider-area ">
     <div>
@@ -147,8 +195,9 @@
             <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
                  class="btn-group position-absolute z-3" role="group" aria-label="Basic outlined example">
                 <a href="../index.html" class="btn btn-outline-light">Home</a>
-                <a  href="../index.html#aboutDiv"  class="btn btn-outline-light">About</a>
-                <a id="toContact" href="../index.html#contactDiv" class="btn btn-outline-light">Contact</a>
+                <a id="a-about" href="#aboutDiv" class="btn btn-outline-light"
+                   data-bs-toggle="offcanvas"  role="button"
+                   aria-controls="aboutDiv">About</a>
             </div>
             <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
                  aria-label="Vertical button group" style="top:5.7%;right: 5%">
@@ -163,7 +212,8 @@
                         data-bs-toggle="modal" data-bs-target="#page-info"
                         aria-controls="page-info"
                         class=" p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon" class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
+                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon"
+                       class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
                 </button>
             </div>
             <div id="polDivKapel" class="polygon hide-on-load ontvangsthal">
