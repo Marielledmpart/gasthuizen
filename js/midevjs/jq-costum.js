@@ -7,130 +7,23 @@
 // }else {
 //     console.log('it is not touch')
 // }
-function setCookie(name, value, days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-}
-
-const getCookieValue = (name) => {
-    let zoomIntrueOrFalse = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
-    // console.log(zoomIntrueOrFalse)
-    return zoomIntrueOrFalse
-}
-
-function checkCookie() {
-    let cTest = getCookieValue('HistoryZoom')
-    if (cTest !== 'true') {
-        setTimeout(() => {
-        }, 1000)
-        $('#startZoomIn').removeClass('d-none');
-    } else if (cTest === 'true') {
-        // $('#discoverBuilding').addClass('d-none')
-        showContentCloseIntroModal();
-
-    }
-    // console.log(cTest)
-}
-
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) {
-            historyZoom = c.substring(nameEQ.length, c.length);
-            // console.log(historyZoom)
-            return c.substring(nameEQ.length, c.length);
-        }
-    }
-    return null;
-}
-
-function websiteIntroductionModal() {
-    if (document.getElementById('web-intro')) {
-        let webModal = document.getElementById('web-intro')
-        let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
-        modalWebsiteIntroductionModal.show();
-        webModal.addEventListener('hidden.bs.modal', () => {
-            showContentCloseIntroModal();
-        })
-    }
-}
-
-function showContentCloseIntroModal() {
-    $('#startZoomIn').removeClass('zoomIn');
-    $('#startZoomIn').addClass('zoomOut');
-    setCookie('HistoryZoom', 'true', 20);
-    showContent()
-    showHideObjects()
-    setTimeout(() => {
-        $('#startZoomIn').addClass('d-none')
-        toolTipAlwaysShow()
-    }, 1000)
-    if (document.getElementById('page-info')) {
-        let modalCardInfo = new bootstrap.Modal('#page-info')
-        // modalCardInfo.show();
-    }
-    if (document.getElementById('reg83')) {
-        let reg83Modal = new bootstrap.Modal('#reg83')
-        // modalCardInfo.show();
-    }
-}
-
-function showContent() {
-    $('#startZoomIn').css('animation-name', '')
-    $('#startZoomIn').css('animation-name', 'zoomOut')
-    // localStorage.setItem("startZoomInValue", "true");
-    // setCookie('HistoryZoom','true', 20);
-    setTimeout(() => {
-        // websiteIntroductionModal()
-
-    }, 1000)
-    $('#showContent').removeClass('d-none')
-}
-
-function Scrolldown() {
-    window.location.hash = '#aboutDiv';
-    console.log('window load')
-}
-
-function goToPage(pageHtml, locationDiv) {
-    location.href = pageHtml;
-    setTimeout(() => {
-        window.load = Scrolldown();
-    }, 10000)
-
-}
-
-function offCanvasShowHide() {
-    const offCanvasAbout = document.getElementById('aboutDiv');
-    if (offCanvasAbout){
-        offCanvasAbout.addEventListener('show.bs.offcanvas', () => {
-            toolTipAlwaysHide();
-        })
-        offCanvasAbout.addEventListener('hidden.bs.offcanvas', () => {
-            toolTipAlwaysShowAfterModalHide();
-        })
-    }
-
-}
-
 $(document).ready(function () {
-    offCanvasShowHide();
-    if (!window.location.hash) {
+    moederModal();
+    setTimeout(() => {
+        initTooltipBuildings()
+    }, 1000)
+    offCanvasShowHide(); // event listener for offCanvas when show and hide
+    if (!window.location.hash) { // this for keeping the page on top if there is no # in url
         $('html, body').animate({}, 300)
     }
-    checkCookie()
-    $('.tooltips-lables').addClass('d-none')
-    toggleMenu();
-    $(window).resize(() => {
-        tooptipLabelsSwitch()
+    checkCookie() // check cookies if zoomIn history is true or false , if true it will excute showContentCloseIntroModal() function
+    toggleMenu(); // this for menu list icon event listener to hide the btn group of this menu
+    initObjcetsModal() // this for init modals of object and the data of each modal object,also when clicking on object the right modal with data will apear
+    mobWindowSize() // on page load this will check if the screen is less than 767 and the width is lesser than the height then mobileLandscape icon witll appear
+    $(window).on('resize',() => {
+        tooptipLabelsSwitch();
+        mobWindowSize() // same as above but when window resize
+        // tooptipLabelsSwitch();
     })
 
     $(function () {
@@ -153,95 +46,15 @@ $(document).ready(function () {
                 // delay:50
             }
         });
-    })
+    }) // this for animating text
     $(function () {
         // $('body').removeClass('d-none')
 
     }); // end ready
-    // if (document.getElementById('page-info') && $('#page-info').hasClass('showOnPageLoad')) {
-    //     let modalCardInfo = new bootstrap.Modal('#page-info')
-    //     modalCardInfo.show();
-    // }
-    // let pageModal = document.getElementById('page-info')
-    // pageModal.addEventListener('hidden.bs.modal', () => {
-    //     showContent()
-    // })
 
     // showHideObjects()
-    initObjcet()
-
 
     // https://jsfiddle.net/eFjnU/
-    function goToBuildingCycle() {
-        $("#goToBuilding").fadeIn(3000)
-            .delay(1000)
-            .fadeOut(3000, goToBuildingCycle);
-    };
-    // goToBuildingCycle();
-    $(".tooltip-class").hover(function () {
-        $(this).attr("tooltip-data", $(this).attr("title"));
-        $(this).removeAttr("title");
-    }, function () {
-        $(this).attr("title", $(this).attr("tooltip-data"));
-        $(this).removeAttr("tooltip-data");
-    });
-    $("#icon-next").on("click", function () {
-        var textClass = $("#img-card").attr("class");
-        $("#card-rows").fadeOut(2000).fadeIn(2000)
-        setTimeout(function () {
-            cardArr.forEach((p, i) => {
-                var pageClass = textClass.search(p.page);
-                if (pageClass !== -1) {
-                    p.content.forEach((e, i) => {
-                        var textResult = textClass.search(e.class);
-                        if (textResult !== -1) {
-                            if (e.class === p.content[i].class) {
-                                $("#img-card").removeClass(p.content[i].class);
-                                $("#img-card").addClass(p.content[i + 1].class);
-                                $("#img-card").attr('alt', p.content[i + 1].alt);
-                                $("#img-card").attr('src', p.content[i + 1].src);
-                                $("#text-card").text(p.content[i + 1].text);
-                                $("#card-title").text(p.content[i + 1].title);
-                                $("#icon-previous").show();
-                                if (p.content.length === i + 2) {
-                                    $("#icon-next").hide();
-                                }
-                            }
-                        }
-                    });
-                }
-            })
-        }, 2000)
-    });
-    $("#icon-previous").on("click", function () {
-        var textClass = $("#img-card").attr("class");
-        $("#card-rows").fadeOut(2000).fadeIn(2000)
-        setTimeout(function () {
-            cardArr.forEach((p, i) => {
-                var pageClass = textClass.search(p.page);
-                if (pageClass !== -1) {
-                    p.content.forEach((e, i) => {
-                        var textResult = textClass.search(e.class);
-                        if (textResult !== -1) {
-                            if (e.class === p.content[i].class) {
-                                $("#img-card").removeClass(p.content[i].class);
-                                $("#img-card").addClass(p.content[i - 1].class);
-                                $("#img-card").attr('src', p.content[i - 1].src);
-                                $("#img-card").attr('alt', p.content[i - 1].alt);
-                                $("#text-card").html(p.content[i - 1].text);
-                                $("#card-title").text(p.content[i - 1].title)
-                                if (i === 1) {
-                                    $("#icon-previous").hide();
-                                }
-                                $("#icon-next").show();
-                            }
-                        }
-                    });
-                }
-            })
-        }, 2000)
-
-    });
 
 
     // $('.highLightMap').maphilight({
@@ -292,6 +105,220 @@ $(document).ready(function () {
 
 });
 
+function checkCookie() {
+    let cTest = getCookieValue('HistoryZoom')
+    if (cTest !== 'true') {
+        setTimeout(() => {
+        }, 1000)
+        $('#startZoomIn').removeClass('d-none');
+    } else if (cTest === 'true') {
+        showContentCloseIntroModal();
+    }
+}
+
+function showContentCloseIntroModal() {
+    setCookie('HistoryZoom', 'true', 20);
+    $('#startZoomIn').css('animation-name', 'zoomOut')
+    $('#showContent').removeClass('d-none')
+    showHideObjects()
+    setTimeout(() => {
+        $('#startZoomIn').addClass('d-none')
+        // initTooltipBuildings()
+        // if ($(window).width() > 767){
+        //     tooltipBuildingsShow();
+        // }
+    }, 1000)
+    if (document.getElementById('page-info')) {
+        let modalCardInfo = new bootstrap.Modal('#page-info')
+        // modalCardInfo.show();
+    }
+    if (document.getElementById('reg83')) {
+        let reg83Modal = new bootstrap.Modal('#reg83')
+        // modalCardInfo.show();
+    }
+}
+
+function showHideObjects() {
+    let cardRowsInfo = $('.info-card-element');
+    $('#discoverBuilding').removeClass('hide-on-load')
+    tooptipLabelsSwitch();
+    setTimeout(() => {
+        $(".ontvangsthal").removeClass('hide-on-load')
+    },)
+    $(".ontvangsthal").fadeIn('slow');
+    cardRowsInfo.on('hide.bs.modal', () => {
+        $('#discoverBuilding').removeClass('hide-on-load')
+        tooptipLabelsSwitch();
+        setTimeout(() => {
+            $(".ontvangsthal").removeClass('hide-on-load')
+        },)
+        $(".ontvangsthal").fadeIn('slow');
+    })
+    cardRowsInfo.on('shown.bs.modal', () => {
+        $('.tooltips-lablesIndex').addClass('d-none')
+        toolTipBuildingsHide()
+        $('#discoverBuilding').addClass('hide-on-load')
+        $(".ontvangsthal").fadeOut('slow');
+    })
+}
+
+function tooptipLabelsSwitch() {
+    // TODO adjust the if statement to have if ontouchstart and inside it the conditionar window width
+    if ("ontouchstart" in window || ($(window).width() <= 767) && $(window).width() < $(window).height()) {
+        distroyNormalTooltip();
+        // toolTipBuildingsHide()
+        distroyTooltipBuildings()
+        $('.tooltips-lablesIndex').removeClass('d-none')
+        $('.tooltips-lables').addClass('d-none')
+    }
+    else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+        distroyNormalTooltip()
+        // toolTipBuildingsHide()
+        distroyTooltipBuildings();
+        $('.mobile-landscape').addClass('d-none')
+        $('.tooltips-lablesIndex').removeClass('d-none')
+        $('.tooltips-lables').addClass('d-none')
+    }
+    else {
+        initNormalTooltips()
+        setTimeout(() => {
+            initTooltipBuildings()
+            tooltipBuildingsShow()
+        }, 1100)
+        $('.tooltips-lablesIndex').addClass('d-none')
+        $('.tooltips-lables').addClass('d-none')
+        $('.mobile-landscape').addClass('d-none')
+    }
+}
+
+function distroyNormalTooltip() {
+    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
+    tooltipelements.forEach((el) => {
+        $(el).tooltip().tooltip('dispose')
+    });
+}
+
+function initNormalTooltips() {
+    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
+    tooltipelements.forEach((el) => {
+        $(el).tooltip({})
+    });
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+const getCookieValue = (name) => {
+    let zoomIntrueOrFalse = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+    // console.log(zoomIntrueOrFalse)
+    return zoomIntrueOrFalse
+}
+
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) {
+            historyZoom = c.substring(nameEQ.length, c.length);
+            // console.log(historyZoom)
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
+}
+
+function websiteIntroductionModal() {
+    if (document.getElementById('web-intro')) {
+        let webModal = document.getElementById('web-intro')
+        let modalWebsiteIntroductionModal = new bootstrap.Modal('#web-intro')
+        modalWebsiteIntroductionModal.show();
+        webModal.addEventListener('hidden.bs.modal', () => {
+            showContentCloseIntroModal();
+        })
+    }
+}
+
+
+function Scrolldown() {
+    window.location.hash = '#aboutDiv';
+    console.log('window load')
+}
+
+function goToPage(pageHtml, locationDiv) {
+    location.href = pageHtml;
+    setTimeout(() => {
+        window.load = Scrolldown();
+    }, 10000)
+
+}
+
+function offCanvasShowHide() {
+    const offCanvasAbout = document.getElementById('aboutDiv');
+    if (offCanvasAbout) {
+        offCanvasAbout.addEventListener('show.bs.offcanvas', () => {
+            $('.tooltips-lablesIndex').addClass('d-none')
+            toolTipBuildingsHide();
+        })
+        offCanvasAbout.addEventListener('hidden.bs.offcanvas', () => {
+            if ("ontouchstart" in window || ($(window).width() <= 767) && $(window).width() < $(window).height()) {
+                $('.tooltips-lablesIndex').removeClass('d-none')
+            }
+            else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+                $('.tooltips-lablesIndex').removeClass('d-none')
+            }
+            else {
+                tooltipBuildingsShow();
+            }
+
+
+        })
+    }
+
+}
+function distroyTooltipBuildings() {
+    let tooltipelementOn = document.querySelectorAll("[data-bs-toggle='tooltipOn']");
+    tooltipelementOn.forEach((el) => {
+        $(el).tooltip().tooltip('dispose')
+    });
+}
+function initTooltipBuildings() {
+    let tooltipElementOn = document.querySelectorAll("[data-bs-toggle='tooltipOn']");
+    tooltipElementOn.forEach((el) => {
+        elT = new bootstrap.Tooltip(el, {
+            trigger: 'manual'
+        })
+    })
+}
+
+function toolTipBuildingsHide() {
+    let tooltipElementOn = document.querySelectorAll("[data-bs-toggle='tooltipOn']");
+    tooltipElementOn.forEach((el) => {
+        if (bootstrap.Tooltip.getInstance(el)) {
+            bootstrap.Tooltip.getInstance(el).hide()
+        }
+    })
+}
+
+function tooltipBuildingsShow() {
+    let tooltipElementOn = document.querySelectorAll("[data-bs-toggle='tooltipOn']");
+    tooltipElementOn.forEach((el) => {
+        if (bootstrap.Tooltip.getInstance(el)) {
+            bootstrap.Tooltip.getInstance(el).show()
+        }
+
+    })
+}
+
 function mobileLandscape() {
     $('#startZoomInMobile').removeClass('d-none')
     $('#startZoomInMobile').addClass('icon-mobile-rotate')
@@ -300,77 +327,21 @@ function mobileLandscape() {
     }, 12000)
 }
 
-function toolTipAlwaysShow() {
-    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
-    tooltipElementOn.forEach((el) => {
-        elT = new bootstrap.Tooltip(el, {
-            trigger: 'manual'
-        })
-        elT.show()
-    })
-}
+function mobWindowSize() {
+    let screenWidth = $(window).width();
+    let screenHeight = $(window).height();
+    if (screenWidth <= 767 && screenWidth <= screenHeight) {
 
-function toolTipAlwaysShowAfterModalHide() {
-    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
-    tooltipElementOn.forEach((el) => {
-        bootstrap.Tooltip.getInstance(el).show()
-    })
-}
-
-function toolTipAlwaysHide() {
-    let tooltipElementOn = document.querySelectorAll('.toolTipOn');
-    tooltipElementOn.forEach((el) => {
-        bootstrap.Tooltip.getInstance(el).hide()
-    })
-}
-
-function initTooltipsDisplayLabels() {
-    let tooltipelements = document.querySelectorAll('.toopTipNormail');
-    tooltipelements.forEach((el) => {
-        $(el).tooltip({})
-    });
-    $('.tooltips-lables').addClass('d-none')
-    $('.tooltips-lablesIndex').addClass('d-none')
-}
-
-function distroyTooltipsShowLabels() {
-    let tooltipelements = document.querySelectorAll("[data-bs-toggle='tooltip']");
-    tooltipelements.forEach((el) => {
-        $(el).tooltip().tooltip('dispose')
-    });
-    $('.tooltips-lablesIndex').removeClass('d-none')
-    // $('#kapelPoly').tooltip().tooltip('show')
-}
-
-function tooptipLabelsSwitch() {
-
-    // TODO adjust the if statement to have if ontouchstart and inside it the conditionar window width
-    if ("ontouchstart" in window || ($(window).width() <= 767) && $(window).width() < $(window).height()) {
-        mobileLandscape()
-        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-        distroyTooltipsShowLabels()
-        // $('.mobile-landscape').removeClass('d-none')
-    }
-        // else if ($(window).width() <= 767 && $(window).width() < $(window).height()) {
-        //     console.log('width is smaller thank height')
-        //     mobileLandscape()
-        //     // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-        //     distroyTooltipsShowLabels()
-        //     $('.mobile-landscape').removeClass('d-none')
-    // }
-    else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
-        // mobileLandscape()
-        distroyTooltipsShowLabels()
-        // $('.svgResponsive').attr('viewBox', '0 0 1519 854')
-        $('.mobile-landscape').addClass('d-none')
+        $('#startZoomInMobile').removeClass('d-none')
+        $('#startZoomInMobile').addClass('icon-mobile-rotate')
+        setTimeout(() => {
+            $('#startZoomInMobile').addClass('d-none')
+        }, 12000)
     } else {
-        initTooltipsDisplayLabels()
-
-        // $('.svgResponsive').attr('viewBox', '0 0 1538 854')
-        $('.mobile-landscape').addClass('d-none')
-        $('.tooltips-lablesIndex').addClass('d-none')
+        $('#startZoomInMobile').addClass('d-none')
     }
 }
+
 
 function drawPoly() {
     let polystr = ''
@@ -454,37 +425,13 @@ function goToAboutContact(pageHtml) {
         webModal.hide()
     }, 1000)
 }
-
-
-function showHideObjects() {
-    let cardRowsInfo = $('.info-card-element');
-    $('#discoverBuilding').removeClass('hide-on-load')
-    $('#phone1').removeClass('hide-on-load')
-    $('#phone11').removeClass('hide-on-load')
-    tooptipLabelsSwitch();
-    setTimeout(() => {
-        $(".ontvangsthal").removeClass('hide-on-load')
-    },)
-    $(".ontvangsthal").fadeIn('slow');
-    cardRowsInfo.on('hide.bs.modal', () => {
-        toolTipAlwaysShowAfterModalHide()
-        $('#discoverBuilding').removeClass('hide-on-load')
-        $('#phone1').removeClass('hide-on-load')
-        $('#phone11').removeClass('hide-on-load')
-        tooptipLabelsSwitch();
-        setTimeout(() => {
-            $(".ontvangsthal").removeClass('hide-on-load')
-        },)
-        $(".ontvangsthal").fadeIn('slow');
-    })
-    cardRowsInfo.on('shown.bs.modal', () => {
-        toolTipAlwaysHide()
-        $('#discoverBuilding').addClass('hide-on-load')
-        $(".ontvangsthal").fadeOut('slow');
+function moederModal(){
+    $('#caring-laidy1').on('click',()=>{
+        let modalMoeder = new bootstrap.Modal('#moeder')
+        modalMoeder.show()
     })
 }
-
-function initObjcet() {
+function initObjcetsModal() {
     let modalDataArray;
     if (!$('body').hasClass('noJson')) {
         fetch('./modalData.json')
