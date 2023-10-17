@@ -112,7 +112,11 @@ function checkCookie() {
         }, 1000)
         $('#startZoomIn').removeClass('d-none');
     } else if (cTest === 'true') {
-        showContentCloseIntroModal();
+        if ($('.noJson')[0]){
+            $('#startZoomIn').removeClass('d-none');
+        }else{
+            showContentCloseIntroModal();
+        }
     }
 }
 
