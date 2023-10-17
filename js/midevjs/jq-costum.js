@@ -450,9 +450,16 @@ function initObjcetsModal() {
                     $('#modalLabel').html(elementData.title)
                     $('#modalBody').html(elementData.textBody)
                     if (elementData.image !== 'none') {
+                        $('#modalImage').addClass('col-12')
+                        $('.noImage').addClass(['col-xl-4','col-lg-4', 'col-md-5', 'col-sm-12'])
+                        $('.addCol12').removeClass(['col-xl-12', 'col-lg-12', 'col-md-12', 'col-sm-12'])
+                        $('.addCol12').addClass(['col-xl-8', 'col-lg-8', 'col-md-7', 'col-sm-12'])
                         $('#modalImage').removeClass('d-none')
                         $('#modalImage').attr('src', elementData.image)
                     } else {
+                        $('#modalImage').removeClass('col-12')
+                        $('.noImage').removeClass(['col-xl-4','col-lg-4', 'col-md-5', 'col-sm-12'])
+                        $('.addCol12').addClass(['col-xl-12', 'col-lg-12', 'col-md-12', 'col-sm-12'])
                         $('#modalImage').addClass('d-none')
                     }
                     // let footerList = $('#modalFooter').append('<ul></ul>').find('ul')
