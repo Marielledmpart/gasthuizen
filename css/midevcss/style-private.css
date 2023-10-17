@@ -18,6 +18,9 @@
 .background-militarty-color{
     background-color: #57683e !important;
 }
+.mobile-landscape-font-color{
+    color: #57683e !important;;
+}
 .img-thumbnail{
     background-color: transparent !important;
     /*border: none !important;*/
