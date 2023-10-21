@@ -270,6 +270,7 @@ function offCanvasBiblioShowHide() {
     const offCanvasBiblio = document.getElementById('biblioDiv');
     if (offCanvasBiblio) {
         offCanvasBiblio.addEventListener('show.bs.offcanvas', () => {
+
             $('.tooltips-lablesIndex').addClass('d-none')
             toolTipBuildingsHide();
         })
