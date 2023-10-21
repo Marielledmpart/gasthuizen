@@ -625,12 +625,12 @@ img-background {
     /*cursor: pointer;*/
     /*transition: all 3s ease;*/
     opacity: 0;
-    animation: fadein 3s  ease-in  alternate infinite;
+    animation: fadein 2s  ease-in  alternate infinite;
     /*animation-delay: 0.5s;*/
 }
 .info-button-fadeIn{
     opacity: 1;
-    animation: fadeinInfo 3s  ease-in  alternate infinite;
+    animation: fadeinInfo 2s  ease-in  alternate infinite;
     transition: all 3s ease;
     /*animation-delay: 1s;*/
 }
