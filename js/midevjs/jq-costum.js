@@ -12,7 +12,8 @@ $(document).ready(function () {
     setTimeout(() => {
         initTooltipBuildings()
     }, 1000)
-    offCanvasShowHide(); // event listener for offCanvas when show and hide
+    offCanvasAboutShowHide(); // event listener for offCanvas when show and hide
+    offCanvasBiblioShowHide();
     if (!window.location.hash) { // this for keeping the page on top if there is no # in url
         $('html, body').animate({}, 300)
     }
@@ -265,8 +266,30 @@ function goToPage(pageHtml, locationDiv) {
     }, 10000)
 
 }
+function offCanvasBiblioShowHide() {
+    const offCanvasBiblio = document.getElementById('biblioDiv');
+    if (offCanvasBiblio) {
+        offCanvasBiblio.addEventListener('show.bs.offcanvas', () => {
+            $('.tooltips-lablesIndex').addClass('d-none')
+            toolTipBuildingsHide();
+        })
+        offCanvasBiblio.addEventListener('hidden.bs.offcanvas', () => {
+            if ("ontouchstart" in window || ($(window).width() <= 767) && $(window).width() < $(window).height()) {
+                $('.tooltips-lablesIndex').removeClass('d-none')
+            }
+            else if ($(window).width() <= 767 && $(window).width() >= $(window).height()) {
+                $('.tooltips-lablesIndex').removeClass('d-none')
+            }
+            else {
+                tooltipBuildingsShow();
+            }
 
-function offCanvasShowHide() {
+
+        })
+    }
+
+}
+function offCanvasAboutShowHide() {
     const offCanvasAbout = document.getElementById('aboutDiv');
     if (offCanvasAbout) {
         offCanvasAbout.addEventListener('show.bs.offcanvas', () => {

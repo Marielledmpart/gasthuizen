@@ -106,16 +106,19 @@
                  style="top:15%;left: 20%">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <i style="font-size: 5vw" class="bi bi-arrow-down"></i>
-                    <i class="bi bi-phone"style="font-size: 30vw"></i>
+                    <i class="bi bi-phone" style="font-size: 30vw"></i>
                     <i style="font-size: 5vw" class="bi bi-arrow-up"></i>
                 </div>
             </div>
             <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
                  class="btn-group  position-absolute z-3" role="group" aria-label="Basic outlined example">
-                <a href="#img1"  class=" btn btn-outline-light mobile-btn-text-size">Home</a>
+                <a href="#img1" class=" btn btn-outline-light mobile-btn-text-size">Home</a>
+                <a id="a-biblio" href="#biblioDiv" class="mobile-btn-text-size  btn btn-outline-light"
+                   data-bs-toggle="offcanvas" role="button"
+                   aria-controls="biblioDiv">Bibliograph</a>
                 <a id="a-about" href="#aboutDiv" class="mobile-btn-text-size  btn btn-outline-light"
-                   data-bs-toggle="offcanvas"  role="button"
-                   aria-controls="aboutDiv"  >About</a>
+                   data-bs-toggle="offcanvas" role="button"
+                   aria-controls="aboutDiv">About</a>
             </div>
             <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
                  aria-label="Vertical button group" style="top:5.7%;right: 5%">
@@ -124,7 +127,7 @@
                         type="button">
                     <i id="iButton" class="mobile-text-size bi bi-list"></i>
                 </button>
-                <button type="button"  id="btn-info"
+                <button type="button" id="btn-info"
                         data-bs-toggle="modal" data-bs-target="#page-info"
                         aria-controls="page-info"
                         class=" p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
@@ -208,7 +211,7 @@
         <div class="modal-content bg-text-white text-light border border-1 border-light ">
             <div class="modal-header border-0">
                 <h1 id="infoModalLabel" class="modal-title fs-5">Inleiding algemeen</h1>
-                <button  type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
+                <button type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
                         class="btn-close btn-close-white float-end" aria-label="Close">
                 </button>
             </div>
@@ -219,7 +222,8 @@
                 <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
                 <p id="infoModalBody" class="  ">
                     Het eerste gasthuis van de jonge stad Amsterdam, het Oude Gasthuis, stond aan het uiteinde van de
-                    Windmolenstraat ter hoogte van de Middeldam<a class="text-decoration-none" href="#voetNote1"><sup>1</sup></a> . Uit de
+                    Windmolenstraat ter hoogte van de Middeldam<a class="text-decoration-none"
+                                                                  href="#voetNote1"><sup>1</sup></a> . Uit de
                     administratie van
                     de gasthuismeesters kunnen we afleiden dat het al eerder dan 1371 bestond. Het erf waarop het Oude
                     Gasthuis stond was aanvankelijk waarschijnlijk vrij breed, maar tussen 1391 en 1398 moest het een
@@ -228,7 +232,8 @@
                     Pietersgilde van de viskopers en vleeshouwers. Voor 1395 werd de St. Pieterskapel uitgebreid met een
                     gasthuis. Toendertijd was het St. Pietersgasthuis ondergeschikt aan de kapel, maar in de vijftiende
                     eeuw streefde het gasthuis de kapel ruimschoots voorbij en uiteindelijk was de St. Pieterskapel niet
-                    veel meer dan een gasthuiskapel<a class="text-decoration-none" href="#voetNote2"><sup>2</sup></a>. Het St. Pietersgasthuis
+                    veel meer dan een gasthuiskapel<a class="text-decoration-none" href="#voetNote2"><sup>2</sup></a>.
+                    Het St. Pietersgasthuis
                     groeide in
                     deze periode uit tot de tweede charitatieve instelling in Amsterdam, na het Oude Gasthuis.
                     In 1492 moest het Oude Gasthuis echter plaats maken voor uitbreiding van het stadhuis. Het Sint
@@ -261,8 +266,8 @@
 <!-- Reason to come the zoo start here -->
 
 
-<div class=" bg-green-color offcanvas-width-75 offcanvas offcanvas-start" tabindex="-1" id="aboutDiv"
-     aria-labelledby="offcanvasExampleLabel">
+<div class=" bg-green-color ease-in-out-offcanvas offcanvas-width-75 offcanvas offcanvas-start" tabindex="-1"
+     id="aboutDiv" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header text-light">
         <h2 class="offcanvas-title ps-5" id="offcanvasExampleLabel">About</h2>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -309,6 +314,108 @@
         </div>
     </div>
 </div>
+<div id="biblioDiv" class=" offcanvas-width-75 ease-in-out-offcanvas offcanvas offcanvas-start" tabindex="-1"
+     aria-labelledby="offcanvasExampleLabel">
+    <img src="images/midev/background-01.png" class="img-bg-offCanvas">
+    <div class="offcanvas-header text-light">
+        <h2 class="offcanvas-title ps-5" id="offcanvasBiblioLabel">Bibliography</h2>
+        <button type="button" class="btn-close btn-close-white " aria-label="Close" data-bs-dismiss="offcanvas">
+        </button>
+    </div>
+    <div class=" offcanvas-body text-light">
+        <div class="row d-flex justify-content-center">
+            <div class="col-8">
+                <h4>Gebruikte literatuur</h4>
+                <p class="card-text">
+                    P.H.J. van der Laan, Resoluties van de Vroedschap van Amsterdam 1551-1565, Hilversum Verloren 2008.
+                    B.R. de Melker, Metamorfose van stad en devotie, ontstaan en conjunctuur van kerkelijke, religieuze
+                    en charitatieve instellingen in Amsterdam in het licht van de stedelijke ontwikkeling, 1385-1435.
+                    Hilversum Verloren 2021.
+                    M. Verhoeff, De oude Nederlandse maten en gewichten, Amsterdam 1982.
+                </p>
+            </div>
+        </div>
+        <div class="row pt-5 d-flex justify-content-center">
+            <div class="col-8">
+                <h4>Gebruikte bronnen</h4>
+                <h5>Stadsarchief Amsterdam</h5>
+                <h6>Archief Gasthuizen (GH;toegang 342)</h6>
+                <ul class="dashed">
+                    <li>
+                        Inv.nr. 79, belastingboek, 1538-1566
+                    </li>
+                    <li>
+                        Inv.nr. 80, belastingboek, 1566-1582
+                    </li>
+                    <li>
+                        Inv.nr. 83, register van ontvangsten en uitgaven, 1550-1559
+                    </li>
+                    <li>
+                        Inv.nr. 86, rekenboek van inkomsten en uitgaven van het pesthuis, 1558-1559
+                    </li>
+                    <li>
+                        Inv.nr. 90, eerste kaartboek van de gasthuizen, 1559
+                    </li>
+                    <li>
+                        Inv.nr. 95, oorkonde waarin het St. Pietersgasthuis toestemming krijgt om de zieken die in het
+                        gasthuis gestorven zijn te begraven etc, 1492
+                    </li>
+                    <li>
+                        Inv.nr. 134, oorkonde van schenking aan het St. Pietersgasthuis door Joost Buijck Zybrantszoon
+                        en Balicg Popiusdochter, 1548 Archief van de burgemeesters: Groot Memoriaal (BM, toegang 5023)
+                    </li>
+                    <li>
+                        inv.nr 2, Register van inkomende en uitgaande missieven, akten, besluiten etc, 10 maart 1545-
+                        26 januari 1624
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row pt-5 d-flex justify-content-center">
+            <div class="col-8">
+                <h4>Gebruikte websites</h4>
+                <p><a target="_blank"
+                      href="https://mgw.meertens.knaw.nl/maat/49">https://mgw.meertens.knaw.nl/maat/49</a></p>
+                <p><a target="_blank"
+                      href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8">https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8</a>
+                </p>
+            </div>
+        </div>
+        <div class="row pt-5 ps-5 d-flex justify-content-center">
+            <div class="col-9">
+                <h4>Gebruikte Afbeeldingen</h4>
+                <div class="row">
+                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
+                        <img class="card-img-top" src="images/midev/keuken/boodschappen.png" alt=".." >
+                        <div class="card-body ">
+                            <a href="https://google.com" target="_blank" class="">www.google.com</a>
+                        </div>
+                    </div>
+                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
+                        <img class="card-img-top" src="images/midev/keuken/boodschappen.png" alt=".." >
+                        <div class="card-body ">
+                            <a href="https://google.com" target="_blank" class="">www.google.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
+                        <img class="card-img-top" src="images/midev/keuken/boodschappen.png" alt=".." >
+                        <div class="card-body ">
+                            <a href="https://google.com" target="_blank" class="">www.google.com</a>
+                        </div>
+                    </div>
+                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
+                        <img class="card-img-top" src="images/midev/keuken/boodschappen.png" alt=".." >
+                        <div class="card-body ">
+                            <a href="https://google.com" target="_blank" class="">www.google.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer id="indexFooter" class="footermain">
     <div class="footer-top footerinner">
         <div class="container">
@@ -317,24 +424,6 @@
                     <div class="widget p-4 shadow background-militarty-color text-light">
                         <h2 class="">Over het project</h2>
                         <p class="card-text">
-                            <!--                            Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de-->
-                            <!--                            oudste archieven van-->
-                            <!--                            Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van-->
-                            <!--                            ontvangsten en-->
-                            <!--                            uitgaven van het St. Pietersgasthuis over de jaren 1550 – 1559 . Alleen al de-->
-                            <!--                            boodschappenlijstjes van de-->
-                            <!--                            gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken boekdelen. Toename van de-->
-                            <!--                            inkoop van zeep-->
-                            <!--                            duidt op epidemieën en houtaankopen wijzen op de verhoogde vraag naar grafkisten. De kaart-->
-                            <!--                            van middeleeuws-->
-                            <!--                            Amsterdam uit 1538 leidt de bezoeker het St. Pieters Gasthuis, de gasthuiskapel of het-->
-                            <!--                            pesthuis binnen. Door-->
-                            <!--                            in de afbeeldingen op omlijnde figuren of objecten te klikken verschijnt informatie over het-->
-                            <!--                            reilen en-->
-                            <!--                            zijlen van het St. Pietersgasthuis. Alle informatie komt direct uit de administratie van de-->
-                            <!--                            gasthuismeesters. Via de voetnoten bij de teksten komt u vanzelf bij de scans van de bronnen-->
-                            <!--                            waaruit de-->
-                            <!--                            informatie afkomstig is.-->
                             Gedurende 2019 en 2021 maakte de stichting Middeleeuws Amsterdam (SMAA) met het project
                             ‘Ontsluiten van de Amsterdamse gasthuisarchieven tot 1578’ de archieven van de Amsterdamse
                             middeleeuwse gasthuizen beter toegankelijk. Deze website vertelt de meest bijzondere
@@ -344,7 +433,8 @@
                             digitaal worden geraadpleegd worden via de website van het Stadsarchief Amsterdam. En om het
                             geheel compleet te maken is voor de wetenschappelijke onderzoeker een bronnenuitgave van de
                             meest bijzondere registers toegevoegd. Heeft u vragen naar aanleiding van de verhalen? Neem
-                            contact op met de projectleider Mariëlle Kruithof: <a class="link-offset-2 link-offset-3-hover" href="mailto:mariëlle@dmpart.nl">mariëlle@dmpart.nl</a>
+                            contact op met de projectleider Mariëlle Kruithof: <a
+                                class="link-offset-2 link-offset-3-hover" href="mailto:mariëlle@dmpart.nl">mariëlle@dmpart.nl</a>
                         </p>
                     </div>
                 </div>
@@ -357,7 +447,8 @@
                                 </li>
                                 <li><a href="#"><img src="images/midev/sponser-logos/logoHuisje.jpg" alt=""></a>
                                 </li>
-                                <li><a href="#"><img src="images/midev/sponser-logos/dioraphte-logo-dark%20smll.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/midev/sponser-logos/dioraphte-logo-dark%20smll.png"
+                                                     alt=""></a></li>
                                 <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>
                                 <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>
                                 <li><a href="#"><img src="./images/sponser/partner-6.png" alt=""></a></li>
@@ -379,46 +470,8 @@
                     <!--                    </div>-->
                 </div>
             </div>
-            <!--            <div id="aboutDiv" class="row pt-5">-->
-            <!--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
-            <!--                    <div class="widget p-3 shadow background-militarty-color text-light">-->
-            <!--                        <h2 class="">Stichting Middeleeuwse geschiedenis Amsterdam</h2>-->
-            <!--                        <p class="card-text">-->
-            <!--                            De Stichting Middeleeuwse Archieven Amsterdam (hierna: SMAA) wil de toegankelijkheid,-->
-            <!--                            beschikbaarheid en het gebruik bevorderen van de middeleeuwse archieven van en over de stad-->
-            <!--                            Amsterdam. Wij willen namelijk de kennis over middeleeuwse Amsterdam vergroten onder een zo-->
-            <!--                            breed mogelijk publiek.-->
-            <!--                            SMAA wil mensen uit en buiten Amsterdam bewust maken van hoe de stad er in haar eerste-->
-            <!--                            eeuwen uitzag en functioneerde. Dat doen wij door de parallellen en verschillen tussen heden-->
-            <!--                            en verleden zichtbaar te maken op maatschappelijke thema’s als welvaart, zorg, jeugd,-->
-            <!--                            migratie, integratie, diversiteit en gemeenschapszin.-->
-            <!--                            Gedurende 2019 en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse-->
-            <!--                            gasthuisarchieven tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen beter-->
-            <!--                            toegankelijk. De stukken werden geconserveerd en de archieven kregen een nieuwe inventaris.-->
-            <!--                            De meest bijzondere bronnen uit deze archieven werden vertaald in modern Nederlands. De-->
-            <!--                            archieven kunnen digitaal worden geraadpleegd via de website van het Stadsarchief Amsterdam.-->
-            <!--                            En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker een-->
-            <!--                            bronnenuitgave van de meest bijzondere registers toegevoegd.-->
-            <!--                        </p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <div id="contactDiv" class="row pt-5">-->
-            <!--                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
-            <!--                    <div class="widget p-3 shadow background-militarty-color text-light">-->
-            <!--                        <h2 class="">Contact</h2>-->
-            <!--                        <p class="card-text">-->
-            <!--                            E-mail: middeleeuwsamsterdam@gmail.com <br>-->
-            <!--                            Voor inhoudelijke vragen<br>-->
-            <!--                            E-mail: marielle@dmpart.nl-->
-
-            <!--                        </p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
         </div>
     </div>
-
     <div class="footer-bottom-area pb-5 ">
         <div class="container p-3 pt-5 background-militarty-color shadow">
             <div class="row">
@@ -426,25 +479,27 @@
                     Deze website is een product gepubliceerd als onderdeel van het project Ontsluiting Middeleeuwse
                     Gasthuizenarchieven Amsterdam. Het project is uitgevoerd door de Stichting Middeleeuwse Geschiedenis
                     Amsterdam.
-                    <a class="link-underline-primary link-offset-2 link-offset-3-hover" href="https://www.middeleeuwsamsterdam.nl/" target="_blank">Ga naar de website van de stichting</a>
+                    <a class="link-underline-primary link-offset-2 link-offset-3-hover"
+                       href="https://www.middeleeuwsamsterdam.nl/" target="_blank">Ga naar de website van de
+                        stichting</a>
                 </p>
             </div>
-<!--            <div class="row">-->
-<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-<!--                    <div class="footer-menu">-->
-<!--                        <ul>-->
-<!--                            <li><a href="#">Facebook</a></li>-->
-<!--                            <li><a href="#">Twitter</a></li>-->
-<!--                            <li><a href="#">Flickr</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-<!--                    <div class="copyright">-->
-<!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+            <!--                    <div class="footer-menu">-->
+            <!--                        <ul>-->
+            <!--                            <li><a href="#">Facebook</a></li>-->
+            <!--                            <li><a href="#">Twitter</a></li>-->
+            <!--                            <li><a href="#">Flickr</a></li>-->
+            <!--                        </ul>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+            <!--                    <div class="copyright">-->
+            <!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
 </footer>

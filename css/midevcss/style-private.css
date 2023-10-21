@@ -8,12 +8,36 @@
     top: 0;
     width: 100%;
 }
+.img-bg-offCanvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /*background: url(/images/midev/background-01.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*width: 100%*/
+}
 .bg-green-color{
     background-color: rgb(69, 84, 50) !important;
-    --bs-offcanvas-transition: transform 1s ease-in-out !important;
 }
 .offcanvas-width-75{
     --bs-offcanvas-width: 75% !important;
+}
+.ease-in-out-offcanvas{
+    --bs-offcanvas-transition: transform 1s ease-in-out !important;
+}
+.btn-close-off-canvas{
+    color: white !important;
+}
+.offcanvas-width-50{
+    --bs-offcanvas-width: 50% !important;
 }
 .background-militarty-color{
     background-color: #57683e !important;
@@ -629,6 +653,22 @@ img-background {
 
 .li-dash::before{
     content: "— ";
+}
+ul {
+    margin: 0;
+}
+ul.dashed {
+    list-style-type: none;
+}
+ul.dashed > li {
+    list-style-position: inside;
+    /*text-indent: 20px;*/
+    text-indent: -1em;
+    padding-left: 1.5em;
+}
+ul.dashed > li:before {
+    content: "-";
+    text-indent: 5px;
 }
 .ul-bullet {
     list-style-type: disc !important;
