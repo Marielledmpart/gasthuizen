@@ -8,6 +8,8 @@
 //     console.log('it is not touch')
 // }
 $(document).ready(function () {
+    $('#nfoIcon').css('animation', 'fadeinInfo 2s  ease-in  alternate infinite')
+    $('.polygon').css('animation', 'fadeinInfo 2s  ease-in  alternate infinite')
     moederModal();
     setTimeout(() => {
         initTooltipBuildings()
