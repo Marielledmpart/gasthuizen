@@ -1,679 +1,1168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Amsterdam Midev</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="apple-touch-icon" href="./images/favicon.ico">
-    <!--    <script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
-    <!--    <script src="../js/midevjs/jquery.maphilight.js"></script>-->
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css" rel="stylesheet">
-    <!-- all css here -->
-    <!--    private css-->
-    <link rel="stylesheet" href="css/midevcss/style-private.css">
-    <link rel="stylesheet" href="sass/css/custom.css">
-    <!-- bootstrap v5.3.1  css -->
-    <!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
-    <!-- bootstrap v3.3.6 css -->
-    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
-    <!-- flat-icon css -->
-    <link rel="stylesheet" href="css/flaticon.css">
-    <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <!-- meanmenu css -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
-    <!-- owl.carousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <!-- font-awesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- modernizr css -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
-<body class="noJson " style="background-color: #455432 ">
-<div class="slider-area ">
-    <div>
-        <div id="startZoomIn" class="d-none w-100 row position-absolute z-3 text-light "
-             style="animation-name: zoomIn; animation-duration:2s; top:25%;left: 15%;">
-            <div class="row w-100">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
-                    <h2 class=" " style=" font-size: 5vw !important;width: 80%;font-family: 'Athelas '">
-                        Het St. Pieters<br>
-                        Gasthuis
-                    </h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <button type="button" onclick="showContentCloseIntroModal()" style="font-size: 2vw !important;"
-                            class="bg-text-white   btn btn-outline-light " aria-label="Close"><strong>Welkom in
-                        Middeleeuws Amsterdam</strong>
-                    </button>
-                </div>
-            </div>
-            <!--            <div class="read-more"><span role="button" onclick="showContentCloseIntroModal()">Discover More</span></div>-->
-        </div>
-        <div id="discoverBuilding" class="row position-absolute  text-light  hide-on-load"
-             style="top:10%;left: 10%;  animation-name: zoomIn; animation-duration:2s">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h2 id="textD"
-                    data-bs-title="De Kapel" style="font-size: 1.5vw; font-family: 'Javanese Text'">Klik op de verlichte
-                    gebouwen om meer te ontdekken</h2>
-            </div>
-        </div>
-        <div id="pieters-label-id" style="top:15%;right: 33%;"
-             class="row  d-none  tooltips-lablesIndex position-absolute">
-            <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="opBackground1 px-2 text-light"> St. Pietersgasthuis</div>
-            </div>
-        </div>
-        <div id="kapel-label-id" style="top:20%;right: 55%;"
-             class="row  d-none  tooltips-lablesIndex position-absolute">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="kapel-label-info" class="opBackground1  text-light px-2"
-                     style="font-size: 1.5vw !important;">De kapel
-                </div>
-            </div>
-        </div>
-        <div id="pesthuis-label-id" style="top:44%;right: 67%;"
-             class="row  d-none  tooltips-lablesIndex position-absolute">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div id="pesthuis-label-info" class="opBackground1  text-light px-2"
-                     style="font-size: 1.5vw !important;">Het Pesthuis
-                </div>
-            </div>
-        </div>
-        <div class="shadow-body-inset">
-            <img alt="..." id="img1" class="w-100 img-fluid highLightMap" src="./images/midev/amsterdam-1.jpg"
-                 usemap="#workmap">
-        </div>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Amsterdamse Gasthuizen</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+		<link rel="apple-touch-icon" href="./images/favicon.ico" />
+		<!--    <script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
+		<!--    <script src="../js/midevjs/jquery.maphilight.js"></script>-->
+		<!-- Place favicon.ico in the root directory -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css"
+			rel="stylesheet"
+		/>
+		<!-- all css here -->
+		<!--    private css-->
+		<link rel="stylesheet" href="css/midevcss/style-private.css" />
+		<link rel="stylesheet" href="sass/css/custom.css" />
+		<!-- bootstrap v5.3.1  css -->
+		<!--    <link rel="stylesheet" href="../bs5css/bootstrap.min.css">-->
+		<!-- bootstrap v3.3.6 css -->
+		<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+		<!-- flat-icon css -->
+		<link rel="stylesheet" href="css/flaticon.css" />
+		<!-- animate css -->
+		<link rel="stylesheet" href="css/animate.css" />
+		<!-- jquery-ui.min css -->
+		<link rel="stylesheet" href="css/jquery-ui.min.css" />
+		<!-- meanmenu css -->
+		<link rel="stylesheet" href="css/meanmenu.min.css" />
+		<!-- owl.carousel css -->
+		<link rel="stylesheet" href="css/owl.carousel.css" />
+		<!-- font-awesome css -->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<!-- style css -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- responsive css -->
+		<link rel="stylesheet" href="css/responsive.css" />
+		<!-- modernizr css -->
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	</head>
+	<body class="noJson" style="background-color: #455432">
+		<div class="slider-area">
+			<div>
+				<div
+					id="startZoomIn"
+					class="d-none w-100 row position-absolute z-3 text-light"
+					style="
+						animation-name: zoomIn;
+						animation-duration: 2s;
+						top: 25%;
+						left: 15%;
+					"
+				>
+					<div class="row w-100">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
+							<h2
+								class="mainTitle"
+								style="font-size: 5vw !important; width: 80%"
+							>
+								Het St. Pieters<br />
+								Gasthuis
+							</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<button
+								type="button"
+								onclick="showContentCloseIntroModal()"
+								style="font-size: 2vw !important"
+								class="bg-text-white btn btn-outline-light"
+								aria-label="Close"
+							>
+								<strong>Welkom in Middeleeuws Amsterdam</strong>
+							</button>
+						</div>
+					</div>
+					<!--            <div class="read-more"><span role="button" onclick="showContentCloseIntroModal()">Discover More</span></div>-->
+				</div>
+				<div
+					id="discoverBuilding"
+					class="row position-absolute text-light hide-on-load"
+					style="
+						top: 10%;
+						left: 10%;
+						animation-name: zoomIn;
+						animation-duration: 2s;
+					"
+				>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h2
+							id="textD"
+							data-bs-title="De Kapel"
+							style="font-size: 1.5vw; font-family: 'Javanese Text'"
+						>
+							Klik op de verlichte gebouwen om meer te ontdekken
+						</h2>
+					</div>
+				</div>
+				<div
+					id="pieters-label-id"
+					style="top: 15%; right: 33%"
+					class="row d-none tooltips-lablesIndex position-absolute"
+				>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+						<div class="opBackground1 px-2 text-light">St. Pietersgasthuis</div>
+					</div>
+				</div>
+				<div
+					id="kapel-label-id"
+					style="top: 20%; right: 55%"
+					class="row d-none tooltips-lablesIndex position-absolute"
+				>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+						<div
+							id="kapel-label-info"
+							class="opBackground1 text-light px-2"
+							style="font-size: 1.5vw !important"
+						>
+							De kapel
+						</div>
+					</div>
+				</div>
+				<div
+					id="pesthuis-label-id"
+					style="top: 44%; right: 67%"
+					class="row d-none tooltips-lablesIndex position-absolute"
+				>
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+						<div
+							id="pesthuis-label-info"
+							class="opBackground1 text-light px-2"
+							style="font-size: 1.5vw !important"
+						>
+							Het Pesthuis
+						</div>
+					</div>
+				</div>
+				<div class="shadow-body-inset">
+					<img
+						alt="..."
+						id="img1"
+						class="w-100 img-fluid highLightMap"
+						src="./images/midev/amsterdam-1.jpg"
+						usemap="#workmap"
+					/>
+				</div>
 
-
-        <div id="showContent" class="d-none">
-            <div id="startZoomInMobile" class="row  position-absolute d-none  text-light"
-                 style="top:15%;left: 20%">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <i style="font-size: 5vw" class="bi bi-arrow-down"></i>
-                    <i class="bi bi-phone" style="font-size: 30vw"></i>
-                    <i style="font-size: 5vw" class="bi bi-arrow-up"></i>
-                </div>
-            </div>
-            <div id="btnGroup" style="top:7%;right: 8%;display: none;background:rgba(0, 0, 0, 0.5) !important;"
-                 class="btn-group  position-absolute z-3" role="group" aria-label="Basic outlined example">
-                <a href="#img1" class=" btn btn-outline-light mobile-btn-text-size">Home</a>
-                <a id="a-biblio" href="#biblioDiv" class="mobile-btn-text-size  btn btn-outline-light"
-                   data-bs-toggle="offcanvas" role="button"
-                   aria-controls="biblioDiv">Bibliography</a>
-                <a id="a-about" href="#aboutDiv" class="mobile-btn-text-size  btn btn-outline-light"
-                   data-bs-toggle="offcanvas" role="button"
-                   aria-controls="aboutDiv">About</a>
-            </div>
-            <div class="btn-group-vertical position-absolute z-3 no-borders" role="group"
-                 aria-label="Vertical button group" style="top:5.7%;right: 5%">
-                <button id="toggleMenu"
-                        class="p-0 btn btn-secondary no-borders bg-transparent hide-on-load ontvangsthal"
-                        type="button">
-                    <i id="iButton" class="mobile-text-size bi bi-list"></i>
-                </button>
-                <button type="button" id="btn-info"
-                        data-bs-toggle="modal" data-bs-target="#page-info"
-                        aria-controls="page-info"
-                        class=" p-0 btn link-light  no-borders hide-on-load ontvangsthal  z-3   link-light ">
-                    <i data-bs-title="Informatie" data-bs-toggle="tooltip" data-bs-placement="left" id="nfoIcon"
-                       class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"></i>
-                </button>
-            </div>
-            <!--        polygon shapes start-->
-            <div id="polDiv" class="ontvangsthal hide-on-load polygon">
-                <!--
+				<div id="showContent" class="d-none">
+					<div
+						id="startZoomInMobile"
+						class="row position-absolute d-none text-light"
+						style="top: 15%; left: 20%"
+					>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<i style="font-size: 5vw" class="bi bi-arrow-down"></i>
+							<i class="bi bi-phone" style="font-size: 30vw"></i>
+							<i style="font-size: 5vw" class="bi bi-arrow-up"></i>
+						</div>
+					</div>
+					<div
+						id="btnGroup"
+						style="
+							top: 7%;
+							right: 8%;
+							display: none;
+							background: rgba(0, 0, 0, 0.5) !important;
+						"
+						class="btn-group position-absolute z-3"
+						role="group"
+						aria-label="Basic outlined example"
+					>
+						<a href="#img1" class="btn btn-outline-light mobile-btn-text-size"
+							>Home</a
+						>
+						<a
+							id="a-biblio"
+							href="#biblioDiv"
+							class="mobile-btn-text-size btn btn-outline-light"
+							data-bs-toggle="offcanvas"
+							role="button"
+							aria-controls="biblioDiv"
+							>Bibliography</a
+						>
+						<a
+							id="a-about"
+							href="#aboutDiv"
+							class="mobile-btn-text-size btn btn-outline-light"
+							data-bs-toggle="offcanvas"
+							role="button"
+							aria-controls="aboutDiv"
+							>About</a
+						>
+					</div>
+					<div
+						class="btn-group-vertical position-absolute z-3 no-borders"
+						role="group"
+						aria-label="Vertical button group"
+						style="top: 5.7%; right: 5%"
+					>
+						<button
+							id="toggleMenu"
+							class="p-0 btn btn-secondary no-borders bg-transparent hide-on-load ontvangsthal"
+							type="button"
+						>
+							<i id="iButton" class="mobile-text-size bi bi-list"></i>
+						</button>
+						<button
+							type="button"
+							id="btn-info"
+							data-bs-toggle="modal"
+							data-bs-target="#page-info"
+							aria-controls="page-info"
+							class="p-0 btn link-light no-borders hide-on-load ontvangsthal z-3 link-light"
+						>
+							<i
+								data-bs-title="Informatie"
+								data-bs-toggle="tooltip"
+								data-bs-placement="left"
+								id="nfoIcon"
+								class="info-button-fadeIn mobile-text-size bi bi-info-circle toopTipNormail"
+							></i>
+						</button>
+					</div>
+					<!--        polygon shapes start-->
+					<div id="polDiv" class="ontvangsthal hide-on-load polygon">
+						<!--
                   preserveAspectRatio: makes sure the triangle is scalable
                   viewbox: points stretches from the parent
                 -->
-                <!--                            points="922,318,927,312,940,332,944,341,949,352,952,364,948,372,929,380,958,404,955,367,963,353,964,345,971,350,1017,383,1032,401,959,430,956,451,856,372,857,367,856,357,864,340,868,342"-->
-                <!--                                        points="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426"-->
-                <!--                                                    points="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641"-->
-                <svg class="svg1" preserveAspectRatio="none" viewBox="0 0 1519 854">
-                    <polygon id="pietersPoly" class=" polygon1 no-borders"
-                             data-bs-title="St. Pietersgasthuis" data-bs-toggle="tooltipOn" data-bs-placement="top"
-                             onclick="goToPage('./pages/pieters.html')"
-                             points="813,236,796,223,778,209,764,196,751,186,739,177,731,171,736,168,736,160,740,152,742,148,744,149,752,146,777,136,785,133,788,128,791,126,792,129,796,136,799,140,800,147,806,155,809,163,807,167,805,172,791,178,802,188,813,196,812,187,811,169,820,155,824,157,835,166,850,177,858,181,867,194,828,208,814,214,813,224"
-                    ></polygon>
-                    <polygon id="kapelPoly" class="toolTipOn polygon1 no-borders" data-bs-toggle="tooltipOn"
-                             data-bs-placement="left"
-                             data-bs-title="De Kapel"
-                             onclick="goToPage('./pages/kapel.html')"
-                             points="711,213,711,204,714,198,714,192,717,192,719,194,727,192,727,181,727,171,729,172,732,185,733,190,738,188,746,184,749,192,751,196,753,205,747,207,742,210,738,207,736,209,734,218,725,209,720,211,715,212"
-                    ></polygon>
-                    <polygon class="toolTipOn polygon1 no-borders" data-bs-toggle="tooltipOn" data-bs-placement="top"
-                             data-bs-title="Het Pesthuis"
-                             onclick="goToPage('./pages/pesthuis.html')"
-                             points="528,547,527,558,520,545,504,525,481,500,465,484,457,475,458,467,460,456,466,455,480,450,493,445,495,441,520,431,526,433,531,426,532,421,560,408,567,404,572,414,577,414,579,420,584,418,586,426,590,425,593,432,597,432,600,438,604,438,609,450,612,448,617,458,623,462,630,469,645,484,647,490,633,495,631,500,619,503,612,500,588,508,583,511,582,519,559,525,556,521,552,525,547,528,540,542,533,544"
-                    ></polygon>
-                </svg>
-            </div>
-            <!--        polygon shapes end-->
-            <div id="map-container" class="container">
+						<!--                            points="922,318,927,312,940,332,944,341,949,352,952,364,948,372,929,380,958,404,955,367,963,353,964,345,971,350,1017,383,1032,401,959,430,956,451,856,372,857,367,856,357,864,340,868,342"-->
+						<!--                                        points="823,413,828,406,830,395,835,400,845,397,844,375,845,369,850,374,854,393,869,388,879,403,880,414,864,423,858,420,853,434,855,434,851,429,845,419,836,421,824,426"-->
+						<!--                                                    points="667,643,670,620,763,589,753,563,696,498,675,508,589,535,588,552,579,556,657,641"-->
+						<svg class="svg1" preserveAspectRatio="none" viewBox="0 0 1519 854">
+							<polygon
+								id="pietersPoly"
+								class="polygon1 no-borders"
+								data-bs-title="St. Pietersgasthuis"
+								data-bs-toggle="tooltipOn"
+								data-bs-placement="top"
+								onclick="goToPage('./pages/pieters.html')"
+								points="813,236,796,223,778,209,764,196,751,186,739,177,731,171,736,168,736,160,740,152,742,148,744,149,752,146,777,136,785,133,788,128,791,126,792,129,796,136,799,140,800,147,806,155,809,163,807,167,805,172,791,178,802,188,813,196,812,187,811,169,820,155,824,157,835,166,850,177,858,181,867,194,828,208,814,214,813,224"
+							></polygon>
+							<polygon
+								id="kapelPoly"
+								class="toolTipOn polygon1 no-borders"
+								data-bs-toggle="tooltipOn"
+								data-bs-placement="left"
+								data-bs-title="De Kapel"
+								onclick="goToPage('./pages/kapel.html')"
+								points="711,213,711,204,714,198,714,192,717,192,719,194,727,192,727,181,727,171,729,172,732,185,733,190,738,188,746,184,749,192,751,196,753,205,747,207,742,210,738,207,736,209,734,218,725,209,720,211,715,212"
+							></polygon>
+							<polygon
+								class="toolTipOn polygon1 no-borders"
+								data-bs-toggle="tooltipOn"
+								data-bs-placement="top"
+								data-bs-title="Het Pesthuis"
+								onclick="goToPage('./pages/pesthuis.html')"
+								points="528,547,527,558,520,545,504,525,481,500,465,484,457,475,458,467,460,456,466,455,480,450,493,445,495,441,520,431,526,433,531,426,532,421,560,408,567,404,572,414,577,414,579,420,584,418,586,426,590,425,593,432,597,432,600,438,604,438,609,450,612,448,617,458,623,462,630,469,645,484,647,490,633,495,631,500,619,503,612,500,588,508,583,511,582,519,559,525,556,521,552,525,547,528,540,542,533,544"
+							></polygon>
+						</svg>
+					</div>
+					<!--        polygon shapes end-->
+					<div id="map-container" class="container"></div>
+				</div>
+			</div>
+		</div>
+		<div
+			id="web-intro"
+			class="top-position-modal-5 modal info-card-element fade-scale modal-xl"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered info-card-element">
+				<div
+					class="modal-content bg-text-white text-light border border-1 border-light"
+				>
+					<div class="modal-header border-0">
+						<h1 id="infoModalLabel1" class="modal-title fs-5">
+							Over deze website
+						</h1>
+						<button
+							type="button"
+							data-bs-dismiss="modal"
+							data-bs-target="#web-intro"
+							class="btn-close btn-close-white float-end"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p id="infoModalBody1" class="  ">
+							Tijdens het project zijn er zijn talloze bijzondere verhalen naar
+							boven gekomen uit de oudste archieven van Amsterdam. Hrt zijn
+							(onder andere) verhalen die zich schuilhouden in het register van
+							ontvangsten en uitgaven van het St. Pietersgasthuis over de jaren
+							1550 – 1559 . Alleen al de boodschappenlijstjes van de
+							gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken
+							boekdelen. Toename van de inkoop van zeep duidt op epidemieën en
+							houtaankopen wijzen op de verhoogde vraag naar grafkisten. De
+							kaart van middeleeuws Amsterdam uit 1538 leidt de bezoeker het St.
+							Pieters Gasthuis, de gasthuiskapel of het pesthuis binnen. Door in
+							de afbeeldingen op omlijnde figuren of objecten te klikken
+							verschijnt informatie over het reilen en zijlen van het St.
+							Pietersgasthuis. Alle informatie komt direct uit de administratie
+							van de gasthuismeesters. Via de voetnoten bij de teksten komt u
+							vanzelf bij de scans van de bronnen waaruit de informatie
+							afkomstig is.
+						</p>
+					</div>
+					<div class="modal-footer no-borders flex-column align-items-end">
+						<button
+							type="button"
+							data-bs-dismiss="modal"
+							data-bs-target="#web-intro"
+							class="fs-4 btn btn-outline-light float-end"
+							aria-label="Close"
+						>
+							Plattegrond
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			id="page-info"
+			class="top-position-modal-5 modal info-card-element fade-scale modal-xl"
+			tabindex="-1"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered info-card-element">
+				<div
+					class="modal-content bg-text-white text-light border border-1 border-light"
+				>
+					<div class="modal-header border-0">
+						<h1 id="infoModalLabel" class="modal-title fs-5">
+							Inleiding algemeen
+						</h1>
+						<button
+							type="button"
+							data-bs-dismiss="modal"
+							data-bs-target="#card-rows-info"
+							class="btn-close btn-close-white float-end"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<!--                <img id="infoModalImage" src="../images/midev/register-83.png"-->
+						<!--                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"-->
+						<!--                     alt="...">-->
+						<!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
+						<p id="infoModalBody" class="  ">
+							Het eerste gasthuis van de jonge stad Amsterdam, het Oude
+							Gasthuis, stond aan het uiteinde van de Windmolenstraat ter hoogte
+							van de Middeldam<a class="text-decoration-none" href="#voetNote1"
+								><sup>1</sup></a
+							>
+							. Uit de administratie van de gasthuismeesters kunnen we afleiden
+							dat het al eerder dan 1371 bestond. Het erf waarop het Oude
+							Gasthuis stond was aanvankelijk waarschijnlijk vrij breed, maar
+							tussen 1391 en 1398 moest het een deel ervan aan de stad afstaan
+							voor de bouw van een nieuw stadhuis. Aan de overkant van de
+							Amstel, in de wijk Gansoord, werd in 1382 een kapel gebouwd door
+							het St. Pietersgilde van de viskopers en vleeshouwers. Voor 1395
+							werd de St. Pieterskapel uitgebreid met een gasthuis. Toendertijd
+							was het St. Pietersgasthuis ondergeschikt aan de kapel, maar in de
+							vijftiende eeuw streefde het gasthuis de kapel ruimschoots voorbij
+							en uiteindelijk was de St. Pieterskapel niet veel meer dan een
+							gasthuiskapel<a class="text-decoration-none" href="#voetNote2"
+								><sup>2</sup></a
+							>. Het St. Pietersgasthuis groeide in deze periode uit tot de
+							tweede charitatieve instelling in Amsterdam, na het Oude Gasthuis.
+							In 1492 moest het Oude Gasthuis echter plaats maken voor
+							uitbreiding van het stadhuis. Het Sint Pietersgasthuis en het Oude
+							Gasthuis werden samengevoegd tot één gasthuis en gingen in de Nes
+							verder onder de naam St. Pietersgasthuis. De invloed van het St.
+							Pietersgilde op het St. Pietersgasthuis was op dat moment al
+							volledig te verwaarlozen.
+						</p>
+					</div>
+					<div class="modal-footer border-0 flex-column align-items-start">
+						<ul id="infoUl" class="fontSize-8">
+							<li>
+								<a
+									class="fontSize-8"
+									href="https://verloren.nl/Webshop/Detail/catid/22748/eid/40119/metamorfose-van-stad-en-devotie"
+									target="_blank"
+									><sup id="voetNote1">1</sup> B.R. de Melker, Metamorfose van
+									stad en devotie, p. 117</a
+								>
+							</li>
+							<li>
+								<a
+									class="fontSize-8"
+									href="https://verloren.nl/Webshop/Detail/catid/22748/eid/40119/metamorfose-van-stad-en-devotie"
+									target="_blank"
+									><sup id="voetNote2">2</sup> De Melker, Metamorfose van stad
+									en devotie, p. 115</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="myTooltip"></div>
+		<span id="pol1Title" title="St. Pieters Gasthuis"></span>
+		<span id="pol2Title" title="De Kapel"></span>
+		<span id="pol3Title" title="Het Pesthuys"></span>
+		<!-- Slider Area End Here -->
+		<!-- Reason to come the zoo start here -->
 
-
-            </div>
-
-        </div>
-    </div>
-</div>
-<div id="web-intro" class="top-position-modal-5 modal info-card-element fade-scale modal-xl" tabindex="-1"
-     aria-hidden="true">
-    <div class=" modal-dialog  modal-dialog-centered info-card-element">
-        <div class="modal-content bg-text-white text-light border  border-1 border-light ">
-            <div class="modal-header border-0">
-                <h1 id="infoModalLabel1" class="modal-title fs-5">Over deze website</h1>
-                <button type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
-                        class="btn-close btn-close-white float-end" aria-label="Close">
-                </button>
-            </div>
-            <div class="modal-body ">
-                <p id="infoModalBody1" class="  ">
-                    Tijdens het project zijn er zijn talloze bijzondere verhalen naar boven gekomen uit de oudste
-                    archieven van Amsterdam. Hrt zijn (onder andere) verhalen die zich schuilhouden in het register van
-                    ontvangsten en uitgaven van het St. Pietersgasthuis over de jaren 1550 – 1559 . Alleen al de
-                    boodschappenlijstjes van de gasthuismeesters -de toenmalige ziekenhuisdirecteuren- spreken
-                    boekdelen. Toename van de inkoop van zeep duidt op epidemieën en houtaankopen wijzen op de verhoogde
-                    vraag naar grafkisten. De kaart van middeleeuws Amsterdam uit 1538 leidt de bezoeker het St. Pieters
-                    Gasthuis, de gasthuiskapel of het pesthuis binnen. Door in de afbeeldingen op omlijnde figuren of
-                    objecten te klikken verschijnt informatie over het reilen en zijlen van het St. Pietersgasthuis.
-                    Alle informatie komt direct uit de administratie van de gasthuismeesters. Via de voetnoten bij de
-                    teksten komt u vanzelf bij de scans van de bronnen waaruit de informatie afkomstig is.
-                </p>
-            </div>
-            <div class="modal-footer no-borders flex-column align-items-end">
-                <button type="button" data-bs-dismiss="modal" data-bs-target="#web-intro"
-                        class="fs-4  btn btn-outline-light float-end" aria-label="Close">Plattegrond
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
-<div id="page-info" class=" top-position-modal-5 modal info-card-element fade-scale   modal-xl" tabindex="-1"
-     aria-hidden="true">
-    <div class=" modal-dialog  modal-dialog-centered info-card-element ">
-        <div class="modal-content bg-text-white text-light border border-1 border-light ">
-            <div class="modal-header border-0">
-                <h1 id="infoModalLabel" class="modal-title fs-5">Inleiding algemeen</h1>
-                <button type="button" data-bs-dismiss="modal" data-bs-target="#card-rows-info"
-                        class="btn-close btn-close-white float-end" aria-label="Close">
-                </button>
-            </div>
-            <div class="modal-body">
-                <!--                <img id="infoModalImage" src="../images/midev/register-83.png"-->
-                <!--                     class=" img-fluid col-md-5  col-sm-5 col-nami-xs-5 col-lg-3 col-xl-3  rounded float-end"-->
-                <!--                     alt="...">-->
-                <!--                        https://mdbootstrap.com/docs/standard/content-styles/hover-effects/#!-->
-                <p id="infoModalBody" class="  ">
-                    Het eerste gasthuis van de jonge stad Amsterdam, het Oude Gasthuis, stond aan het uiteinde van de
-                    Windmolenstraat ter hoogte van de Middeldam<a class="text-decoration-none"
-                                                                  href="#voetNote1"><sup>1</sup></a> . Uit de
-                    administratie van
-                    de gasthuismeesters kunnen we afleiden dat het al eerder dan 1371 bestond. Het erf waarop het Oude
-                    Gasthuis stond was aanvankelijk waarschijnlijk vrij breed, maar tussen 1391 en 1398 moest het een
-                    deel ervan aan de stad afstaan voor de bouw van een nieuw stadhuis.
-                    Aan de overkant van de Amstel, in de wijk Gansoord, werd in 1382 een kapel gebouwd door het St.
-                    Pietersgilde van de viskopers en vleeshouwers. Voor 1395 werd de St. Pieterskapel uitgebreid met een
-                    gasthuis. Toendertijd was het St. Pietersgasthuis ondergeschikt aan de kapel, maar in de vijftiende
-                    eeuw streefde het gasthuis de kapel ruimschoots voorbij en uiteindelijk was de St. Pieterskapel niet
-                    veel meer dan een gasthuiskapel<a class="text-decoration-none" href="#voetNote2"><sup>2</sup></a>.
-                    Het St. Pietersgasthuis
-                    groeide in
-                    deze periode uit tot de tweede charitatieve instelling in Amsterdam, na het Oude Gasthuis.
-                    In 1492 moest het Oude Gasthuis echter plaats maken voor uitbreiding van het stadhuis. Het Sint
-                    Pietersgasthuis en het Oude Gasthuis werden samengevoegd tot één gasthuis en gingen in de Nes verder
-                    onder de naam St. Pietersgasthuis. De invloed van het St. Pietersgilde op het St.
-                    Pietersgasthuis was op dat moment al volledig te verwaarlozen.
-                </p>
-            </div>
-            <div class="modal-footer border-0 flex-column align-items-start">
-                <ul id="infoUl" class="fontSize-8">
-                    <li>
-                        <a class=" fontSize-8" href="https://google.com" target="_blank"><sup
-                                id="voetNote1">1</sup> B.R. de Melker, Metamorfose van stad en devotie, p. 117</a>
-                    </li>
-                    <li>
-                        <a class="fontSize-8" href="https://google.com" target="_blank"><sup
-                                id="voetNote2">2</sup> De Melker, Metamorfose van stad en devotie, p. 115</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</div>
-<div id="myTooltip"></div>
-<span id="pol1Title" title="St. Pieters Gasthuis"></span>
-<span id="pol2Title" title="De Kapel"></span>
-<span id="pol3Title" title="Het Pesthuys"></span>
-<!-- Slider Area End Here -->
-<!-- Reason to come the zoo start here -->
-
-
-<div class=" bg-green-color ease-in-out-offcanvas offcanvas-width-75 offcanvas offcanvas-start" tabindex="-1"
-     id="aboutDiv" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header text-light">
-        <h2 class="offcanvas-title ps-5" id="offcanvasExampleLabel">About</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body text-light">
-        <div class="row d-flex justify-content-center pb-2">
-            <div class="background-militarty-color widget p-4 shadow col-8">
-                <h2 class="mb-3">Over het project</h2>
-                <p class="card-text">
-                    De Stichting Middeleeuwse Archieven Amsterdam wil de toegankelijkheid, beschikbaarheid en het
-                    gebruik
-                    bevorderen van de middeleeuwse archieven van en over de stad Amsterdam. De stichting wil de kennis
-                    over
-                    middeleeuwse Amsterdam vergroten onder een zo breed mogelijk publiek. SMAA wil mensen uit en buiten
-                    Amsterdam bewust maken van hoe de stad er in haar eerste eeuwen uitzag en functioneerde. Dat doen
-                    wij
-                    door de parallellen en verschillen tussen heden en verleden zichtbaar te maken op maatschappelijke
-                    thema’s als welvaart, zorg, jeugd, migratie, integratie, diversiteit en gemeenschapszin. Gedurende
-                    2019
-                    en 2021 maakte SMAA met het project ‘Ontsluiten van de Amsterdamse gasthuisarchieven tot 1578’ de
-                    archieven van de Amsterdamse middeleeuwse gasthuizen beter toegankelijk. De stukken werden
-                    geconserveerd
-                    en de archieven kregen een nieuwe inventaris. De meest bijzondere bronnen uit deze archieven werden
-                    vertaald in modern Nederlands. De archieven kunnen digitaal worden geraadpleegd via de website van
-                    het
-                    Stadsarchief Amsterdam. En om het geheel compleet te maken is voor de wetenschappelijke onderzoeker
-                    een
-                    bronnenuitgave van de meest bijzondere registers toegevoegd.
-                </p>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center pt-2">
-            <div class="background-militarty-color widget p-4 shadow col-8 ">
-                <h2 class="mb-3">Disclaimer</h2>
-                <p class="card-text">
-                    De inhoud van deze website, zoals tekst, grafieken, afbeeldingen en ander materiaal is uitsluitend
-                    bedoeld om het publiek mee te nemen naar en te verwonderen over de verhalen betreffende de
-                    middeleeuwse Amsterdamse gasthuizen. De bronvermeldingen maken het mogelijk namen, plaatsen,
-                    aantallen en gebeurtenissen in de archieven te verifiëren. De afbeeldingen hebben geen relatie met
-                    het St. Pietersgasthuis en zijn over het algemeen niet uit de periode waarin de gepubliceerde
-                    verhalen spelen.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="biblioDiv" class=" offcanvas-width-75 ease-in-out-offcanvas offcanvas offcanvas-start" tabindex="-1"
-     aria-labelledby="offcanvasExampleLabel">
-    <img alt="..." src="images/midev/background-01.png" class="img-bg-offCanvas">
-    <div class="offcanvas-header text-light">
-        <h2 class="offcanvas-title ps-5" id="offcanvasBiblioLabel">Bibliography</h2>
-        <button type="button" class="btn-close btn-close-white " aria-label="Close" data-bs-dismiss="offcanvas">
-        </button>
-    </div>
-    <div class=" offcanvas-body text-light">
-        <div class="row d-flex justify-content-center">
-            <div class="col-8">
-                <h4>Gebruikte literatuur</h4>
-                <p class="card-text">
-                    P.H.J. van der Laan, Resoluties van de Vroedschap van Amsterdam 1551-1565, Hilversum Verloren 2008.
-                    B.R. de Melker, Metamorfose van stad en devotie, ontstaan en conjunctuur van kerkelijke, religieuze
-                    en charitatieve instellingen in Amsterdam in het licht van de stedelijke ontwikkeling, 1385-1435.
-                    Hilversum Verloren 2021.
-                    M. Verhoeff, De oude Nederlandse maten en gewichten, Amsterdam 1982.
-                </p>
-            </div>
-        </div>
-        <div class="row pt-5 d-flex justify-content-center">
-            <div class="col-8">
-                <h4>Gebruikte bronnen</h4>
-                <h5>Stadsarchief Amsterdam</h5>
-                <h6>Archief Gasthuizen (GH;toegang 342)</h6>
-                <ul class="dashed">
-                    <li>
-                        Inv.nr. 79, belastingboek, 1538-1566
-                    </li>
-                    <li>
-                        Inv.nr. 80, belastingboek, 1566-1582
-                    </li>
-                    <li>
-                        Inv.nr. 83, register van ontvangsten en uitgaven, 1550-1559
-                    </li>
-                    <li>
-                        Inv.nr. 86, rekenboek van inkomsten en uitgaven van het pesthuis, 1558-1559
-                    </li>
-                    <li>
-                        Inv.nr. 90, eerste kaartboek van de gasthuizen, 1559
-                    </li>
-                    <li>
-                        Inv.nr. 95, oorkonde waarin het St. Pietersgasthuis toestemming krijgt om de zieken die in het
-                        gasthuis gestorven zijn te begraven etc, 1492
-                    </li>
-                    <li>
-                        Inv.nr. 134, oorkonde van schenking aan het St. Pietersgasthuis door Joost Buijck Zybrantszoon
-                        en Balicg Popiusdochter, 1548 Archief van de burgemeesters: Groot Memoriaal (BM, toegang 5023)
-                    </li>
-                    <li>
-                        inv.nr 2, Register van inkomende en uitgaande missieven, akten, besluiten etc, 10 maart 1545-
-                        26 januari 1624
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row pt-5 d-flex justify-content-center">
-            <div class="col-8">
-                <h4>Gebruikte websites</h4>
-                <p><a target="_blank"
-                      href="https://mgw.meertens.knaw.nl/maat/49">https://mgw.meertens.knaw.nl/maat/49</a></p>
-                <p><a target="_blank"
-                      href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8">https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8</a></p>
-            </div>
-        </div>
-        <div class="row pt-5 ps-5 d-flex justify-content-center">
-            <div class="col-9">
-                <h4>Gebruikte Afbeeldingen</h4>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/map.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/11259/collection.38011" target="_blank" class="">http://hdl.handle.net/11259/collection.38011</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/keuken.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.5057" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.5057</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/pethuis.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://archief.amsterdam/archief/10097/010097002952" target="_blank" class="">http://archief.amsterdam/archief/10097/010097002952</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/reg83.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/0/limit/10/highlight/8" target="_blank" class="">https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/0/limit/10/highlight/8</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/rekening-kamer.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.6296" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.6296</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/coins.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.235756" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.235756</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/cow.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.673033" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.673033</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/priests.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://collectie.rijksmuseumtwenthe.nl/zoeken-in-de-collectie/detail/id/283baaf9-e455-54f8-90a6-910296ea6b97" target="_blank" class="">https://collectie.rijksmuseumtwenthe.nl/zoeken-in-de-collectie/detail/id/283baaf9-e455-54f8-90a6-910296ea6b97</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/leg-operation.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.5189" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.5189</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/leg-operation1.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://i.pinimg.com/564x/a1/b3/30/a1b330415c7967043c31e0a10bb60f6f.jpg" target="_blank" class="">https://i.pinimg.com/564x/a1/b3/30/a1b330415c7967043c31e0a10bb60f6f.jpg</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/sperate.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.161195" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.161195</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/buurt.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.9048" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.9048</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/groente.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.7686" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.7686</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/ziekenhuis.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.362374" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.362374</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/leader.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.190869" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.190869</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/buurt1.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.362370" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.362370</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/roman.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.445926" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.445926</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/kapel.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://hdl.handle.net/21.12130/collect.8B279191-99B6-47DF-AEB3-E4A60413CCCC" target="_blank" class="">https://hdl.handle.net/21.12130/collect.8B279191-99B6-47DF-AEB3-E4A60413CCCC</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/high-priest.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.445143" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.445143</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/old-sick.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.299567" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.299567</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/plek.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://archief.amsterdam/beeldbank/detail/93102a85-af24-eb5e-df18-e9cf72552999/media/144549cf-f03c-1518-c6e6-11b44860073e?mode=detail&view=horizontal&q=septeren&rows=1&page=28" target="_blank" class="">https://archief.amsterdam/beeldbank/detail/93102a85-af24-eb5e-df18-e9cf72552999/media/144549cf-f03c-1518-c6e6-11b44860073e?mode=detail&view=horizontal&q=septeren&rows=1&page=28</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/eten.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.6029" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.6029</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/meal.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="http://hdl.handle.net/10934/RM0001.COLLECT.8296" target="_blank" class="">http://hdl.handle.net/10934/RM0001.COLLECT.8296</a>
-                        </div>
-                    </div>
-                    <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent">
-                        <img class="card-img-top" src="../images/midev/photos-in-use/pray-prist.jpg" alt=".." >
-                        <div class="card-body ">
-                            <a href="https://manuscripts.kb.nl/search/simple/sick" target="_blank" class="">https://manuscripts.kb.nl/search/simple/sick</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<footer id="indexFooter" class="footermain">
-    <div class="footer-top footerinner">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-buttom-4-sm">
-                    <div class="widget p-4 shadow background-militarty-color text-light">
-                        <h2 class="">Over het project</h2>
-                        <p class="card-text">
-                            Gedurende 2019 en 2021 maakte de stichting Middeleeuws Amsterdam (SMAA) met het project
-                            ‘Ontsluiten van de Amsterdamse gasthuisarchieven tot 1578’ de archieven van de Amsterdamse
-                            middeleeuwse gasthuizen beter toegankelijk. Deze website vertelt de meest bijzondere
-                            verhalen die wij tijdens het project hebben opgehaald uit de archieven. De fysieke stukken
-                            zijn goed geconserveerd en hebben een nieuwe inventaris gekregen. De meest bijzondere
-                            bronnen uit de archieven werden vertaald in modern Nederlands. De archieven zelf kunnen
-                            digitaal worden geraadpleegd worden via de website van het Stadsarchief Amsterdam. En om het
-                            geheel compleet te maken is voor de wetenschappelijke onderzoeker een bronnenuitgave van de
-                            meest bijzondere registers toegevoegd. Heeft u vragen naar aanleiding van de verhalen? Neem
-                            contact op met de projectleider Mariëlle Kruithof: <a
-                                class="link-offset-2 link-offset-3-hover" href="mailto:mariëlle@dmpart.nl">mariëlle@dmpart.nl</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="widget p-4  shadow background-militarty-color">
-                        <h2 class="">Mede mogelijk gemaakt door</h2>
-                        <div class="sponser sisss">
-                            <ul>
-                                <li><a href="#"><img src="images/midev/sponser-logos/PBCF_Logo_wit1.png" alt=""></a>
-                                </li>
-                                <li><a href="#"><img src="images/midev/sponser-logos/logoHuisje.jpg" alt=""></a>
-                                </li>
-                                <li><a href="#"><img src="images/midev/sponser-logos/dioraphte-logo-dark%20smll.png"
-                                                     alt=""></a></li>
-<!--                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-6.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-7.png" alt=""></a></li>-->
-<!--                                <li><a href="#"><img src="./images/sponser/partner-8.png" alt=""></a></li>-->
-                            </ul>
-                        </div>
-                    </div>
-                    <!--                    <div class="widget">-->
-                    <!--                        <h2>Flickr Feed</h2>-->
-                    <!--                        <div class="sponser">-->
-                    <!--                            <ul>-->
-                    <!--                                <li><a href="#"><img src="./images/sponser/8.png" alt=""></a></li>-->
-                    <!--                                <li><a href="#"><img src="./images/sponser/9.png" alt=""></a></li>-->
-                    <!--                                <li><a href="#"><img src="./images/sponser/10.png" alt=""></a></li>-->
-                    <!--                                <li><a href="#"><img src="./images/sponser/11.png" alt=""></a></li>-->
-                    <!--                            </ul>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom-area pb-5 ">
-        <div class="container p-3 pt-5 background-militarty-color shadow">
-            <div class="row">
-                <p class="card-text text-light">
-                    Deze website is een product gepubliceerd als onderdeel van het project Ontsluiting Middeleeuwse
-                    Gasthuizenarchieven Amsterdam. Het project is uitgevoerd door de Stichting Middeleeuwse Geschiedenis
-                    Amsterdam.
-                    <a class="link-underline-primary link-offset-2 link-offset-3-hover"
-                       href="https://www.middeleeuwsamsterdam.nl/" target="_blank">Ga naar de website van de
-                        stichting</a>
-                </p>
-            </div>
-            <!--            <div class="row">-->
-            <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-            <!--                    <div class="footer-menu">-->
-            <!--                        <ul>-->
-            <!--                            <li><a href="#">Facebook</a></li>-->
-            <!--                            <li><a href="#">Twitter</a></li>-->
-            <!--                            <li><a href="#">Flickr</a></li>-->
-            <!--                        </ul>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
-            <!--                    <div class="copyright">-->
-            <!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-        </div>
-    </div>
-</footer>
-<!-- Footer End Here -->
-<!-- all js here -->
-<!-- jquery latest version -->
-<!--<script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
-<script src="js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
-<!--<script src="./js/midevjs/modernizr-custom.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
-        integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/textillate@0.4.1/jquery.textillate.min.js"></script>
-<!--<script src="../js/midevjs/imageMapResizer.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
-        integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- jquery-ui js -->
-<script src="js/jquery-ui.min.js"></script>
-<!--private js-->
-<script src="js/midevjs/jq-costum.js"></script>
-<script src="js/midevjs/jquery.maphilight.js"></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
-<!-- bootstrap js -->
-<script src="js/bs5js/bootstrap.min.js"></script>
-<!--<script src="js/bootstrap.min.js"></script>-->
-<!-- owl.carousel js -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- meanmenu js -->
-<script src="js/jquery.meanmenu.js"></script>
-<!-- wow js -->
-<script src="js/wow.min.js"></script>
-<!-- plugins js -->
-<script src="js/plugins.js"></script>
-<!-- main js -->
-<script src="js/main.js"></script>
-</body>
+		<div
+			class="bg-green-color ease-in-out-offcanvas offcanvas-width-75 offcanvas offcanvas-start"
+			tabindex="-1"
+			id="aboutDiv"
+			aria-labelledby="offcanvasExampleLabel"
+		>
+			<div class="offcanvas-header text-light">
+				<h2 class="offcanvas-title ps-5" id="offcanvasExampleLabel">About</h2>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="offcanvas-body text-light">
+				<div class="row d-flex justify-content-center pb-2">
+					<div class="background-militarty-color widget p-4 shadow col-8">
+						<h2 class="mb-3">Over het project</h2>
+						<p class="card-text">
+							De Stichting Middeleeuwse Archieven Amsterdam wil de
+							toegankelijkheid, beschikbaarheid en het gebruik bevorderen van de
+							middeleeuwse archieven van en over de stad Amsterdam. De stichting
+							wil de kennis over middeleeuwse Amsterdam vergroten onder een zo
+							breed mogelijk publiek. SMAA wil mensen uit en buiten Amsterdam
+							bewust maken van hoe de stad er in haar eerste eeuwen uitzag en
+							functioneerde. Dat doen wij door de parallellen en verschillen
+							tussen heden en verleden zichtbaar te maken op maatschappelijke
+							thema’s als welvaart, zorg, jeugd, migratie, integratie,
+							diversiteit en gemeenschapszin. Gedurende 2019 en 2021 maakte SMAA
+							met het project ‘Ontsluiten van de Amsterdamse gasthuisarchieven
+							tot 1578’ de archieven van de Amsterdamse middeleeuwse gasthuizen
+							beter toegankelijk. De stukken werden geconserveerd en de
+							archieven kregen een nieuwe inventaris. De meest bijzondere
+							bronnen uit deze archieven werden vertaald in modern Nederlands.
+							De archieven kunnen digitaal worden geraadpleegd via de website
+							van het Stadsarchief Amsterdam. En om het geheel compleet te maken
+							is voor de wetenschappelijke onderzoeker een bronnenuitgave van de
+							meest bijzondere registers toegevoegd.
+						</p>
+					</div>
+				</div>
+				<div class="row d-flex justify-content-center pt-2">
+					<div class="background-militarty-color widget p-4 shadow col-8">
+						<h2 class="mb-3">Disclaimer</h2>
+						<p class="card-text">
+							De inhoud van deze website, zoals tekst, grafieken, afbeeldingen
+							en ander materiaal is uitsluitend bedoeld om het publiek mee te
+							nemen naar en te verwonderen over de verhalen betreffende de
+							middeleeuwse Amsterdamse gasthuizen. De bronvermeldingen maken het
+							mogelijk namen, plaatsen, aantallen en gebeurtenissen in de
+							archieven te verifiëren. De afbeeldingen hebben geen relatie met
+							het St. Pietersgasthuis en zijn over het algemeen niet uit de
+							periode waarin de gepubliceerde verhalen spelen.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			id="biblioDiv"
+			class="offcanvas-width-75 ease-in-out-offcanvas offcanvas offcanvas-start"
+			tabindex="-1"
+			aria-labelledby="offcanvasExampleLabel"
+		>
+			<img
+				alt="..."
+				src="images/midev/background-01.png"
+				class="img-bg-offCanvas"
+			/>
+			<div class="offcanvas-header text-light">
+				<h2 class="offcanvas-title ps-5" id="offcanvasBiblioLabel">
+					Bibliography
+				</h2>
+				<button
+					type="button"
+					class="btn-close btn-close-white"
+					aria-label="Close"
+					data-bs-dismiss="offcanvas"
+				></button>
+			</div>
+			<div class="offcanvas-body text-light">
+				<div class="row d-flex justify-content-center">
+					<div class="col-8">
+						<h4>Gebruikte literatuur</h4>
+						<p class="card-text">
+							P.H.J. van der Laan, Resoluties van de Vroedschap van Amsterdam
+							1551-1565, Hilversum Verloren 2008. B.R. de Melker, Metamorfose
+							van stad en devotie, ontstaan en conjunctuur van kerkelijke,
+							religieuze en charitatieve instellingen in Amsterdam in het licht
+							van de stedelijke ontwikkeling, 1385-1435. Hilversum Verloren
+							2021. M. Verhoeff, De oude Nederlandse maten en gewichten,
+							Amsterdam 1982.
+						</p>
+					</div>
+				</div>
+				<div class="row pt-5 d-flex justify-content-center">
+					<div class="col-8">
+						<h4>Gebruikte bronnen</h4>
+						<h5>Stadsarchief Amsterdam</h5>
+						<h6>Archief Gasthuizen (GH;toegang 342)</h6>
+						<ul class="dashed">
+							<li>Inv.nr. 79, belastingboek, 1538-1566</li>
+							<li>Inv.nr. 80, belastingboek, 1566-1582</li>
+							<li>
+								Inv.nr. 83, register van ontvangsten en uitgaven, 1550-1559
+							</li>
+							<li>
+								Inv.nr. 86, rekenboek van inkomsten en uitgaven van het
+								pesthuis, 1558-1559
+							</li>
+							<li>Inv.nr. 90, eerste kaartboek van de gasthuizen, 1559</li>
+							<li>
+								Inv.nr. 95, oorkonde waarin het St. Pietersgasthuis toestemming
+								krijgt om de zieken die in het gasthuis gestorven zijn te
+								begraven etc, 1492
+							</li>
+							<li>
+								Inv.nr. 134, oorkonde van schenking aan het St. Pietersgasthuis
+								door Joost Buijck Zybrantszoon en Balicg Popiusdochter, 1548
+								Archief van de burgemeesters: Groot Memoriaal (BM, toegang 5023)
+							</li>
+							<li>
+								inv.nr 2, Register van inkomende en uitgaande missieven, akten,
+								besluiten etc, 10 maart 1545- 26 januari 1624
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row pt-5 d-flex justify-content-center">
+					<div class="col-8">
+						<h4>Gebruikte websites</h4>
+						<p>
+							<a target="_blank" href="https://mgw.meertens.knaw.nl/maat/49"
+								>https://mgw.meertens.knaw.nl/maat/49</a
+							>
+						</p>
+						<p>
+							<a
+								target="_blank"
+								href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8"
+								>https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/30/limit/10/highlight/8</a
+							>
+						</p>
+					</div>
+				</div>
+				<div class="row pt-5 ps-5 d-flex justify-content-center">
+					<div class="col-9">
+						<h4>Gebruikte Afbeeldingen</h4>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/map.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/11259/collection.38011"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/11259/collection.38011</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/keuken.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.5057"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.5057</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/pethuis.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://archief.amsterdam/archief/10097/010097002952"
+										target="_blank"
+										class=""
+										>http://archief.amsterdam/archief/10097/010097002952</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/reg83.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/0/limit/10/highlight/8"
+										target="_blank"
+										class=""
+										>https://archief.amsterdam/inventarissen/scans/342/2.1.1.12.1/start/0/limit/10/highlight/8</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/rekening-kamer.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.6296"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.6296</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/coins.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.235756"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.235756</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/cow.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.673033"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.673033</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/priests.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://collectie.rijksmuseumtwenthe.nl/zoeken-in-de-collectie/detail/id/283baaf9-e455-54f8-90a6-910296ea6b97"
+										target="_blank"
+										class=""
+										>https://collectie.rijksmuseumtwenthe.nl/zoeken-in-de-collectie/detail/id/283baaf9-e455-54f8-90a6-910296ea6b97</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/leg-operation.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.5189"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.5189</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/leg-operation1.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://i.pinimg.com/564x/a1/b3/30/a1b330415c7967043c31e0a10bb60f6f.jpg"
+										target="_blank"
+										class=""
+										>https://i.pinimg.com/564x/a1/b3/30/a1b330415c7967043c31e0a10bb60f6f.jpg</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/sperate.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.161195"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.161195</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/buurt.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.9048"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.9048</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/groente.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.7686"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.7686</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/ziekenhuis.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.362374"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.362374</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/leader.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.190869"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.190869</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/buurt1.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.362370"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.362370</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/roman.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.445926"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.445926</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/kapel.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://hdl.handle.net/21.12130/collect.8B279191-99B6-47DF-AEB3-E4A60413CCCC"
+										target="_blank"
+										class=""
+										>https://hdl.handle.net/21.12130/collect.8B279191-99B6-47DF-AEB3-E4A60413CCCC</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/high-priest.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.445143"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.445143</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/old-sick.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.299567"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.299567</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/plek.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://archief.amsterdam/beeldbank/detail/93102a85-af24-eb5e-df18-e9cf72552999/media/144549cf-f03c-1518-c6e6-11b44860073e?mode=detail&view=horizontal&q=septeren&rows=1&page=28"
+										target="_blank"
+										class=""
+										>https://archief.amsterdam/beeldbank/detail/93102a85-af24-eb5e-df18-e9cf72552999/media/144549cf-f03c-1518-c6e6-11b44860073e?mode=detail&view=horizontal&q=septeren&rows=1&page=28</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/eten.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.6029"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.6029</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/meal.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="http://hdl.handle.net/10934/RM0001.COLLECT.8296"
+										target="_blank"
+										class=""
+										>http://hdl.handle.net/10934/RM0001.COLLECT.8296</a
+									>
+								</div>
+							</div>
+							<div
+								class="card col-xl-6 col-lg-6 col-md-6 col-sm-12 bg-transparent"
+							>
+								<img
+									class="card-img-top"
+									src="../images/midev/photos-in-use/pray-prist.jpg"
+									alt=".."
+								/>
+								<div class="card-body">
+									<a
+										href="https://manuscripts.kb.nl/search/simple/sick"
+										target="_blank"
+										class=""
+										>https://manuscripts.kb.nl/search/simple/sick</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="indexFooter" class="footermain">
+			<div class="footer-top footerinner">
+				<div class="container">
+					<div class="row">
+						<div
+							class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding-buttom-4-sm"
+						>
+							<div
+								class="widget p-4 shadow background-militarty-color text-light"
+							>
+								<h2 class="">Over het project</h2>
+								<p class="card-text">
+									Gedurende 2019 en 2021 maakte de stichting Middeleeuws
+									Amsterdam (SMAA) met het project ‘Ontsluiten van de
+									Amsterdamse gasthuisarchieven tot 1578’ de archieven van de
+									Amsterdamse middeleeuwse gasthuizen beter toegankelijk. Deze
+									website vertelt de meest bijzondere verhalen die wij tijdens
+									het project hebben opgehaald uit de archieven. De fysieke
+									stukken zijn goed geconserveerd en hebben een nieuwe
+									inventaris gekregen. De meest bijzondere bronnen uit de
+									archieven werden vertaald in modern Nederlands. De archieven
+									zelf kunnen digitaal worden geraadpleegd worden via de website
+									van het Stadsarchief Amsterdam. En om het geheel compleet te
+									maken is voor de wetenschappelijke onderzoeker een
+									bronnenuitgave van de meest bijzondere registers toegevoegd.
+									Heeft u vragen naar aanleiding van de verhalen? Neem contact
+									op met de projectleider Mariëlle Kruithof:
+									<a
+										class="link-offset-2 link-offset-3-hover"
+										href="mailto:mariëlle@dmpart.nl"
+										>mariëlle@dmpart.nl</a
+									>
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="widget p-4 shadow background-militarty-color">
+								<h2 class="">Mede mogelijk gemaakt door</h2>
+								<div class="sponser sisss">
+									<ul>
+										<li>
+											<a href="https://www.cultuurfonds.nl/"
+												><img
+													src="images/midev/sponser-logos/PBCF_Logo_wit1.png"
+													alt=""
+											/></a>
+										</li>
+										<li>
+											<img
+												src="images/midev/sponser-logos/logoHuisje.jpg"
+												alt="Pruikenburg fonds"
+											/>
+										</li>
+										<li>
+											<a href="https://dioraphte.nl/"
+												><img
+													src="images/midev/sponser-logos/dioraphte-logo-dark%20smll.png"
+													alt=""
+											/></a>
+										</li>
+										<!--                                <li><a href="#"><img src="images/midev/keuken/eerliek-mael-150.png" alt=""></a></li>-->
+										<!--                                <li><a href="#"><img src="./images/sponser/partner-5.png" alt=""></a></li>-->
+										<!--                                <li><a href="#"><img src="./images/sponser/partner-6.png" alt=""></a></li>-->
+										<!--                                <li><a href="#"><img src="./images/sponser/partner-7.png" alt=""></a></li>-->
+										<!--                                <li><a href="#"><img src="./images/sponser/partner-8.png" alt=""></a></li>-->
+									</ul>
+								</div>
+							</div>
+							<!--                    <div class="widget">-->
+							<!--                        <h2>Flickr Feed</h2>-->
+							<!--                        <div class="sponser">-->
+							<!--                            <ul>-->
+							<!--                                <li><a href="#"><img src="./images/sponser/8.png" alt=""></a></li>-->
+							<!--                                <li><a href="#"><img src="./images/sponser/9.png" alt=""></a></li>-->
+							<!--                                <li><a href="#"><img src="./images/sponser/10.png" alt=""></a></li>-->
+							<!--                                <li><a href="#"><img src="./images/sponser/11.png" alt=""></a></li>-->
+							<!--                            </ul>-->
+							<!--                        </div>-->
+							<!--                    </div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom-area pb-5">
+				<div class="container p-3 pt-5 background-militarty-color shadow">
+					<div class="row">
+						<p class="card-text text-light">
+							Deze website is een product gepubliceerd als onderdeel van het
+							project Ontsluiting Middeleeuwse Gasthuizenarchieven Amsterdam.
+							Het project is uitgevoerd door de Stichting Middeleeuwse
+							Geschiedenis Amsterdam.
+							<a
+								class="link-underline-primary link-offset-2 link-offset-3-hover"
+								href="https://www.middeleeuwsamsterdam.nl/"
+								target="_blank"
+								>Ga naar de website van de stichting</a
+							>
+						</p>
+					</div>
+					<!--            <div class="row">-->
+					<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+					<!--                    <div class="footer-menu">-->
+					<!--                        <ul>-->
+					<!--                            <li><a href="#">Facebook</a></li>-->
+					<!--                            <li><a href="#">Twitter</a></li>-->
+					<!--                            <li><a href="#">Flickr</a></li>-->
+					<!--                        </ul>-->
+					<!--                    </div>-->
+					<!--                </div>-->
+					<!--                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">-->
+					<!--                    <div class="copyright">-->
+					<!--                        <p>Zooks <i class="fa fa-heart" aria-hidden="true"></i> by envalab</p>-->
+					<!--                    </div>-->
+					<!--                </div>-->
+					<!--            </div>-->
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End Here -->
+		<!-- all js here -->
+		<!-- jquery latest version -->
+		<!--<script src="../js/vendor/jquery-1.12.0.min.js"></script>-->
+		<script src="js/vendor/code.jquery.com_jquery-3.7.0.min.js"></script>
+		<!--<script src="./js/midevjs/modernizr-custom.js"></script>-->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"
+			integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/textillate@0.4.1/jquery.textillate.min.js"></script>
+		<!--<script src="../js/midevjs/imageMapResizer.js"></script>-->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"
+			integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- jquery-ui js -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!--private js-->
+		<script src="js/midevjs/jq-costum.js"></script>
+		<script src="js/midevjs/jquery.maphilight.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>-->
+		<!-- bootstrap js -->
+		<script src="js/bs5js/bootstrap.min.js"></script>
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<!-- owl.carousel js -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- meanmenu js -->
+		<script src="js/jquery.meanmenu.js"></script>
+		<!-- wow js -->
+		<script src="js/wow.min.js"></script>
+		<!-- plugins js -->
+		<script src="js/plugins.js"></script>
+		<!-- main js -->
+		<script src="js/main.js"></script>
+	</body>
 </html>
